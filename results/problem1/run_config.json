@@ -1,0 +1,1223 @@
+{
+  "seed": 2026,
+  "split": {
+    "train": {
+      "sites": 347,
+      "rows": 2171,
+      "positive_rate": 0.18424689083371718
+    },
+    "validation": {
+      "sites": 74,
+      "rows": 462,
+      "positive_rate": 0.19264069264069264
+    },
+    "test": {
+      "sites": 75,
+      "rows": 483,
+      "positive_rate": 0.2070393374741201
+    }
+  },
+  "n_bags": 50,
+  "dummy_random_states": "2026-2125",
+  "grids": {
+    "naive_bayes": [
+      {
+        "bandwidth": 0.1
+      },
+      {
+        "bandwidth": 0.25
+      },
+      {
+        "bandwidth": 0.5
+      },
+      {
+        "bandwidth": 1.0
+      },
+      {
+        "bandwidth": "silverman"
+      }
+    ],
+    "least_squares": [
+      {
+        "reg_lambda": 0.001
+      },
+      {
+        "reg_lambda": 0.01
+      },
+      {
+        "reg_lambda": 0.1
+      },
+      {
+        "reg_lambda": 1.0
+      },
+      {
+        "reg_lambda": 10.0
+      },
+      {
+        "reg_lambda": 100.0
+      },
+      {
+        "reg_lambda": 1000.0
+      }
+    ],
+    "mlp": [
+      {
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "learning_rate": 0.001,
+        "n_epochs": 50,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "learning_rate": 0.001,
+        "n_epochs": 50,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "learning_rate": 0.001,
+        "n_epochs": 100,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "learning_rate": 0.001,
+        "n_epochs": 100,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 50,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 50,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 100,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 100,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.001,
+        "n_epochs": 50,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.001,
+        "n_epochs": 50,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.001,
+        "n_epochs": 100,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.001,
+        "n_epochs": 100,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 50,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 50,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 100,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 100,
+        "batch_size": 64
+      }
+    ],
+    "bagging": [
+      {
+        "bandwidth": 0.1
+      },
+      {
+        "bandwidth": 0.25
+      },
+      {
+        "bandwidth": 0.5
+      },
+      {
+        "bandwidth": 1.0
+      },
+      {
+        "bandwidth": "silverman"
+      }
+    ]
+  },
+  "validation": {
+    "(1e) Registry features": {
+      "Naive Bayes (Parzen)": [
+        {
+          "params": {
+            "bandwidth": 0.1
+          },
+          "val_f1_default": 0.09302325581395349,
+          "val_f1_tuned": 0.3946188340807175,
+          "threshold": 0.19051673858407178
+        },
+        {
+          "params": {
+            "bandwidth": 0.25
+          },
+          "val_f1_default": 0.0970873786407767,
+          "val_f1_tuned": 0.3717472118959108,
+          "threshold": 0.15167258319249882
+        },
+        {
+          "params": {
+            "bandwidth": 0.5
+          },
+          "val_f1_default": 0.06249999999999999,
+          "val_f1_tuned": 0.34980988593155893,
+          "threshold": 0.17445846216037314
+        },
+        {
+          "params": {
+            "bandwidth": 1.0
+          },
+          "val_f1_default": 0.041666666666666664,
+          "val_f1_tuned": 0.3552311435523115,
+          "threshold": 0.1422188175744756
+        },
+        {
+          "params": {
+            "bandwidth": "silverman"
+          },
+          "val_f1_default": 0.0967741935483871,
+          "val_f1_tuned": 0.35932203389830514,
+          "threshold": 0.019370285143746592
+        }
+      ],
+      "Least Squares": [
+        {
+          "params": {
+            "reg_lambda": 0.001
+          },
+          "val_f1_default": 0.038834951456310676,
+          "val_f1_tuned": 0.35866261398176286,
+          "threshold": 0.18104573884349406
+        },
+        {
+          "params": {
+            "reg_lambda": 0.01
+          },
+          "val_f1_default": 0.038834951456310676,
+          "val_f1_tuned": 0.35866261398176286,
+          "threshold": 0.18104535773752628
+        },
+        {
+          "params": {
+            "reg_lambda": 0.1
+          },
+          "val_f1_default": 0.038834951456310676,
+          "val_f1_tuned": 0.3541666666666667,
+          "threshold": 0.16109072634820062
+        },
+        {
+          "params": {
+            "reg_lambda": 1.0
+          },
+          "val_f1_default": 0.038834951456310676,
+          "val_f1_tuned": 0.3522388059701492,
+          "threshold": 0.17899441426273424
+        },
+        {
+          "params": {
+            "reg_lambda": 10.0
+          },
+          "val_f1_default": 0.0,
+          "val_f1_tuned": 0.3436619718309859,
+          "threshold": 0.1742018766216118
+        },
+        {
+          "params": {
+            "reg_lambda": 100.0
+          },
+          "val_f1_default": 0.0,
+          "val_f1_tuned": 0.34108527131782945,
+          "threshold": 0.16278953818858327
+        },
+        {
+          "params": {
+            "reg_lambda": 1000.0
+          },
+          "val_f1_default": 0.0,
+          "val_f1_tuned": 0.33915211970074816,
+          "threshold": 0.16835179613186915
+        }
+      ],
+      "MLP": [
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.0,
+          "val_f1_tuned": 0.36764705882352944,
+          "threshold": 0.18644370989693634
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.0,
+          "val_f1_tuned": 0.34188034188034183,
+          "threshold": 0.17361811150874834
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.0,
+          "val_f1_tuned": 0.36,
+          "threshold": 0.17066990854022457
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.0,
+          "val_f1_tuned": 0.3655913978494623,
+          "threshold": 0.18235047804289645
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.0,
+          "val_f1_tuned": 0.33730158730158727,
+          "threshold": 0.009575685238502078
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.01923076923076923,
+          "val_f1_tuned": 0.33268101761252444,
+          "threshold": 0.03250899933965423
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.07272727272727272,
+          "val_f1_tuned": 0.34854771784232363,
+          "threshold": 0.015163638786685613
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.09302325581395349,
+          "val_f1_tuned": 0.34,
+          "threshold": 0.016795561242650026
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.08333333333333333,
+          "val_f1_tuned": 0.37154150197628455,
+          "threshold": 0.22761242445157337
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.08333333333333333,
+          "val_f1_tuned": 0.38497652582159625,
+          "threshold": 0.24344979776852987
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.0,
+          "val_f1_tuned": 0.35451505016722407,
+          "threshold": 0.19777373156978112
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.08333333333333333,
+          "val_f1_tuned": 0.3615384615384615,
+          "threshold": 0.2230907861284132
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.08547008547008547,
+          "val_f1_tuned": 0.32887189292543023,
+          "threshold": 0.021405178185917268
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.0925925925925926,
+          "val_f1_tuned": 0.34756097560975613,
+          "threshold": 0.14847531170558903
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.09022556390977443,
+          "val_f1_tuned": 0.3415977961432507,
+          "threshold": 0.06729971402003965
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.0967741935483871,
+          "val_f1_tuned": 0.3412969283276451,
+          "threshold": 0.1309147499484839
+        }
+      ]
+    },
+    "(1f) Full features": {
+      "Naive Bayes (Parzen)": [
+        {
+          "params": {
+            "bandwidth": 0.1
+          },
+          "val_f1_default": 0.2857142857142857,
+          "val_f1_tuned": 0.37837837837837834,
+          "threshold": 0.21761661463613577
+        },
+        {
+          "params": {
+            "bandwidth": 0.25
+          },
+          "val_f1_default": 0.28169014084507044,
+          "val_f1_tuned": 0.3916666666666666,
+          "threshold": 0.14887991013757393
+        },
+        {
+          "params": {
+            "bandwidth": 0.5
+          },
+          "val_f1_default": 0.28346456692913385,
+          "val_f1_tuned": 0.38554216867469876,
+          "threshold": 0.16323189009678726
+        },
+        {
+          "params": {
+            "bandwidth": 1.0
+          },
+          "val_f1_default": 0.23636363636363636,
+          "val_f1_tuned": 0.36718749999999994,
+          "threshold": 0.18331809354907963
+        },
+        {
+          "params": {
+            "bandwidth": "silverman"
+          },
+          "val_f1_default": 0.22535211267605634,
+          "val_f1_tuned": 0.3805668016194331,
+          "threshold": 0.025514970777602765
+        }
+      ],
+      "Least Squares": [
+        {
+          "params": {
+            "reg_lambda": 0.001
+          },
+          "val_f1_default": 0.24793388429752064,
+          "val_f1_tuned": 0.411764705882353,
+          "threshold": 0.2135989274096627
+        },
+        {
+          "params": {
+            "reg_lambda": 0.01
+          },
+          "val_f1_default": 0.24793388429752064,
+          "val_f1_tuned": 0.411764705882353,
+          "threshold": 0.213612821000121
+        },
+        {
+          "params": {
+            "reg_lambda": 0.1
+          },
+          "val_f1_default": 0.24793388429752064,
+          "val_f1_tuned": 0.411764705882353,
+          "threshold": 0.21375003072886214
+        },
+        {
+          "params": {
+            "reg_lambda": 1.0
+          },
+          "val_f1_default": 0.23529411764705882,
+          "val_f1_tuned": 0.411764705882353,
+          "threshold": 0.21311212845743321
+        },
+        {
+          "params": {
+            "reg_lambda": 10.0
+          },
+          "val_f1_default": 0.2385321100917431,
+          "val_f1_tuned": 0.4148148148148148,
+          "threshold": 0.19247955167850875
+        },
+        {
+          "params": {
+            "reg_lambda": 100.0
+          },
+          "val_f1_default": 0.22429906542056074,
+          "val_f1_tuned": 0.40143369175627236,
+          "threshold": 0.187130082391835
+        },
+        {
+          "params": {
+            "reg_lambda": 1000.0
+          },
+          "val_f1_default": 0.10416666666666666,
+          "val_f1_tuned": 0.39682539682539686,
+          "threshold": 0.19575232663223824
+        }
+      ],
+      "MLP": [
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.21568627450980393,
+          "val_f1_tuned": 0.36734693877551017,
+          "threshold": 0.19464808251824045
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.10416666666666666,
+          "val_f1_tuned": 0.3741935483870968,
+          "threshold": 0.18716760716660974
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.2452830188679245,
+          "val_f1_tuned": 0.3490909090909091,
+          "threshold": 0.176569336618748
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.21568627450980393,
+          "val_f1_tuned": 0.36734693877551017,
+          "threshold": 0.19629860489682358
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.32,
+          "val_f1_tuned": 0.3533834586466166,
+          "threshold": 0.20880410625510143
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.2735042735042735,
+          "val_f1_tuned": 0.34184675834970535,
+          "threshold": 0.029196456192725005
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.24516129032258063,
+          "val_f1_tuned": 0.3471882640586797,
+          "threshold": 0.00929737912075632
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.29577464788732394,
+          "val_f1_tuned": 0.3672131147540983,
+          "threshold": 0.1054406676429634
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.23423423423423423,
+          "val_f1_tuned": 0.37168141592920356,
+          "threshold": 0.19602733589005794
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.23636363636363636,
+          "val_f1_tuned": 0.3716216216216216,
+          "threshold": 0.162318615365241
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.25862068965517243,
+          "val_f1_tuned": 0.36486486486486486,
+          "threshold": 0.1482539583544893
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.23423423423423423,
+          "val_f1_tuned": 0.373015873015873,
+          "threshold": 0.17750933864660806
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.22608695652173913,
+          "val_f1_tuned": 0.35882352941176476,
+          "threshold": 0.0871044451347661
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.2241379310344828,
+          "val_f1_tuned": 0.35734870317002887,
+          "threshold": 0.10593276677893312
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.22388059701492535,
+          "val_f1_tuned": 0.3262411347517731,
+          "threshold": 0.09586702023306715
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.2,
+          "val_f1_tuned": 0.3571428571428571,
+          "threshold": 0.20786499919141138
+        }
+      ]
+    },
+    "(1h) Bagging comparison": {
+      "Naive Bayes (Parzen)": [
+        {
+          "params": {
+            "bandwidth": 0.1
+          },
+          "val_f1_default": 0.2857142857142857,
+          "val_f1_tuned": 0.37837837837837834,
+          "threshold": 0.21761661463613577
+        },
+        {
+          "params": {
+            "bandwidth": 0.25
+          },
+          "val_f1_default": 0.28169014084507044,
+          "val_f1_tuned": 0.3916666666666666,
+          "threshold": 0.14887991013757393
+        },
+        {
+          "params": {
+            "bandwidth": 0.5
+          },
+          "val_f1_default": 0.28346456692913385,
+          "val_f1_tuned": 0.38554216867469876,
+          "threshold": 0.16323189009678726
+        },
+        {
+          "params": {
+            "bandwidth": 1.0
+          },
+          "val_f1_default": 0.23636363636363636,
+          "val_f1_tuned": 0.36718749999999994,
+          "threshold": 0.18331809354907963
+        },
+        {
+          "params": {
+            "bandwidth": "silverman"
+          },
+          "val_f1_default": 0.22535211267605634,
+          "val_f1_tuned": 0.3805668016194331,
+          "threshold": 0.025514970777602765
+        }
+      ],
+      "Least Squares": [
+        {
+          "params": {
+            "reg_lambda": 0.001
+          },
+          "val_f1_default": 0.24793388429752064,
+          "val_f1_tuned": 0.411764705882353,
+          "threshold": 0.2135989274096627
+        },
+        {
+          "params": {
+            "reg_lambda": 0.01
+          },
+          "val_f1_default": 0.24793388429752064,
+          "val_f1_tuned": 0.411764705882353,
+          "threshold": 0.213612821000121
+        },
+        {
+          "params": {
+            "reg_lambda": 0.1
+          },
+          "val_f1_default": 0.24793388429752064,
+          "val_f1_tuned": 0.411764705882353,
+          "threshold": 0.21375003072886214
+        },
+        {
+          "params": {
+            "reg_lambda": 1.0
+          },
+          "val_f1_default": 0.23529411764705882,
+          "val_f1_tuned": 0.411764705882353,
+          "threshold": 0.21311212845743321
+        },
+        {
+          "params": {
+            "reg_lambda": 10.0
+          },
+          "val_f1_default": 0.2385321100917431,
+          "val_f1_tuned": 0.4148148148148148,
+          "threshold": 0.19247955167850875
+        },
+        {
+          "params": {
+            "reg_lambda": 100.0
+          },
+          "val_f1_default": 0.22429906542056074,
+          "val_f1_tuned": 0.40143369175627236,
+          "threshold": 0.187130082391835
+        },
+        {
+          "params": {
+            "reg_lambda": 1000.0
+          },
+          "val_f1_default": 0.10416666666666666,
+          "val_f1_tuned": 0.39682539682539686,
+          "threshold": 0.19575232663223824
+        }
+      ],
+      "MLP": [
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.21568627450980393,
+          "val_f1_tuned": 0.36734693877551017,
+          "threshold": 0.19464808251824045
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.10416666666666666,
+          "val_f1_tuned": 0.3741935483870968,
+          "threshold": 0.18716760716660974
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.2452830188679245,
+          "val_f1_tuned": 0.3490909090909091,
+          "threshold": 0.176569336618748
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.21568627450980393,
+          "val_f1_tuned": 0.36734693877551017,
+          "threshold": 0.19629860489682358
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.32,
+          "val_f1_tuned": 0.3533834586466166,
+          "threshold": 0.20880410625510143
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.2735042735042735,
+          "val_f1_tuned": 0.34184675834970535,
+          "threshold": 0.029196456192725005
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.24516129032258063,
+          "val_f1_tuned": 0.3471882640586797,
+          "threshold": 0.00929737912075632
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.29577464788732394,
+          "val_f1_tuned": 0.3672131147540983,
+          "threshold": 0.1054406676429634
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.23423423423423423,
+          "val_f1_tuned": 0.37168141592920356,
+          "threshold": 0.19602733589005794
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.23636363636363636,
+          "val_f1_tuned": 0.3716216216216216,
+          "threshold": 0.162318615365241
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.25862068965517243,
+          "val_f1_tuned": 0.36486486486486486,
+          "threshold": 0.1482539583544893
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.23423423423423423,
+          "val_f1_tuned": 0.373015873015873,
+          "threshold": 0.17750933864660806
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.22608695652173913,
+          "val_f1_tuned": 0.35882352941176476,
+          "threshold": 0.0871044451347661
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.2241379310344828,
+          "val_f1_tuned": 0.35734870317002887,
+          "threshold": 0.10593276677893312
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "val_f1_default": 0.22388059701492535,
+          "val_f1_tuned": 0.3262411347517731,
+          "threshold": 0.09586702023306715
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "val_f1_default": 0.2,
+          "val_f1_tuned": 0.3571428571428571,
+          "threshold": 0.20786499919141138
+        }
+      ],
+      "Bagged NB (Parzen)": [
+        {
+          "params": {
+            "bandwidth": 0.1
+          },
+          "val_f1_default": 0.2929936305732484,
+          "val_f1_tuned": 0.37229437229437234,
+          "threshold": 0.21888462396746425
+        },
+        {
+          "params": {
+            "bandwidth": 0.25
+          },
+          "val_f1_default": 0.2753623188405797,
+          "val_f1_tuned": 0.39473684210526316,
+          "threshold": 0.18341756596499575
+        },
+        {
+          "params": {
+            "bandwidth": 0.5
+          },
+          "val_f1_default": 0.28125,
+          "val_f1_tuned": 0.3861003861003861,
+          "threshold": 0.16117347637461296
+        },
+        {
+          "params": {
+            "bandwidth": 1.0
+          },
+          "val_f1_default": 0.23423423423423423,
+          "val_f1_tuned": 0.3691275167785235,
+          "threshold": 0.15942775624577893
+        },
+        {
+          "params": {
+            "bandwidth": "silverman"
+          },
+          "val_f1_default": 0.2302158273381295,
+          "val_f1_tuned": 0.3900709219858156,
+          "threshold": 0.020605204643137087
+        }
+      ]
+    }
+  }
+}
