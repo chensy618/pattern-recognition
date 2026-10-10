@@ -79,6 +79,66 @@ def group_train_val_test_split(groups, train_frac=0.70, val_frac=0.15, seed=SEED
     return train_idx, val_idx, test_idx
 
 
+def group_kfold_splits(groups, k=5, val_frac=0.15 / 0.85, seed=SEED):
+    """
+    Group k-fold cross-validation *by site* (alternative to the single split).
+
+    The unique site ids are shuffled and divided into k folds of (almost) equal
+    numbers of sites. Fold i is the test set of split i. The sites of the other
+    k - 1 folds are shuffled again and divided into a validation part
+    (`val_frac` of these sites) and a training part. The default val_frac
+    keeps the same train : validation ratio (70 : 15) as the single split.
+
+    Every site is in the test set of exactly one split, and all rows of a site
+    always stay together.
+
+    Returns a list of k (train_idx, val_idx, test_idx) tuples.
+    """
+    groups = np.asarray(groups)
+    rng = np.random.default_rng(seed)
+    sites = rng.permutation(np.unique(groups))
+    folds = np.array_split(sites, k)
+
+    splits = []
+    for i in range(k):
+        test_sites = folds[i]
+        rest = rng.permutation(np.concatenate([folds[j] for j in range(k) if j != i]))
+        n_val = int(round(val_frac * len(rest)))
+        val_sites, train_sites = rest[:n_val], rest[n_val:]
+
+        train_idx = np.where(np.isin(groups, train_sites))[0]
+        val_idx = np.where(np.isin(groups, val_sites))[0]
+        test_idx = np.where(np.isin(groups, test_sites))[0]
+        check_disjoint_sites(groups, train_idx, val_idx, test_idx)
+        splits.append((train_idx, val_idx, test_idx))
+
+    # Every row must be tested exactly once over the k splits.
+    all_test = np.concatenate([s[2] for s in splits])
+    assert len(all_test) == len(groups) and len(np.unique(all_test)) == len(groups)
+    return splits
+
+
+def group_kfold(groups, k=5, seed=SEED):
+    """
+    Plain group k-fold by site, used *inside* a training set to select
+    hyperparameters (SPLIT_METHOD = "holdout_cv").
+
+    `groups` are the site ids of the training rows. Returns a list of k
+    (fit_pos, val_pos) tuples of positions into `groups`; every site is in the
+    validation part of exactly one fold.
+    """
+    groups = np.asarray(groups)
+    rng = np.random.default_rng(seed)
+    folds = np.array_split(rng.permutation(np.unique(groups)), k)
+    splits = []
+    for i in range(k):
+        val_pos = np.where(np.isin(groups, folds[i]))[0]
+        fit_pos = np.where(~np.isin(groups, folds[i]))[0]
+        assert not set(groups[fit_pos]) & set(groups[val_pos]), "site in both parts"
+        splits.append((fit_pos, val_pos))
+    return splits
+
+
 def check_disjoint_sites(groups, train_idx, val_idx, test_idx):
     """Verify that no site appears in more than one of the three sets."""
     s_tr, s_va, s_te = (set(groups[i]) for i in (train_idx, val_idx, test_idx))

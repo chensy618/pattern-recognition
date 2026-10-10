@@ -1,0 +1,29 @@
+X_reference: (915, 8), X_query: (246, 8)
+features: conductivity, sodium, chloride, sulfate, ph, color, turbidity, toc
+
+(2b) Explained variance
+  PC1: 0.3592 (35.92%)   cumulative: 0.3592 (35.92%)
+  PC2: 0.2017 (20.17%)   cumulative: 0.5609 (56.09%)
+
+(2b) PC1: three largest absolute coefficients
+  conductivity +0.5236
+  sulfate      +0.4552
+  sodium       +0.4508
+  all PC1 coefficients: conductivity +0.524, sodium +0.451, chloride +0.370, sulfate +0.455, ph +0.377, color -0.188, turbidity +0.024, toc +0.015
+
+(2d) Threshold tau = 95% quantile of the reference scores = 19.7148
+  reference records above tau: 46 / 915
+  flagged query records: 37 / 246
+
+(2d) Ten highest-scoring query records
+  rank  record_id          score  flagged
+     1  Wd0ff3918e355     65.142  True
+     2  Wda7c4446ab56     59.781  True
+     3  Wfcd3c52dacfc     55.785  True
+     4  We39fa2ed29ab     54.435  True
+     5  We7e67de2c269     47.671  True
+     6  Wfaca0e1ab9b2     46.362  True
+     7  Wce50b72ffd36     46.067  True
+     8  We21615997b66     45.645  True
+     9  Weef3f9524a87     40.905  True
+    10  Wfdeae37841c3     40.794  True

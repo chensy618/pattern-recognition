@@ -1,5 +1,8 @@
 {
   "seed": 2026,
+  "split_method": "holdout",
+  "k": null,
+  "inner_folds": null,
   "split": {
     "train": {
       "sites": 347,
@@ -22,6 +25,9 @@
   "grids": {
     "naive_bayes": [
       {
+        "bandwidth": 0.05
+      },
+      {
         "bandwidth": 0.1
       },
       {
@@ -32,6 +38,12 @@
       },
       {
         "bandwidth": 1.0
+      },
+      {
+        "bandwidth": 2.0
+      },
+      {
+        "bandwidth": 4.0
       },
       {
         "bandwidth": "silverman"
@@ -58,11 +70,161 @@
       },
       {
         "reg_lambda": 1000.0
+      },
+      {
+        "reg_lambda": 10000.0
+      },
+      {
+        "reg_lambda": 100000.0
       }
     ],
     "mlp": [
       {
         "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.001,
+        "n_epochs": 50,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.001,
+        "n_epochs": 50,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.001,
+        "n_epochs": 100,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.001,
+        "n_epochs": 100,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.001,
+        "n_epochs": 200,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.001,
+        "n_epochs": 200,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 50,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 50,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 100,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 100,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 200,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 200,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 50,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 50,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 100,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 100,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 200,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          16
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 200,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
           32,
           16
         ],
@@ -102,6 +264,78 @@
           32,
           16
         ],
+        "learning_rate": 0.001,
+        "n_epochs": 200,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "learning_rate": 0.001,
+        "n_epochs": 200,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 50,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 50,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 100,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 100,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 200,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 200,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          32,
+          16
+        ],
         "learning_rate": 0.01,
         "n_epochs": 50,
         "batch_size": 32
@@ -135,7 +369,26 @@
       },
       {
         "hidden_sizes": [
+          32,
           16
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 200,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 200,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          64,
+          32
         ],
         "learning_rate": 0.001,
         "n_epochs": 50,
@@ -143,7 +396,8 @@
       },
       {
         "hidden_sizes": [
-          16
+          64,
+          32
         ],
         "learning_rate": 0.001,
         "n_epochs": 50,
@@ -151,7 +405,8 @@
       },
       {
         "hidden_sizes": [
-          16
+          64,
+          32
         ],
         "learning_rate": 0.001,
         "n_epochs": 100,
@@ -159,7 +414,8 @@
       },
       {
         "hidden_sizes": [
-          16
+          64,
+          32
         ],
         "learning_rate": 0.001,
         "n_epochs": 100,
@@ -167,7 +423,80 @@
       },
       {
         "hidden_sizes": [
-          16
+          64,
+          32
+        ],
+        "learning_rate": 0.001,
+        "n_epochs": 200,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          64,
+          32
+        ],
+        "learning_rate": 0.001,
+        "n_epochs": 200,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          64,
+          32
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 50,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          64,
+          32
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 50,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          64,
+          32
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 100,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          64,
+          32
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 100,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          64,
+          32
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 200,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          64,
+          32
+        ],
+        "learning_rate": 0.003,
+        "n_epochs": 200,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          64,
+          32
         ],
         "learning_rate": 0.01,
         "n_epochs": 50,
@@ -175,7 +504,8 @@
       },
       {
         "hidden_sizes": [
-          16
+          64,
+          32
         ],
         "learning_rate": 0.01,
         "n_epochs": 50,
@@ -183,7 +513,8 @@
       },
       {
         "hidden_sizes": [
-          16
+          64,
+          32
         ],
         "learning_rate": 0.01,
         "n_epochs": 100,
@@ -191,14 +522,36 @@
       },
       {
         "hidden_sizes": [
-          16
+          64,
+          32
         ],
         "learning_rate": 0.01,
         "n_epochs": 100,
+        "batch_size": 64
+      },
+      {
+        "hidden_sizes": [
+          64,
+          32
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 200,
+        "batch_size": 32
+      },
+      {
+        "hidden_sizes": [
+          64,
+          32
+        ],
+        "learning_rate": 0.01,
+        "n_epochs": 200,
         "batch_size": 64
       }
     ],
     "bagging": [
+      {
+        "bandwidth": 0.05
+      },
       {
         "bandwidth": 0.1
       },
@@ -212,6 +565,12 @@
         "bandwidth": 1.0
       },
       {
+        "bandwidth": 2.0
+      },
+      {
+        "bandwidth": 4.0
+      },
+      {
         "bandwidth": "silverman"
       }
     ]
@@ -221,43 +580,123 @@
       "Naive Bayes (Parzen)": [
         {
           "params": {
+            "bandwidth": 0.05
+          },
+          "threshold": 0.22410875907718245,
+          "val_precision_default": 0.13513513513513514,
+          "val_recall_default": 0.056179775280898875,
+          "val_f1_default": 0.07936507936507936,
+          "val_accuracy_default": 0.7489177489177489,
+          "val_precision_tuned": 0.30952380952380953,
+          "val_recall_tuned": 0.43820224719101125,
+          "val_f1_tuned": 0.3627906976744187,
+          "val_accuracy_tuned": 0.7034632034632035,
+          "selected": false
+        },
+        {
+          "params": {
             "bandwidth": 0.1
           },
+          "threshold": 0.19051673858407178,
+          "val_precision_default": 0.15,
+          "val_recall_default": 0.06741573033707865,
           "val_f1_default": 0.09302325581395349,
+          "val_accuracy_default": 0.7467532467532467,
+          "val_precision_tuned": 0.3283582089552239,
+          "val_recall_tuned": 0.4943820224719101,
           "val_f1_tuned": 0.3946188340807175,
-          "threshold": 0.19051673858407178
+          "val_accuracy_tuned": 0.7077922077922078,
+          "selected": true
         },
         {
           "params": {
             "bandwidth": 0.25
           },
+          "threshold": 0.15167258319249882,
+          "val_precision_default": 0.35714285714285715,
+          "val_recall_default": 0.056179775280898875,
           "val_f1_default": 0.0970873786407767,
+          "val_accuracy_default": 0.7987012987012987,
+          "val_precision_tuned": 0.2777777777777778,
+          "val_recall_tuned": 0.5617977528089888,
           "val_f1_tuned": 0.3717472118959108,
-          "threshold": 0.15167258319249882
+          "val_accuracy_tuned": 0.6341991341991342,
+          "selected": false
         },
         {
           "params": {
             "bandwidth": 0.5
           },
+          "threshold": 0.17445846216037314,
+          "val_precision_default": 0.42857142857142855,
+          "val_recall_default": 0.033707865168539325,
           "val_f1_default": 0.06249999999999999,
+          "val_accuracy_default": 0.8051948051948052,
+          "val_precision_tuned": 0.26436781609195403,
+          "val_recall_tuned": 0.5168539325842697,
           "val_f1_tuned": 0.34980988593155893,
-          "threshold": 0.17445846216037314
+          "val_accuracy_tuned": 0.6298701298701299,
+          "selected": false
         },
         {
           "params": {
             "bandwidth": 1.0
           },
+          "threshold": 0.1422188175744756,
+          "val_precision_default": 0.2857142857142857,
+          "val_recall_default": 0.02247191011235955,
           "val_f1_default": 0.041666666666666664,
+          "val_accuracy_default": 0.8008658008658008,
+          "val_precision_tuned": 0.2267080745341615,
+          "val_recall_tuned": 0.8202247191011236,
           "val_f1_tuned": 0.3552311435523115,
-          "threshold": 0.1422188175744756
+          "val_accuracy_tuned": 0.4264069264069264,
+          "selected": false
+        },
+        {
+          "params": {
+            "bandwidth": 2.0
+          },
+          "threshold": 0.18149458457257614,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.24774774774774774,
+          "val_recall_tuned": 0.6179775280898876,
+          "val_f1_tuned": 0.3536977491961415,
+          "val_accuracy_tuned": 0.564935064935065,
+          "selected": false
+        },
+        {
+          "params": {
+            "bandwidth": 4.0
+          },
+          "threshold": 0.17386886542775273,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.24774774774774774,
+          "val_recall_tuned": 0.6179775280898876,
+          "val_f1_tuned": 0.3536977491961415,
+          "val_accuracy_tuned": 0.564935064935065,
+          "selected": false
         },
         {
           "params": {
             "bandwidth": "silverman"
           },
+          "threshold": 0.019370285143746592,
+          "val_precision_default": 0.17142857142857143,
+          "val_recall_default": 0.06741573033707865,
           "val_f1_default": 0.0967741935483871,
+          "val_accuracy_default": 0.7575757575757576,
+          "val_precision_tuned": 0.25728155339805825,
+          "val_recall_tuned": 0.5955056179775281,
           "val_f1_tuned": 0.35932203389830514,
-          "threshold": 0.019370285143746592
+          "val_accuracy_tuned": 0.5909090909090909,
+          "selected": false
         }
       ],
       "Least Squares": [
@@ -265,184 +704,158 @@
           "params": {
             "reg_lambda": 0.001
           },
+          "threshold": 0.18104573884349406,
+          "val_precision_default": 0.14285714285714285,
+          "val_recall_default": 0.02247191011235955,
           "val_f1_default": 0.038834951456310676,
+          "val_accuracy_default": 0.7857142857142857,
+          "val_precision_tuned": 0.24583333333333332,
+          "val_recall_tuned": 0.6629213483146067,
           "val_f1_tuned": 0.35866261398176286,
-          "threshold": 0.18104573884349406
+          "val_accuracy_tuned": 0.5432900432900433,
+          "selected": false
         },
         {
           "params": {
             "reg_lambda": 0.01
           },
+          "threshold": 0.18104535773752628,
+          "val_precision_default": 0.14285714285714285,
+          "val_recall_default": 0.02247191011235955,
           "val_f1_default": 0.038834951456310676,
+          "val_accuracy_default": 0.7857142857142857,
+          "val_precision_tuned": 0.24583333333333332,
+          "val_recall_tuned": 0.6629213483146067,
           "val_f1_tuned": 0.35866261398176286,
-          "threshold": 0.18104535773752628
+          "val_accuracy_tuned": 0.5432900432900433,
+          "selected": false
         },
         {
           "params": {
             "reg_lambda": 0.1
           },
+          "threshold": 0.16109072634820062,
+          "val_precision_default": 0.14285714285714285,
+          "val_recall_default": 0.02247191011235955,
           "val_f1_default": 0.038834951456310676,
+          "val_accuracy_default": 0.7857142857142857,
+          "val_precision_tuned": 0.2305084745762712,
+          "val_recall_tuned": 0.7640449438202247,
           "val_f1_tuned": 0.3541666666666667,
-          "threshold": 0.16109072634820062
+          "val_accuracy_tuned": 0.46320346320346323,
+          "selected": false
         },
         {
           "params": {
             "reg_lambda": 1.0
           },
+          "threshold": 0.17899441426273424,
+          "val_precision_default": 0.14285714285714285,
+          "val_recall_default": 0.02247191011235955,
           "val_f1_default": 0.038834951456310676,
+          "val_accuracy_default": 0.7857142857142857,
+          "val_precision_tuned": 0.23983739837398374,
+          "val_recall_tuned": 0.6629213483146067,
           "val_f1_tuned": 0.3522388059701492,
-          "threshold": 0.17899441426273424
+          "val_accuracy_tuned": 0.5303030303030303,
+          "selected": false
         },
         {
           "params": {
             "reg_lambda": 10.0
           },
+          "threshold": 0.1742018766216118,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
           "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.22932330827067668,
+          "val_recall_tuned": 0.6853932584269663,
           "val_f1_tuned": 0.3436619718309859,
-          "threshold": 0.1742018766216118
+          "val_accuracy_tuned": 0.49567099567099565,
+          "selected": false
         },
         {
           "params": {
             "reg_lambda": 100.0
           },
+          "threshold": 0.16278953818858327,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
           "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.2214765100671141,
+          "val_recall_tuned": 0.7415730337078652,
           "val_f1_tuned": 0.34108527131782945,
-          "threshold": 0.16278953818858327
+          "val_accuracy_tuned": 0.44805194805194803,
+          "selected": false
         },
         {
           "params": {
             "reg_lambda": 1000.0
           },
+          "threshold": 0.16835179613186915,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
           "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.21794871794871795,
+          "val_recall_tuned": 0.7640449438202247,
           "val_f1_tuned": 0.33915211970074816,
-          "threshold": 0.16835179613186915
+          "val_accuracy_tuned": 0.4264069264069264,
+          "selected": false
+        },
+        {
+          "params": {
+            "reg_lambda": 10000.0
+          },
+          "threshold": 0.18770593404761934,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.2717948717948718,
+          "val_recall_tuned": 0.5955056179775281,
+          "val_f1_tuned": 0.37323943661971826,
+          "val_accuracy_tuned": 0.6147186147186147,
+          "selected": false
+        },
+        {
+          "params": {
+            "reg_lambda": 100000.0
+          },
+          "threshold": 0.18474944139133043,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.27450980392156865,
+          "val_recall_tuned": 0.6292134831460674,
+          "val_f1_tuned": 0.3822525597269625,
+          "val_accuracy_tuned": 0.6082251082251082,
+          "selected": true
         }
       ],
       "MLP": [
         {
           "params": {
             "hidden_sizes": [
-              32,
               16
             ],
             "learning_rate": 0.001,
             "n_epochs": 50,
             "batch_size": 32
           },
-          "val_f1_default": 0.0,
-          "val_f1_tuned": 0.36764705882352944,
-          "threshold": 0.18644370989693634
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.001,
-            "n_epochs": 50,
-            "batch_size": 64
-          },
-          "val_f1_default": 0.0,
-          "val_f1_tuned": 0.34188034188034183,
-          "threshold": 0.17361811150874834
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.001,
-            "n_epochs": 100,
-            "batch_size": 32
-          },
-          "val_f1_default": 0.0,
-          "val_f1_tuned": 0.36,
-          "threshold": 0.17066990854022457
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.001,
-            "n_epochs": 100,
-            "batch_size": 64
-          },
-          "val_f1_default": 0.0,
-          "val_f1_tuned": 0.3655913978494623,
-          "threshold": 0.18235047804289645
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.01,
-            "n_epochs": 50,
-            "batch_size": 32
-          },
-          "val_f1_default": 0.0,
-          "val_f1_tuned": 0.33730158730158727,
-          "threshold": 0.009575685238502078
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.01,
-            "n_epochs": 50,
-            "batch_size": 64
-          },
-          "val_f1_default": 0.01923076923076923,
-          "val_f1_tuned": 0.33268101761252444,
-          "threshold": 0.03250899933965423
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.01,
-            "n_epochs": 100,
-            "batch_size": 32
-          },
-          "val_f1_default": 0.07272727272727272,
-          "val_f1_tuned": 0.34854771784232363,
-          "threshold": 0.015163638786685613
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.01,
-            "n_epochs": 100,
-            "batch_size": 64
-          },
-          "val_f1_default": 0.09302325581395349,
-          "val_f1_tuned": 0.34,
-          "threshold": 0.016795561242650026
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              16
-            ],
-            "learning_rate": 0.001,
-            "n_epochs": 50,
-            "batch_size": 32
-          },
+          "threshold": 0.22761242445157337,
+          "val_precision_default": 0.5714285714285714,
+          "val_recall_default": 0.0449438202247191,
           "val_f1_default": 0.08333333333333333,
+          "val_accuracy_default": 0.8095238095238095,
+          "val_precision_tuned": 0.2865853658536585,
+          "val_recall_tuned": 0.5280898876404494,
           "val_f1_tuned": 0.37154150197628455,
-          "threshold": 0.22761242445157337
+          "val_accuracy_tuned": 0.6558441558441559,
+          "selected": false
         },
         {
           "params": {
@@ -453,9 +866,16 @@
             "n_epochs": 50,
             "batch_size": 64
           },
+          "threshold": 0.24344979776852987,
+          "val_precision_default": 0.5714285714285714,
+          "val_recall_default": 0.0449438202247191,
           "val_f1_default": 0.08333333333333333,
+          "val_accuracy_default": 0.8095238095238095,
+          "val_precision_tuned": 0.33064516129032256,
+          "val_recall_tuned": 0.4606741573033708,
           "val_f1_tuned": 0.38497652582159625,
-          "threshold": 0.24344979776852987
+          "val_accuracy_tuned": 0.7164502164502164,
+          "selected": true
         },
         {
           "params": {
@@ -466,9 +886,16 @@
             "n_epochs": 100,
             "batch_size": 32
           },
+          "threshold": 0.19777373156978112,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
           "val_f1_default": 0.0,
+          "val_accuracy_default": 0.7965367965367965,
+          "val_precision_tuned": 0.2523809523809524,
+          "val_recall_tuned": 0.5955056179775281,
           "val_f1_tuned": 0.35451505016722407,
-          "threshold": 0.19777373156978112
+          "val_accuracy_tuned": 0.5822510822510822,
+          "selected": false
         },
         {
           "params": {
@@ -479,35 +906,216 @@
             "n_epochs": 100,
             "batch_size": 64
           },
+          "threshold": 0.2230907861284132,
+          "val_precision_default": 0.5714285714285714,
+          "val_recall_default": 0.0449438202247191,
           "val_f1_default": 0.08333333333333333,
+          "val_accuracy_default": 0.8095238095238095,
+          "val_precision_tuned": 0.27485380116959063,
+          "val_recall_tuned": 0.5280898876404494,
           "val_f1_tuned": 0.3615384615384615,
-          "threshold": 0.2230907861284132
+          "val_accuracy_tuned": 0.6406926406926406,
+          "selected": false
         },
         {
           "params": {
             "hidden_sizes": [
               16
             ],
-            "learning_rate": 0.01,
+            "learning_rate": 0.001,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.10744851752015962,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.7965367965367965,
+          "val_precision_tuned": 0.228125,
+          "val_recall_tuned": 0.8202247191011236,
+          "val_f1_tuned": 0.35696821515892424,
+          "val_accuracy_tuned": 0.43073593073593075,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.19642664933020357,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.7965367965367965,
+          "val_precision_tuned": 0.25,
+          "val_recall_tuned": 0.5955056179775281,
+          "val_f1_tuned": 0.3521594684385382,
+          "val_accuracy_tuned": 0.577922077922078,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.003,
             "n_epochs": 50,
             "batch_size": 32
           },
-          "val_f1_default": 0.08547008547008547,
-          "val_f1_tuned": 0.32887189292543023,
-          "threshold": 0.021405178185917268
+          "threshold": 0.13378335586717363,
+          "val_precision_default": 0.25,
+          "val_recall_default": 0.033707865168539325,
+          "val_f1_default": 0.05940594059405941,
+          "val_accuracy_default": 0.7943722943722944,
+          "val_precision_tuned": 0.23157894736842105,
+          "val_recall_tuned": 0.7415730337078652,
+          "val_f1_tuned": 0.3529411764705882,
+          "val_accuracy_tuned": 0.47619047619047616,
+          "selected": false
         },
         {
           "params": {
             "hidden_sizes": [
               16
             ],
-            "learning_rate": 0.01,
+            "learning_rate": 0.003,
             "n_epochs": 50,
             "batch_size": 64
           },
+          "threshold": 0.20707843225888778,
+          "val_precision_default": 0.3333333333333333,
+          "val_recall_default": 0.0449438202247191,
+          "val_f1_default": 0.07920792079207921,
+          "val_accuracy_default": 0.7987012987012987,
+          "val_precision_tuned": 0.26519337016574585,
+          "val_recall_tuned": 0.5393258426966292,
+          "val_f1_tuned": 0.35555555555555557,
+          "val_accuracy_tuned": 0.6233766233766234,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.13652687874153804,
+          "val_precision_default": 0.19230769230769232,
+          "val_recall_default": 0.056179775280898875,
+          "val_f1_default": 0.08695652173913043,
+          "val_accuracy_default": 0.7727272727272727,
+          "val_precision_tuned": 0.23333333333333334,
+          "val_recall_tuned": 0.6292134831460674,
+          "val_f1_tuned": 0.3404255319148936,
+          "val_accuracy_tuned": 0.5303030303030303,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.15589488016340833,
+          "val_precision_default": 0.2631578947368421,
+          "val_recall_default": 0.056179775280898875,
           "val_f1_default": 0.0925925925925926,
+          "val_accuracy_default": 0.7878787878787878,
+          "val_precision_tuned": 0.244,
+          "val_recall_tuned": 0.6853932584269663,
+          "val_f1_tuned": 0.35988200589970504,
+          "val_accuracy_tuned": 0.5303030303030303,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.010742008673569304,
+          "val_precision_default": 0.14285714285714285,
+          "val_recall_default": 0.06741573033707865,
+          "val_f1_default": 0.0916030534351145,
+          "val_accuracy_default": 0.7424242424242424,
+          "val_precision_tuned": 0.19727891156462585,
+          "val_recall_tuned": 0.9775280898876404,
+          "val_f1_tuned": 0.3283018867924528,
+          "val_accuracy_tuned": 0.22943722943722944,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.14997456847048288,
+          "val_precision_default": 0.19230769230769232,
+          "val_recall_default": 0.056179775280898875,
+          "val_f1_default": 0.08695652173913043,
+          "val_accuracy_default": 0.7727272727272727,
+          "val_precision_tuned": 0.24170616113744076,
+          "val_recall_tuned": 0.5730337078651685,
+          "val_f1_tuned": 0.33999999999999997,
+          "val_accuracy_tuned": 0.5714285714285714,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.021405178185917268,
+          "val_precision_default": 0.17857142857142858,
+          "val_recall_default": 0.056179775280898875,
+          "val_f1_default": 0.08547008547008547,
+          "val_accuracy_default": 0.7683982683982684,
+          "val_precision_tuned": 0.19815668202764977,
+          "val_recall_tuned": 0.9662921348314607,
+          "val_f1_tuned": 0.32887189292543023,
+          "val_accuracy_tuned": 0.24025974025974026,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.14847531170558903,
+          "val_precision_default": 0.2631578947368421,
+          "val_recall_default": 0.056179775280898875,
+          "val_f1_default": 0.0925925925925926,
+          "val_accuracy_default": 0.7878787878787878,
+          "val_precision_tuned": 0.2384937238493724,
+          "val_recall_tuned": 0.6404494382022472,
           "val_f1_tuned": 0.34756097560975613,
-          "threshold": 0.14847531170558903
+          "val_accuracy_tuned": 0.5367965367965368,
+          "selected": false
         },
         {
           "params": {
@@ -518,9 +1126,16 @@
             "n_epochs": 100,
             "batch_size": 32
           },
+          "threshold": 0.06729971402003965,
+          "val_precision_default": 0.13636363636363635,
+          "val_recall_default": 0.06741573033707865,
           "val_f1_default": 0.09022556390977443,
+          "val_accuracy_default": 0.7380952380952381,
+          "val_precision_tuned": 0.22627737226277372,
+          "val_recall_tuned": 0.6966292134831461,
           "val_f1_tuned": 0.3415977961432507,
-          "threshold": 0.06729971402003965
+          "val_accuracy_tuned": 0.48268398268398266,
+          "selected": false
         },
         {
           "params": {
@@ -531,9 +1146,812 @@
             "n_epochs": 100,
             "batch_size": 64
           },
+          "threshold": 0.1309147499484839,
+          "val_precision_default": 0.17142857142857143,
+          "val_recall_default": 0.06741573033707865,
           "val_f1_default": 0.0967741935483871,
+          "val_accuracy_default": 0.7575757575757576,
+          "val_precision_tuned": 0.24509803921568626,
+          "val_recall_tuned": 0.5617977528089888,
           "val_f1_tuned": 0.3412969283276451,
-          "threshold": 0.1309147499484839
+          "val_accuracy_tuned": 0.5822510822510822,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.023628975423530395,
+          "val_precision_default": 0.14285714285714285,
+          "val_recall_default": 0.06741573033707865,
+          "val_f1_default": 0.0916030534351145,
+          "val_accuracy_default": 0.7424242424242424,
+          "val_precision_tuned": 0.21153846153846154,
+          "val_recall_tuned": 0.7415730337078652,
+          "val_f1_tuned": 0.3291770573566085,
+          "val_accuracy_tuned": 0.41774891774891776,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.07419102900543385,
+          "val_precision_default": 0.13636363636363635,
+          "val_recall_default": 0.06741573033707865,
+          "val_f1_default": 0.09022556390977443,
+          "val_accuracy_default": 0.7380952380952381,
+          "val_precision_tuned": 0.23015873015873015,
+          "val_recall_tuned": 0.651685393258427,
+          "val_f1_tuned": 0.34017595307917886,
+          "val_accuracy_tuned": 0.512987012987013,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.18644370989693634,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.273224043715847,
+          "val_recall_tuned": 0.5617977528089888,
+          "val_f1_tuned": 0.36764705882352944,
+          "val_accuracy_tuned": 0.6277056277056277,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.17361811150874834,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.22900763358778625,
+          "val_recall_tuned": 0.6741573033707865,
+          "val_f1_tuned": 0.34188034188034183,
+          "val_accuracy_tuned": 0.5,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.17066990854022457,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.2559241706161137,
+          "val_recall_tuned": 0.6067415730337079,
+          "val_f1_tuned": 0.36,
+          "val_accuracy_tuned": 0.5844155844155844,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.18235047804289645,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.26842105263157895,
+          "val_recall_tuned": 0.5730337078651685,
+          "val_f1_tuned": 0.3655913978494623,
+          "val_accuracy_tuned": 0.6168831168831169,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.13618488136671572,
+          "val_precision_default": 0.2222222222222222,
+          "val_recall_default": 0.02247191011235955,
+          "val_f1_default": 0.04081632653061224,
+          "val_accuracy_default": 0.7965367965367965,
+          "val_precision_tuned": 0.25,
+          "val_recall_tuned": 0.5955056179775281,
+          "val_f1_tuned": 0.3521594684385382,
+          "val_accuracy_tuned": 0.577922077922078,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.1900032106239238,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.28,
+          "val_recall_tuned": 0.550561797752809,
+          "val_f1_tuned": 0.3712121212121212,
+          "val_accuracy_tuned": 0.6406926406926406,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.1264071239520885,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.22813688212927757,
+          "val_recall_tuned": 0.6741573033707865,
+          "val_f1_tuned": 0.3409090909090909,
+          "val_accuracy_tuned": 0.49783549783549785,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.1826292784083993,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.2702702702702703,
+          "val_recall_tuned": 0.5617977528089888,
+          "val_f1_tuned": 0.36496350364963503,
+          "val_accuracy_tuned": 0.6233766233766234,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.1310774671110685,
+          "val_precision_default": 0.15151515151515152,
+          "val_recall_default": 0.056179775280898875,
+          "val_f1_default": 0.0819672131147541,
+          "val_accuracy_default": 0.7575757575757576,
+          "val_precision_tuned": 0.24311926605504589,
+          "val_recall_tuned": 0.5955056179775281,
+          "val_f1_tuned": 0.34527687296416937,
+          "val_accuracy_tuned": 0.564935064935065,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.13089499880874164,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.23938223938223938,
+          "val_recall_tuned": 0.6966292134831461,
+          "val_f1_tuned": 0.3563218390804598,
+          "val_accuracy_tuned": 0.5151515151515151,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.0035297161573962683,
+          "val_precision_default": 0.20689655172413793,
+          "val_recall_default": 0.06741573033707865,
+          "val_f1_default": 0.10169491525423728,
+          "val_accuracy_default": 0.7705627705627706,
+          "val_precision_tuned": 0.19642857142857142,
+          "val_recall_tuned": 0.9887640449438202,
+          "val_f1_tuned": 0.32774674115456237,
+          "val_accuracy_tuned": 0.21861471861471862,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.10282274423405117,
+          "val_precision_default": 0.2222222222222222,
+          "val_recall_default": 0.02247191011235955,
+          "val_f1_default": 0.04081632653061224,
+          "val_accuracy_default": 0.7965367965367965,
+          "val_precision_tuned": 0.22764227642276422,
+          "val_recall_tuned": 0.6292134831460674,
+          "val_f1_tuned": 0.3343283582089552,
+          "val_accuracy_tuned": 0.5173160173160173,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.009575685238502078,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.20481927710843373,
+          "val_recall_tuned": 0.9550561797752809,
+          "val_f1_tuned": 0.33730158730158727,
+          "val_accuracy_tuned": 0.27705627705627706,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.03250899933965423,
+          "val_precision_default": 0.06666666666666667,
+          "val_recall_default": 0.011235955056179775,
+          "val_f1_default": 0.01923076923076923,
+          "val_accuracy_default": 0.7792207792207793,
+          "val_precision_tuned": 0.2014218009478673,
+          "val_recall_tuned": 0.9550561797752809,
+          "val_f1_tuned": 0.33268101761252444,
+          "val_accuracy_tuned": 0.2619047619047619,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.015163638786685613,
+          "val_precision_default": 0.19047619047619047,
+          "val_recall_default": 0.0449438202247191,
+          "val_f1_default": 0.07272727272727272,
+          "val_accuracy_default": 0.7792207792207793,
+          "val_precision_tuned": 0.21374045801526717,
+          "val_recall_tuned": 0.9438202247191011,
+          "val_f1_tuned": 0.34854771784232363,
+          "val_accuracy_tuned": 0.3203463203463203,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.016795561242650026,
+          "val_precision_default": 0.15,
+          "val_recall_default": 0.06741573033707865,
+          "val_f1_default": 0.09302325581395349,
+          "val_accuracy_default": 0.7467532467532467,
+          "val_precision_tuned": 0.20681265206812652,
+          "val_recall_tuned": 0.9550561797752809,
+          "val_f1_tuned": 0.34,
+          "val_accuracy_tuned": 0.2857142857142857,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.006810997545006233,
+          "val_precision_default": 0.12903225806451613,
+          "val_recall_default": 0.0449438202247191,
+          "val_f1_default": 0.06666666666666667,
+          "val_accuracy_default": 0.7575757575757576,
+          "val_precision_tuned": 0.21354166666666666,
+          "val_recall_tuned": 0.9213483146067416,
+          "val_f1_tuned": 0.346723044397463,
+          "val_accuracy_tuned": 0.33116883116883117,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.002956665431981866,
+          "val_precision_default": 0.19047619047619047,
+          "val_recall_default": 0.0898876404494382,
+          "val_f1_default": 0.12213740458015267,
+          "val_accuracy_default": 0.7510822510822511,
+          "val_precision_tuned": 0.2037037037037037,
+          "val_recall_tuned": 0.9887640449438202,
+          "val_f1_tuned": 0.3378119001919385,
+          "val_accuracy_tuned": 0.2532467532467532,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.12608832966001343,
+          "val_precision_default": 0.5238095238095238,
+          "val_recall_default": 0.12359550561797752,
+          "val_f1_default": 0.2,
+          "val_accuracy_default": 0.8095238095238095,
+          "val_precision_tuned": 0.22058823529411764,
+          "val_recall_tuned": 0.6741573033707865,
+          "val_f1_tuned": 0.33240997229916897,
+          "val_accuracy_tuned": 0.47835497835497837,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.1418227312312778,
+          "val_precision_default": 0.5,
+          "val_recall_default": 0.07865168539325842,
+          "val_f1_default": 0.13592233009708737,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.22568093385214008,
+          "val_recall_tuned": 0.651685393258427,
+          "val_f1_tuned": 0.3352601156069364,
+          "val_accuracy_tuned": 0.5021645021645021,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.09893916751842717,
+          "val_precision_default": 0.4642857142857143,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.22222222222222218,
+          "val_accuracy_default": 0.803030303030303,
+          "val_precision_tuned": 0.22847682119205298,
+          "val_recall_tuned": 0.7752808988764045,
+          "val_f1_tuned": 0.3529411764705882,
+          "val_accuracy_tuned": 0.4523809523809524,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.027942695744487635,
+          "val_precision_default": 0.48,
+          "val_recall_default": 0.1348314606741573,
+          "val_f1_default": 0.21052631578947367,
+          "val_accuracy_default": 0.8051948051948052,
+          "val_precision_tuned": 0.1956043956043956,
+          "val_recall_tuned": 1.0,
+          "val_f1_tuned": 0.3272058823529412,
+          "val_accuracy_tuned": 0.2077922077922078,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.11707353577472468,
+          "val_precision_default": 0.42857142857142855,
+          "val_recall_default": 0.10112359550561797,
+          "val_f1_default": 0.16363636363636364,
+          "val_accuracy_default": 0.8008658008658008,
+          "val_precision_tuned": 0.26046511627906976,
+          "val_recall_tuned": 0.6292134831460674,
+          "val_f1_tuned": 0.3684210526315789,
+          "val_accuracy_tuned": 0.5844155844155844,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.11178712737291253,
+          "val_precision_default": 0.5238095238095238,
+          "val_recall_default": 0.12359550561797752,
+          "val_f1_default": 0.2,
+          "val_accuracy_default": 0.8095238095238095,
+          "val_precision_tuned": 0.2302158273381295,
+          "val_recall_tuned": 0.7191011235955056,
+          "val_f1_tuned": 0.34877384196185285,
+          "val_accuracy_tuned": 0.48268398268398266,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.10053521579663065,
+          "val_precision_default": 0.5238095238095238,
+          "val_recall_default": 0.12359550561797752,
+          "val_f1_default": 0.2,
+          "val_accuracy_default": 0.8095238095238095,
+          "val_precision_tuned": 0.24110671936758893,
+          "val_recall_tuned": 0.6853932584269663,
+          "val_f1_tuned": 0.3567251461988304,
+          "val_accuracy_tuned": 0.5238095238095238,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.10339484205377225,
+          "val_precision_default": 0.48,
+          "val_recall_default": 0.1348314606741573,
+          "val_f1_default": 0.21052631578947367,
+          "val_accuracy_default": 0.8051948051948052,
+          "val_precision_tuned": 0.22549019607843138,
+          "val_recall_tuned": 0.7752808988764045,
+          "val_f1_tuned": 0.34936708860759497,
+          "val_accuracy_tuned": 0.44372294372294374,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.1346619879478332,
+          "val_precision_default": 0.47058823529411764,
+          "val_recall_default": 0.0898876404494382,
+          "val_f1_default": 0.1509433962264151,
+          "val_accuracy_default": 0.8051948051948052,
+          "val_precision_tuned": 0.27184466019417475,
+          "val_recall_tuned": 0.6292134831460674,
+          "val_f1_tuned": 0.3796610169491525,
+          "val_accuracy_tuned": 0.6038961038961039,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.1340634036132466,
+          "val_precision_default": 0.5238095238095238,
+          "val_recall_default": 0.12359550561797752,
+          "val_f1_default": 0.2,
+          "val_accuracy_default": 0.8095238095238095,
+          "val_precision_tuned": 0.2545454545454545,
+          "val_recall_tuned": 0.6292134831460674,
+          "val_f1_tuned": 0.3624595469255663,
+          "val_accuracy_tuned": 0.5735930735930735,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.09264987402200295,
+          "val_precision_default": 0.5714285714285714,
+          "val_recall_default": 0.0449438202247191,
+          "val_f1_default": 0.08333333333333333,
+          "val_accuracy_default": 0.8095238095238095,
+          "val_precision_tuned": 0.2727272727272727,
+          "val_recall_tuned": 0.6404494382022472,
+          "val_f1_tuned": 0.3825503355704698,
+          "val_accuracy_tuned": 0.6017316017316018,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.1626358264122705,
+          "val_precision_default": 0.42857142857142855,
+          "val_recall_default": 0.1348314606741573,
+          "val_f1_default": 0.20512820512820515,
+          "val_accuracy_default": 0.7987012987012987,
+          "val_precision_tuned": 0.2808988764044944,
+          "val_recall_tuned": 0.5617977528089888,
+          "val_f1_tuned": 0.37453183520599254,
+          "val_accuracy_tuned": 0.6385281385281385,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.14548662488336964,
+          "val_precision_default": 0.2702702702702703,
+          "val_recall_default": 0.11235955056179775,
+          "val_f1_default": 0.15873015873015872,
+          "val_accuracy_default": 0.7705627705627706,
+          "val_precision_tuned": 0.25229357798165136,
+          "val_recall_tuned": 0.6179775280898876,
+          "val_f1_tuned": 0.3583061889250815,
+          "val_accuracy_tuned": 0.5735930735930735,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.09030403427297277,
+          "val_precision_default": 0.5714285714285714,
+          "val_recall_default": 0.0449438202247191,
+          "val_f1_default": 0.08333333333333333,
+          "val_accuracy_default": 0.8095238095238095,
+          "val_precision_tuned": 0.2423076923076923,
+          "val_recall_tuned": 0.7078651685393258,
+          "val_f1_tuned": 0.36103151862464183,
+          "val_accuracy_tuned": 0.5173160173160173,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.01111749221557312,
+          "val_precision_default": 0.25,
+          "val_recall_default": 0.0449438202247191,
+          "val_f1_default": 0.07619047619047618,
+          "val_accuracy_default": 0.79004329004329,
+          "val_precision_tuned": 0.20408163265306123,
+          "val_recall_tuned": 0.898876404494382,
+          "val_f1_tuned": 0.3326403326403326,
+          "val_accuracy_tuned": 0.3051948051948052,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.0880454046030715,
+          "val_precision_default": 0.19047619047619047,
+          "val_recall_default": 0.0449438202247191,
+          "val_f1_default": 0.07272727272727272,
+          "val_accuracy_default": 0.7792207792207793,
+          "val_precision_tuned": 0.2543103448275862,
+          "val_recall_tuned": 0.6629213483146067,
+          "val_f1_tuned": 0.36760124610591893,
+          "val_accuracy_tuned": 0.5606060606060606,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.005818445968115246,
+          "val_precision_default": 0.2857142857142857,
+          "val_recall_default": 0.0449438202247191,
+          "val_f1_default": 0.07766990291262135,
+          "val_accuracy_default": 0.7943722943722944,
+          "val_precision_tuned": 0.2025974025974026,
+          "val_recall_tuned": 0.8764044943820225,
+          "val_f1_tuned": 0.32911392405063294,
+          "val_accuracy_tuned": 0.3116883116883117,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.035577246003031096,
+          "val_precision_default": 0.19047619047619047,
+          "val_recall_default": 0.0449438202247191,
+          "val_f1_default": 0.07272727272727272,
+          "val_accuracy_default": 0.7792207792207793,
+          "val_precision_tuned": 0.2251655629139073,
+          "val_recall_tuned": 0.7640449438202247,
+          "val_f1_tuned": 0.3478260869565218,
+          "val_accuracy_tuned": 0.44805194805194803,
+          "selected": false
         }
       ]
     },
@@ -541,43 +1959,123 @@
       "Naive Bayes (Parzen)": [
         {
           "params": {
+            "bandwidth": 0.05
+          },
+          "threshold": 0.21209179085733898,
+          "val_precision_default": 0.32894736842105265,
+          "val_recall_default": 0.2808988764044944,
+          "val_f1_default": 0.30303030303030304,
+          "val_accuracy_default": 0.7510822510822511,
+          "val_precision_tuned": 0.2986111111111111,
+          "val_recall_tuned": 0.48314606741573035,
+          "val_f1_tuned": 0.36909871244635195,
+          "val_accuracy_tuned": 0.6818181818181818,
+          "selected": false
+        },
+        {
+          "params": {
             "bandwidth": 0.1
           },
+          "threshold": 0.21761661463613577,
+          "val_precision_default": 0.3194444444444444,
+          "val_recall_default": 0.25842696629213485,
           "val_f1_default": 0.2857142857142857,
+          "val_accuracy_default": 0.7510822510822511,
+          "val_precision_tuned": 0.3157894736842105,
+          "val_recall_tuned": 0.47191011235955055,
           "val_f1_tuned": 0.37837837837837834,
-          "threshold": 0.21761661463613577
+          "val_accuracy_tuned": 0.7012987012987013,
+          "selected": false
         },
         {
           "params": {
             "bandwidth": 0.25
           },
+          "threshold": 0.14887991013757393,
+          "val_precision_default": 0.37735849056603776,
+          "val_recall_default": 0.2247191011235955,
           "val_f1_default": 0.28169014084507044,
+          "val_accuracy_default": 0.7792207792207793,
+          "val_precision_tuned": 0.31125827814569534,
+          "val_recall_tuned": 0.5280898876404494,
           "val_f1_tuned": 0.3916666666666666,
-          "threshold": 0.14887991013757393
+          "val_accuracy_tuned": 0.683982683982684,
+          "selected": false
         },
         {
           "params": {
             "bandwidth": 0.5
           },
+          "threshold": 0.16323189009678726,
+          "val_precision_default": 0.47368421052631576,
+          "val_recall_default": 0.20224719101123595,
           "val_f1_default": 0.28346456692913385,
+          "val_accuracy_default": 0.803030303030303,
+          "val_precision_tuned": 0.3,
+          "val_recall_tuned": 0.5393258426966292,
           "val_f1_tuned": 0.38554216867469876,
-          "threshold": 0.16323189009678726
+          "val_accuracy_tuned": 0.6688311688311688,
+          "selected": false
         },
         {
           "params": {
             "bandwidth": 1.0
           },
+          "threshold": 0.18331809354907963,
+          "val_precision_default": 0.6190476190476191,
+          "val_recall_default": 0.14606741573033707,
           "val_f1_default": 0.23636363636363636,
+          "val_accuracy_default": 0.8181818181818182,
+          "val_precision_tuned": 0.281437125748503,
+          "val_recall_tuned": 0.5280898876404494,
           "val_f1_tuned": 0.36718749999999994,
-          "threshold": 0.18331809354907963
+          "val_accuracy_tuned": 0.6493506493506493,
+          "selected": false
+        },
+        {
+          "params": {
+            "bandwidth": 2.0
+          },
+          "threshold": 0.19168077445654597,
+          "val_precision_default": 1.0,
+          "val_recall_default": 0.011235955056179775,
+          "val_f1_default": 0.02222222222222222,
+          "val_accuracy_default": 0.8095238095238095,
+          "val_precision_tuned": 0.3359375,
+          "val_recall_tuned": 0.48314606741573035,
+          "val_f1_tuned": 0.39631336405529954,
+          "val_accuracy_tuned": 0.7164502164502164,
+          "selected": true
+        },
+        {
+          "params": {
+            "bandwidth": 4.0
+          },
+          "threshold": 0.18325836281080354,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.3194444444444444,
+          "val_recall_tuned": 0.5168539325842697,
+          "val_f1_tuned": 0.3948497854077253,
+          "val_accuracy_tuned": 0.6948051948051948,
+          "selected": false
         },
         {
           "params": {
             "bandwidth": "silverman"
           },
+          "threshold": 0.025514970777602765,
+          "val_precision_default": 0.3018867924528302,
+          "val_recall_default": 0.1797752808988764,
           "val_f1_default": 0.22535211267605634,
+          "val_accuracy_default": 0.7619047619047619,
+          "val_precision_tuned": 0.2974683544303797,
+          "val_recall_tuned": 0.5280898876404494,
           "val_f1_tuned": 0.3805668016194331,
-          "threshold": 0.025514970777602765
+          "val_accuracy_tuned": 0.6688311688311688,
+          "selected": false
         }
       ],
       "Least Squares": [
@@ -585,184 +2083,158 @@
           "params": {
             "reg_lambda": 0.001
           },
+          "threshold": 0.2135989274096627,
+          "val_precision_default": 0.46875,
+          "val_recall_default": 0.16853932584269662,
           "val_f1_default": 0.24793388429752064,
+          "val_accuracy_default": 0.803030303030303,
+          "val_precision_tuned": 0.3288590604026846,
+          "val_recall_tuned": 0.550561797752809,
           "val_f1_tuned": 0.411764705882353,
-          "threshold": 0.2135989274096627
+          "val_accuracy_tuned": 0.696969696969697,
+          "selected": false
         },
         {
           "params": {
             "reg_lambda": 0.01
           },
+          "threshold": 0.213612821000121,
+          "val_precision_default": 0.46875,
+          "val_recall_default": 0.16853932584269662,
           "val_f1_default": 0.24793388429752064,
+          "val_accuracy_default": 0.803030303030303,
+          "val_precision_tuned": 0.3288590604026846,
+          "val_recall_tuned": 0.550561797752809,
           "val_f1_tuned": 0.411764705882353,
-          "threshold": 0.213612821000121
+          "val_accuracy_tuned": 0.696969696969697,
+          "selected": false
         },
         {
           "params": {
             "reg_lambda": 0.1
           },
+          "threshold": 0.21375003072886214,
+          "val_precision_default": 0.46875,
+          "val_recall_default": 0.16853932584269662,
           "val_f1_default": 0.24793388429752064,
+          "val_accuracy_default": 0.803030303030303,
+          "val_precision_tuned": 0.3288590604026846,
+          "val_recall_tuned": 0.550561797752809,
           "val_f1_tuned": 0.411764705882353,
-          "threshold": 0.21375003072886214
+          "val_accuracy_tuned": 0.696969696969697,
+          "selected": false
         },
         {
           "params": {
             "reg_lambda": 1.0
           },
+          "threshold": 0.21311212845743321,
+          "val_precision_default": 0.4666666666666667,
+          "val_recall_default": 0.15730337078651685,
           "val_f1_default": 0.23529411764705882,
+          "val_accuracy_default": 0.803030303030303,
+          "val_precision_tuned": 0.3288590604026846,
+          "val_recall_tuned": 0.550561797752809,
           "val_f1_tuned": 0.411764705882353,
-          "threshold": 0.21311212845743321
+          "val_accuracy_tuned": 0.696969696969697,
+          "selected": false
         },
         {
           "params": {
             "reg_lambda": 10.0
           },
+          "threshold": 0.19247955167850875,
+          "val_precision_default": 0.65,
+          "val_recall_default": 0.14606741573033707,
           "val_f1_default": 0.2385321100917431,
+          "val_accuracy_default": 0.8203463203463204,
+          "val_precision_tuned": 0.30939226519337015,
+          "val_recall_tuned": 0.6292134831460674,
           "val_f1_tuned": 0.4148148148148148,
-          "threshold": 0.19247955167850875
+          "val_accuracy_tuned": 0.658008658008658,
+          "selected": true
         },
         {
           "params": {
             "reg_lambda": 100.0
           },
+          "threshold": 0.187130082391835,
+          "val_precision_default": 0.6666666666666666,
+          "val_recall_default": 0.1348314606741573,
           "val_f1_default": 0.22429906542056074,
+          "val_accuracy_default": 0.8203463203463204,
+          "val_precision_tuned": 0.29473684210526313,
+          "val_recall_tuned": 0.6292134831460674,
           "val_f1_tuned": 0.40143369175627236,
-          "threshold": 0.187130082391835
+          "val_accuracy_tuned": 0.6385281385281385,
+          "selected": false
         },
         {
           "params": {
             "reg_lambda": 1000.0
           },
+          "threshold": 0.19575232663223824,
+          "val_precision_default": 0.7142857142857143,
+          "val_recall_default": 0.056179775280898875,
           "val_f1_default": 0.10416666666666666,
+          "val_accuracy_default": 0.8138528138528138,
+          "val_precision_tuned": 0.3067484662576687,
+          "val_recall_tuned": 0.5617977528089888,
           "val_f1_tuned": 0.39682539682539686,
-          "threshold": 0.19575232663223824
+          "val_accuracy_tuned": 0.670995670995671,
+          "selected": false
+        },
+        {
+          "params": {
+            "reg_lambda": 10000.0
+          },
+          "threshold": 0.19922184392150494,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.34710743801652894,
+          "val_recall_tuned": 0.47191011235955055,
+          "val_f1_tuned": 0.4,
+          "val_accuracy_tuned": 0.7272727272727273,
+          "selected": false
+        },
+        {
+          "params": {
+            "reg_lambda": 100000.0
+          },
+          "threshold": 0.18698115598603224,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.3627450980392157,
+          "val_recall_tuned": 0.4157303370786517,
+          "val_f1_tuned": 0.38743455497382207,
+          "val_accuracy_tuned": 0.7467532467532467,
+          "selected": false
         }
       ],
       "MLP": [
         {
           "params": {
             "hidden_sizes": [
-              32,
               16
             ],
             "learning_rate": 0.001,
             "n_epochs": 50,
             "batch_size": 32
           },
-          "val_f1_default": 0.21568627450980393,
-          "val_f1_tuned": 0.36734693877551017,
-          "threshold": 0.19464808251824045
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.001,
-            "n_epochs": 50,
-            "batch_size": 64
-          },
-          "val_f1_default": 0.10416666666666666,
-          "val_f1_tuned": 0.3741935483870968,
-          "threshold": 0.18716760716660974
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.001,
-            "n_epochs": 100,
-            "batch_size": 32
-          },
-          "val_f1_default": 0.2452830188679245,
-          "val_f1_tuned": 0.3490909090909091,
-          "threshold": 0.176569336618748
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.001,
-            "n_epochs": 100,
-            "batch_size": 64
-          },
-          "val_f1_default": 0.21568627450980393,
-          "val_f1_tuned": 0.36734693877551017,
-          "threshold": 0.19629860489682358
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.01,
-            "n_epochs": 50,
-            "batch_size": 32
-          },
-          "val_f1_default": 0.32,
-          "val_f1_tuned": 0.3533834586466166,
-          "threshold": 0.20880410625510143
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.01,
-            "n_epochs": 50,
-            "batch_size": 64
-          },
-          "val_f1_default": 0.2735042735042735,
-          "val_f1_tuned": 0.34184675834970535,
-          "threshold": 0.029196456192725005
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.01,
-            "n_epochs": 100,
-            "batch_size": 32
-          },
-          "val_f1_default": 0.24516129032258063,
-          "val_f1_tuned": 0.3471882640586797,
-          "threshold": 0.00929737912075632
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.01,
-            "n_epochs": 100,
-            "batch_size": 64
-          },
-          "val_f1_default": 0.29577464788732394,
-          "val_f1_tuned": 0.3672131147540983,
-          "threshold": 0.1054406676429634
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              16
-            ],
-            "learning_rate": 0.001,
-            "n_epochs": 50,
-            "batch_size": 32
-          },
+          "threshold": 0.19602733589005794,
+          "val_precision_default": 0.5909090909090909,
+          "val_recall_default": 0.14606741573033707,
           "val_f1_default": 0.23423423423423423,
+          "val_accuracy_default": 0.816017316017316,
+          "val_precision_tuned": 0.30656934306569344,
+          "val_recall_tuned": 0.47191011235955055,
           "val_f1_tuned": 0.37168141592920356,
-          "threshold": 0.19602733589005794
+          "val_accuracy_tuned": 0.6926406926406926,
+          "selected": false
         },
         {
           "params": {
@@ -773,9 +2245,16 @@
             "n_epochs": 50,
             "batch_size": 64
           },
+          "threshold": 0.162318615365241,
+          "val_precision_default": 0.6190476190476191,
+          "val_recall_default": 0.14606741573033707,
           "val_f1_default": 0.23636363636363636,
+          "val_accuracy_default": 0.8181818181818182,
+          "val_precision_tuned": 0.26570048309178745,
+          "val_recall_tuned": 0.6179775280898876,
           "val_f1_tuned": 0.3716216216216216,
-          "threshold": 0.162318615365241
+          "val_accuracy_tuned": 0.5974025974025974,
+          "selected": false
         },
         {
           "params": {
@@ -786,9 +2265,16 @@
             "n_epochs": 100,
             "batch_size": 32
           },
+          "threshold": 0.1482539583544893,
+          "val_precision_default": 0.5555555555555556,
+          "val_recall_default": 0.16853932584269662,
           "val_f1_default": 0.25862068965517243,
+          "val_accuracy_default": 0.8138528138528138,
+          "val_precision_tuned": 0.2608695652173913,
+          "val_recall_tuned": 0.6067415730337079,
           "val_f1_tuned": 0.36486486486486486,
-          "threshold": 0.1482539583544893
+          "val_accuracy_tuned": 0.5930735930735931,
+          "selected": false
         },
         {
           "params": {
@@ -799,35 +2285,216 @@
             "n_epochs": 100,
             "batch_size": 64
           },
+          "threshold": 0.17750933864660806,
+          "val_precision_default": 0.5909090909090909,
+          "val_recall_default": 0.14606741573033707,
           "val_f1_default": 0.23423423423423423,
+          "val_accuracy_default": 0.816017316017316,
+          "val_precision_tuned": 0.2883435582822086,
+          "val_recall_tuned": 0.5280898876404494,
           "val_f1_tuned": 0.373015873015873,
-          "threshold": 0.17750933864660806
+          "val_accuracy_tuned": 0.658008658008658,
+          "selected": false
         },
         {
           "params": {
             "hidden_sizes": [
               16
             ],
-            "learning_rate": 0.01,
-            "n_epochs": 50,
+            "learning_rate": 0.001,
+            "n_epochs": 200,
             "batch_size": 32
           },
-          "val_f1_default": 0.22608695652173913,
-          "val_f1_tuned": 0.35882352941176476,
-          "threshold": 0.0871044451347661
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              16
-            ],
-            "learning_rate": 0.01,
-            "n_epochs": 50,
-            "batch_size": 64
-          },
+          "threshold": 0.09780346270897362,
+          "val_precision_default": 0.48148148148148145,
+          "val_recall_default": 0.14606741573033707,
           "val_f1_default": 0.2241379310344828,
+          "val_accuracy_default": 0.8051948051948052,
+          "val_precision_tuned": 0.2277580071174377,
+          "val_recall_tuned": 0.7191011235955056,
+          "val_f1_tuned": 0.34594594594594597,
+          "val_accuracy_tuned": 0.47619047619047616,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.14741844903477516,
+          "val_precision_default": 0.5555555555555556,
+          "val_recall_default": 0.16853932584269662,
+          "val_f1_default": 0.25862068965517243,
+          "val_accuracy_default": 0.8138528138528138,
+          "val_precision_tuned": 0.2583732057416268,
+          "val_recall_tuned": 0.6067415730337079,
+          "val_f1_tuned": 0.36241610738255037,
+          "val_accuracy_tuned": 0.5887445887445888,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.11768651094819407,
+          "val_precision_default": 0.5384615384615384,
+          "val_recall_default": 0.15730337078651685,
+          "val_f1_default": 0.24347826086956517,
+          "val_accuracy_default": 0.8116883116883117,
+          "val_precision_tuned": 0.24701195219123506,
+          "val_recall_tuned": 0.6966292134831461,
+          "val_f1_tuned": 0.3647058823529412,
+          "val_accuracy_tuned": 0.5324675324675324,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.15449908327702505,
+          "val_precision_default": 0.5416666666666666,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.23008849557522124,
+          "val_accuracy_default": 0.8116883116883117,
+          "val_precision_tuned": 0.26903553299492383,
+          "val_recall_tuned": 0.5955056179775281,
+          "val_f1_tuned": 0.3706293706293706,
+          "val_accuracy_tuned": 0.6103896103896104,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.11253691195450624,
+          "val_precision_default": 0.43333333333333335,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.21848739495798317,
+          "val_accuracy_default": 0.7987012987012987,
+          "val_precision_tuned": 0.23790322580645162,
+          "val_recall_tuned": 0.6629213483146067,
+          "val_f1_tuned": 0.35014836795252224,
+          "val_accuracy_tuned": 0.525974025974026,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.11897822454179602,
+          "val_precision_default": 0.5384615384615384,
+          "val_recall_default": 0.15730337078651685,
+          "val_f1_default": 0.24347826086956517,
+          "val_accuracy_default": 0.8116883116883117,
+          "val_precision_tuned": 0.2450592885375494,
+          "val_recall_tuned": 0.6966292134831461,
+          "val_f1_tuned": 0.3625730994152047,
+          "val_accuracy_tuned": 0.5281385281385281,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.057665745549856,
+          "val_precision_default": 0.2777777777777778,
+          "val_recall_default": 0.11235955056179775,
+          "val_f1_default": 0.16,
+          "val_accuracy_default": 0.7727272727272727,
+          "val_precision_tuned": 0.2255892255892256,
+          "val_recall_tuned": 0.7528089887640449,
+          "val_f1_tuned": 0.3471502590673575,
+          "val_accuracy_tuned": 0.45454545454545453,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.24516614078504237,
+          "val_precision_default": 0.45161290322580644,
+          "val_recall_default": 0.15730337078651685,
+          "val_f1_default": 0.23333333333333334,
+          "val_accuracy_default": 0.8008658008658008,
+          "val_precision_tuned": 0.3119266055045872,
+          "val_recall_tuned": 0.38202247191011235,
+          "val_f1_tuned": 0.3434343434343434,
+          "val_accuracy_tuned": 0.7186147186147186,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.0871044451347661,
+          "val_precision_default": 0.5,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.22608695652173913,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.24302788844621515,
+          "val_recall_tuned": 0.6853932584269663,
+          "val_f1_tuned": 0.35882352941176476,
+          "val_accuracy_tuned": 0.5281385281385281,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.10593276677893312,
+          "val_precision_default": 0.48148148148148145,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.2241379310344828,
+          "val_accuracy_default": 0.8051948051948052,
+          "val_precision_tuned": 0.24031007751937986,
+          "val_recall_tuned": 0.6966292134831461,
           "val_f1_tuned": 0.35734870317002887,
-          "threshold": 0.10593276677893312
+          "val_accuracy_tuned": 0.5173160173160173,
+          "selected": false
         },
         {
           "params": {
@@ -838,9 +2505,16 @@
             "n_epochs": 100,
             "batch_size": 32
           },
+          "threshold": 0.09586702023306715,
+          "val_precision_default": 0.3333333333333333,
+          "val_recall_default": 0.16853932584269662,
           "val_f1_default": 0.22388059701492535,
+          "val_accuracy_default": 0.7748917748917749,
+          "val_precision_tuned": 0.23834196891191708,
+          "val_recall_tuned": 0.5168539325842697,
           "val_f1_tuned": 0.3262411347517731,
-          "threshold": 0.09586702023306715
+          "val_accuracy_tuned": 0.5887445887445888,
+          "selected": false
         },
         {
           "params": {
@@ -851,9 +2525,812 @@
             "n_epochs": 100,
             "batch_size": 64
           },
+          "threshold": 0.20786499919141138,
+          "val_precision_default": 0.3870967741935484,
+          "val_recall_default": 0.1348314606741573,
           "val_f1_default": 0.2,
+          "val_accuracy_default": 0.7922077922077922,
+          "val_precision_tuned": 0.2962962962962963,
+          "val_recall_tuned": 0.449438202247191,
           "val_f1_tuned": 0.3571428571428571,
-          "threshold": 0.20786499919141138
+          "val_accuracy_tuned": 0.6883116883116883,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 1.2636726325239046e-05,
+          "val_precision_default": 0.22950819672131148,
+          "val_recall_default": 0.15730337078651685,
+          "val_f1_default": 0.18666666666666668,
+          "val_accuracy_default": 0.7359307359307359,
+          "val_precision_tuned": 0.19264069264069264,
+          "val_recall_tuned": 1.0,
+          "val_f1_tuned": 0.323049001814882,
+          "val_accuracy_tuned": 0.19264069264069264,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.03445557192743863,
+          "val_precision_default": 0.20454545454545456,
+          "val_recall_default": 0.10112359550561797,
+          "val_f1_default": 0.13533834586466165,
+          "val_accuracy_default": 0.7510822510822511,
+          "val_precision_tuned": 0.21739130434782608,
+          "val_recall_tuned": 0.7303370786516854,
+          "val_f1_tuned": 0.33505154639175255,
+          "val_accuracy_tuned": 0.44155844155844154,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.19464808251824045,
+          "val_precision_default": 0.8461538461538461,
+          "val_recall_default": 0.12359550561797752,
+          "val_f1_default": 0.21568627450980393,
+          "val_accuracy_default": 0.8268398268398268,
+          "val_precision_tuned": 0.28846153846153844,
+          "val_recall_tuned": 0.5056179775280899,
+          "val_f1_tuned": 0.36734693877551017,
+          "val_accuracy_tuned": 0.6645021645021645,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.18716760716660974,
+          "val_precision_default": 0.7142857142857143,
+          "val_recall_default": 0.056179775280898875,
+          "val_f1_default": 0.10416666666666666,
+          "val_accuracy_default": 0.8138528138528138,
+          "val_precision_tuned": 0.26244343891402716,
+          "val_recall_tuned": 0.651685393258427,
+          "val_f1_tuned": 0.3741935483870968,
+          "val_accuracy_tuned": 0.5800865800865801,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.176569336618748,
+          "val_precision_default": 0.7647058823529411,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.2452830188679245,
+          "val_accuracy_default": 0.8268398268398268,
+          "val_precision_tuned": 0.25806451612903225,
+          "val_recall_tuned": 0.5393258426966292,
+          "val_f1_tuned": 0.3490909090909091,
+          "val_accuracy_tuned": 0.6125541125541125,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.19629860489682358,
+          "val_precision_default": 0.8461538461538461,
+          "val_recall_default": 0.12359550561797752,
+          "val_f1_default": 0.21568627450980393,
+          "val_accuracy_default": 0.8268398268398268,
+          "val_precision_tuned": 0.28846153846153844,
+          "val_recall_tuned": 0.5056179775280899,
+          "val_f1_tuned": 0.36734693877551017,
+          "val_accuracy_tuned": 0.6645021645021645,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.03800901412924232,
+          "val_precision_default": 0.7,
+          "val_recall_default": 0.15730337078651685,
+          "val_f1_default": 0.25688073394495414,
+          "val_accuracy_default": 0.8246753246753247,
+          "val_precision_tuned": 0.20833333333333334,
+          "val_recall_tuned": 0.9550561797752809,
+          "val_f1_tuned": 0.3420523138832998,
+          "val_accuracy_tuned": 0.2922077922077922,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.06337404065747171,
+          "val_precision_default": 0.7647058823529411,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.2452830188679245,
+          "val_accuracy_default": 0.8268398268398268,
+          "val_precision_tuned": 0.2116788321167883,
+          "val_recall_tuned": 0.9775280898876404,
+          "val_f1_tuned": 0.348,
+          "val_accuracy_tuned": 0.2943722943722944,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.056570205898542496,
+          "val_precision_default": 0.7222222222222222,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.24299065420560745,
+          "val_accuracy_default": 0.8246753246753247,
+          "val_precision_tuned": 0.2128205128205128,
+          "val_recall_tuned": 0.9325842696629213,
+          "val_f1_tuned": 0.34655532359081415,
+          "val_accuracy_tuned": 0.3225108225108225,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.2534749370014451,
+          "val_precision_default": 0.8,
+          "val_recall_default": 0.1348314606741573,
+          "val_f1_default": 0.23076923076923075,
+          "val_accuracy_default": 0.8268398268398268,
+          "val_precision_tuned": 0.3516483516483517,
+          "val_recall_tuned": 0.3595505617977528,
+          "val_f1_tuned": 0.35555555555555557,
+          "val_accuracy_tuned": 0.7489177489177489,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.10263119745679304,
+          "val_precision_default": 0.5428571428571428,
+          "val_recall_default": 0.21348314606741572,
+          "val_f1_default": 0.3064516129032258,
+          "val_accuracy_default": 0.8138528138528138,
+          "val_precision_tuned": 0.2366412213740458,
+          "val_recall_tuned": 0.6966292134831461,
+          "val_f1_tuned": 0.3532763532763533,
+          "val_accuracy_tuned": 0.5086580086580087,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.0598496602538308,
+          "val_precision_default": 0.6842105263157895,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.24074074074074076,
+          "val_accuracy_default": 0.8225108225108225,
+          "val_precision_tuned": 0.21164021164021163,
+          "val_recall_tuned": 0.898876404494382,
+          "val_f1_tuned": 0.3426124197002141,
+          "val_accuracy_tuned": 0.3354978354978355,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.09335289377966535,
+          "val_precision_default": 0.37254901960784315,
+          "val_recall_default": 0.21348314606741572,
+          "val_f1_default": 0.2714285714285714,
+          "val_accuracy_default": 0.7792207792207793,
+          "val_precision_tuned": 0.27717391304347827,
+          "val_recall_tuned": 0.5730337078651685,
+          "val_f1_tuned": 0.37362637362637363,
+          "val_accuracy_tuned": 0.6298701298701299,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.08601951783895159,
+          "val_precision_default": 0.46153846153846156,
+          "val_recall_default": 0.20224719101123595,
+          "val_f1_default": 0.28125,
+          "val_accuracy_default": 0.8008658008658008,
+          "val_precision_tuned": 0.22826086956521738,
+          "val_recall_tuned": 0.7078651685393258,
+          "val_f1_tuned": 0.34520547945205476,
+          "val_accuracy_tuned": 0.48268398268398266,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.20880410625510143,
+          "val_precision_default": 0.39344262295081966,
+          "val_recall_default": 0.2696629213483146,
+          "val_f1_default": 0.32,
+          "val_accuracy_default": 0.7792207792207793,
+          "val_precision_tuned": 0.2655367231638418,
+          "val_recall_tuned": 0.5280898876404494,
+          "val_f1_tuned": 0.3533834586466166,
+          "val_accuracy_tuned": 0.6277056277056277,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.029196456192725005,
+          "val_precision_default": 0.5714285714285714,
+          "val_recall_default": 0.1797752808988764,
+          "val_f1_default": 0.2735042735042735,
+          "val_accuracy_default": 0.816017316017316,
+          "val_precision_tuned": 0.20714285714285716,
+          "val_recall_tuned": 0.9775280898876404,
+          "val_f1_tuned": 0.34184675834970535,
+          "val_accuracy_tuned": 0.2748917748917749,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.00929737912075632,
+          "val_precision_default": 0.2878787878787879,
+          "val_recall_default": 0.21348314606741572,
+          "val_f1_default": 0.24516129032258063,
+          "val_accuracy_default": 0.7467532467532467,
+          "val_precision_tuned": 0.221875,
+          "val_recall_tuned": 0.797752808988764,
+          "val_f1_tuned": 0.3471882640586797,
+          "val_accuracy_tuned": 0.42207792207792205,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.1054406676429634,
+          "val_precision_default": 0.39622641509433965,
+          "val_recall_default": 0.23595505617977527,
+          "val_f1_default": 0.29577464788732394,
+          "val_accuracy_default": 0.7835497835497836,
+          "val_precision_tuned": 0.25925925925925924,
+          "val_recall_tuned": 0.6292134831460674,
+          "val_f1_tuned": 0.3672131147540983,
+          "val_accuracy_tuned": 0.5822510822510822,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.05713577404202315,
+          "val_precision_default": 0.3333333333333333,
+          "val_recall_default": 0.30337078651685395,
+          "val_f1_default": 0.3176470588235294,
+          "val_accuracy_default": 0.7489177489177489,
+          "val_precision_tuned": 0.29411764705882354,
+          "val_recall_tuned": 0.5617977528089888,
+          "val_f1_tuned": 0.3861003861003861,
+          "val_accuracy_tuned": 0.6558441558441559,
+          "selected": true
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.007430656824292581,
+          "val_precision_default": 0.3181818181818182,
+          "val_recall_default": 0.23595505617977527,
+          "val_f1_default": 0.2709677419354839,
+          "val_accuracy_default": 0.7554112554112554,
+          "val_precision_tuned": 0.23509933774834438,
+          "val_recall_tuned": 0.797752808988764,
+          "val_f1_tuned": 0.36317135549872126,
+          "val_accuracy_tuned": 0.461038961038961,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.15706372999660234,
+          "val_precision_default": 0.5454545454545454,
+          "val_recall_default": 0.1348314606741573,
+          "val_f1_default": 0.2162162162162162,
+          "val_accuracy_default": 0.8116883116883117,
+          "val_precision_tuned": 0.26732673267326734,
+          "val_recall_tuned": 0.6067415730337079,
+          "val_f1_tuned": 0.3711340206185567,
+          "val_accuracy_tuned": 0.6038961038961039,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.22532490762931776,
+          "val_precision_default": 0.6470588235294118,
+          "val_recall_default": 0.12359550561797752,
+          "val_f1_default": 0.20754716981132076,
+          "val_accuracy_default": 0.8181818181818182,
+          "val_precision_tuned": 0.296875,
+          "val_recall_tuned": 0.42696629213483145,
+          "val_f1_tuned": 0.35023041474654376,
+          "val_accuracy_tuned": 0.6948051948051948,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.16630055891622816,
+          "val_precision_default": 0.5,
+          "val_recall_default": 0.1348314606741573,
+          "val_f1_default": 0.21238938053097345,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.2849462365591398,
+          "val_recall_tuned": 0.5955056179775281,
+          "val_f1_tuned": 0.3854545454545455,
+          "val_accuracy_tuned": 0.6341991341991342,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.16281376090963695,
+          "val_precision_default": 0.5454545454545454,
+          "val_recall_default": 0.1348314606741573,
+          "val_f1_default": 0.2162162162162162,
+          "val_accuracy_default": 0.8116883116883117,
+          "val_precision_tuned": 0.2639593908629442,
+          "val_recall_tuned": 0.5842696629213483,
+          "val_f1_tuned": 0.3636363636363637,
+          "val_accuracy_tuned": 0.6060606060606061,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.18555246122808589,
+          "val_precision_default": 0.5,
+          "val_recall_default": 0.1797752808988764,
+          "val_f1_default": 0.2644628099173554,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.2694610778443114,
+          "val_recall_tuned": 0.5056179775280899,
+          "val_f1_tuned": 0.3515625,
+          "val_accuracy_tuned": 0.6406926406926406,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.1802191337653068,
+          "val_precision_default": 0.52,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.22807017543859648,
+          "val_accuracy_default": 0.8095238095238095,
+          "val_precision_tuned": 0.288135593220339,
+          "val_recall_tuned": 0.5730337078651685,
+          "val_f1_tuned": 0.38345864661654133,
+          "val_accuracy_tuned": 0.645021645021645,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.18807146975692213,
+          "val_precision_default": 0.4666666666666667,
+          "val_recall_default": 0.15730337078651685,
+          "val_f1_default": 0.23529411764705882,
+          "val_accuracy_default": 0.803030303030303,
+          "val_precision_tuned": 0.26666666666666666,
+          "val_recall_tuned": 0.5842696629213483,
+          "val_f1_tuned": 0.3661971830985915,
+          "val_accuracy_tuned": 0.6103896103896104,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.14818596815757878,
+          "val_precision_default": 0.5,
+          "val_recall_default": 0.1348314606741573,
+          "val_f1_default": 0.21238938053097345,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.25925925925925924,
+          "val_recall_tuned": 0.6292134831460674,
+          "val_f1_tuned": 0.3672131147540983,
+          "val_accuracy_tuned": 0.5822510822510822,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.041578928618306144,
+          "val_precision_default": 0.21212121212121213,
+          "val_recall_default": 0.07865168539325842,
+          "val_f1_default": 0.11475409836065574,
+          "val_accuracy_default": 0.7662337662337663,
+          "val_precision_tuned": 0.23550724637681159,
+          "val_recall_tuned": 0.7303370786516854,
+          "val_f1_tuned": 0.3561643835616438,
+          "val_accuracy_tuned": 0.49134199134199136,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.15346115816423048,
+          "val_precision_default": 0.4642857142857143,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.22222222222222218,
+          "val_accuracy_default": 0.803030303030303,
+          "val_precision_tuned": 0.266304347826087,
+          "val_recall_tuned": 0.550561797752809,
+          "val_f1_tuned": 0.35897435897435903,
+          "val_accuracy_tuned": 0.6212121212121212,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.010440935483627215,
+          "val_precision_default": 0.21621621621621623,
+          "val_recall_default": 0.0898876404494382,
+          "val_f1_default": 0.12698412698412698,
+          "val_accuracy_default": 0.7619047619047619,
+          "val_precision_tuned": 0.21561338289962825,
+          "val_recall_tuned": 0.651685393258427,
+          "val_f1_tuned": 0.3240223463687151,
+          "val_accuracy_tuned": 0.47619047619047616,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.01851294326607247,
+          "val_precision_default": 0.2682926829268293,
+          "val_recall_default": 0.12359550561797752,
+          "val_f1_default": 0.16923076923076924,
+          "val_accuracy_default": 0.7662337662337663,
+          "val_precision_tuned": 0.2251655629139073,
+          "val_recall_tuned": 0.7640449438202247,
+          "val_f1_tuned": 0.3478260869565218,
+          "val_accuracy_tuned": 0.44805194805194803,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.621610507082054,
+          "val_precision_default": 0.3409090909090909,
+          "val_recall_default": 0.33707865168539325,
+          "val_f1_default": 0.3389830508474576,
+          "val_accuracy_default": 0.7467532467532467,
+          "val_precision_tuned": 0.4307692307692308,
+          "val_recall_tuned": 0.3146067415730337,
+          "val_f1_tuned": 0.36363636363636365,
+          "val_accuracy_tuned": 0.7878787878787878,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.04029698911471984,
+          "val_precision_default": 0.26666666666666666,
+          "val_recall_default": 0.1348314606741573,
+          "val_f1_default": 0.1791044776119403,
+          "val_accuracy_default": 0.7619047619047619,
+          "val_precision_tuned": 0.21543408360128619,
+          "val_recall_tuned": 0.7528089887640449,
+          "val_f1_tuned": 0.335,
+          "val_accuracy_tuned": 0.42424242424242425,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.0672798357497626,
+          "val_precision_default": 0.3026315789473684,
+          "val_recall_default": 0.25842696629213485,
+          "val_f1_default": 0.2787878787878788,
+          "val_accuracy_default": 0.7424242424242424,
+          "val_precision_tuned": 0.2393617021276596,
+          "val_recall_tuned": 0.5056179775280899,
+          "val_f1_tuned": 0.3249097472924188,
+          "val_accuracy_tuned": 0.5952380952380952,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.026728909318256593,
+          "val_precision_default": 0.18571428571428572,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.16352201257861634,
+          "val_accuracy_default": 0.7121212121212122,
+          "val_precision_tuned": 0.21897810218978103,
+          "val_recall_tuned": 0.6741573033707865,
+          "val_f1_tuned": 0.3305785123966942,
+          "val_accuracy_tuned": 0.474025974025974,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 5.903885455480619e-14,
+          "val_precision_default": 0.23809523809523808,
+          "val_recall_default": 0.2808988764044944,
+          "val_f1_default": 0.25773195876288657,
+          "val_accuracy_default": 0.6883116883116883,
+          "val_precision_tuned": 0.19264069264069264,
+          "val_recall_tuned": 1.0,
+          "val_f1_tuned": 0.323049001814882,
+          "val_accuracy_tuned": 0.19264069264069264,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 2.5668689716011465e-12,
+          "val_precision_default": 0.2318840579710145,
+          "val_recall_default": 0.1797752808988764,
+          "val_f1_default": 0.20253164556962022,
+          "val_accuracy_default": 0.7272727272727273,
+          "val_precision_tuned": 0.19264069264069264,
+          "val_recall_tuned": 1.0,
+          "val_f1_tuned": 0.323049001814882,
+          "val_accuracy_tuned": 0.19264069264069264,
+          "selected": false
         }
       ]
     },
@@ -861,43 +3338,123 @@
       "Naive Bayes (Parzen)": [
         {
           "params": {
+            "bandwidth": 0.05
+          },
+          "threshold": 0.21209179085733898,
+          "val_precision_default": 0.32894736842105265,
+          "val_recall_default": 0.2808988764044944,
+          "val_f1_default": 0.30303030303030304,
+          "val_accuracy_default": 0.7510822510822511,
+          "val_precision_tuned": 0.2986111111111111,
+          "val_recall_tuned": 0.48314606741573035,
+          "val_f1_tuned": 0.36909871244635195,
+          "val_accuracy_tuned": 0.6818181818181818,
+          "selected": false
+        },
+        {
+          "params": {
             "bandwidth": 0.1
           },
+          "threshold": 0.21761661463613577,
+          "val_precision_default": 0.3194444444444444,
+          "val_recall_default": 0.25842696629213485,
           "val_f1_default": 0.2857142857142857,
+          "val_accuracy_default": 0.7510822510822511,
+          "val_precision_tuned": 0.3157894736842105,
+          "val_recall_tuned": 0.47191011235955055,
           "val_f1_tuned": 0.37837837837837834,
-          "threshold": 0.21761661463613577
+          "val_accuracy_tuned": 0.7012987012987013,
+          "selected": false
         },
         {
           "params": {
             "bandwidth": 0.25
           },
+          "threshold": 0.14887991013757393,
+          "val_precision_default": 0.37735849056603776,
+          "val_recall_default": 0.2247191011235955,
           "val_f1_default": 0.28169014084507044,
+          "val_accuracy_default": 0.7792207792207793,
+          "val_precision_tuned": 0.31125827814569534,
+          "val_recall_tuned": 0.5280898876404494,
           "val_f1_tuned": 0.3916666666666666,
-          "threshold": 0.14887991013757393
+          "val_accuracy_tuned": 0.683982683982684,
+          "selected": false
         },
         {
           "params": {
             "bandwidth": 0.5
           },
+          "threshold": 0.16323189009678726,
+          "val_precision_default": 0.47368421052631576,
+          "val_recall_default": 0.20224719101123595,
           "val_f1_default": 0.28346456692913385,
+          "val_accuracy_default": 0.803030303030303,
+          "val_precision_tuned": 0.3,
+          "val_recall_tuned": 0.5393258426966292,
           "val_f1_tuned": 0.38554216867469876,
-          "threshold": 0.16323189009678726
+          "val_accuracy_tuned": 0.6688311688311688,
+          "selected": false
         },
         {
           "params": {
             "bandwidth": 1.0
           },
+          "threshold": 0.18331809354907963,
+          "val_precision_default": 0.6190476190476191,
+          "val_recall_default": 0.14606741573033707,
           "val_f1_default": 0.23636363636363636,
+          "val_accuracy_default": 0.8181818181818182,
+          "val_precision_tuned": 0.281437125748503,
+          "val_recall_tuned": 0.5280898876404494,
           "val_f1_tuned": 0.36718749999999994,
-          "threshold": 0.18331809354907963
+          "val_accuracy_tuned": 0.6493506493506493,
+          "selected": false
+        },
+        {
+          "params": {
+            "bandwidth": 2.0
+          },
+          "threshold": 0.19168077445654597,
+          "val_precision_default": 1.0,
+          "val_recall_default": 0.011235955056179775,
+          "val_f1_default": 0.02222222222222222,
+          "val_accuracy_default": 0.8095238095238095,
+          "val_precision_tuned": 0.3359375,
+          "val_recall_tuned": 0.48314606741573035,
+          "val_f1_tuned": 0.39631336405529954,
+          "val_accuracy_tuned": 0.7164502164502164,
+          "selected": true
+        },
+        {
+          "params": {
+            "bandwidth": 4.0
+          },
+          "threshold": 0.18325836281080354,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.3194444444444444,
+          "val_recall_tuned": 0.5168539325842697,
+          "val_f1_tuned": 0.3948497854077253,
+          "val_accuracy_tuned": 0.6948051948051948,
+          "selected": false
         },
         {
           "params": {
             "bandwidth": "silverman"
           },
+          "threshold": 0.025514970777602765,
+          "val_precision_default": 0.3018867924528302,
+          "val_recall_default": 0.1797752808988764,
           "val_f1_default": 0.22535211267605634,
+          "val_accuracy_default": 0.7619047619047619,
+          "val_precision_tuned": 0.2974683544303797,
+          "val_recall_tuned": 0.5280898876404494,
           "val_f1_tuned": 0.3805668016194331,
-          "threshold": 0.025514970777602765
+          "val_accuracy_tuned": 0.6688311688311688,
+          "selected": false
         }
       ],
       "Least Squares": [
@@ -905,184 +3462,158 @@
           "params": {
             "reg_lambda": 0.001
           },
+          "threshold": 0.2135989274096627,
+          "val_precision_default": 0.46875,
+          "val_recall_default": 0.16853932584269662,
           "val_f1_default": 0.24793388429752064,
+          "val_accuracy_default": 0.803030303030303,
+          "val_precision_tuned": 0.3288590604026846,
+          "val_recall_tuned": 0.550561797752809,
           "val_f1_tuned": 0.411764705882353,
-          "threshold": 0.2135989274096627
+          "val_accuracy_tuned": 0.696969696969697,
+          "selected": false
         },
         {
           "params": {
             "reg_lambda": 0.01
           },
+          "threshold": 0.213612821000121,
+          "val_precision_default": 0.46875,
+          "val_recall_default": 0.16853932584269662,
           "val_f1_default": 0.24793388429752064,
+          "val_accuracy_default": 0.803030303030303,
+          "val_precision_tuned": 0.3288590604026846,
+          "val_recall_tuned": 0.550561797752809,
           "val_f1_tuned": 0.411764705882353,
-          "threshold": 0.213612821000121
+          "val_accuracy_tuned": 0.696969696969697,
+          "selected": false
         },
         {
           "params": {
             "reg_lambda": 0.1
           },
+          "threshold": 0.21375003072886214,
+          "val_precision_default": 0.46875,
+          "val_recall_default": 0.16853932584269662,
           "val_f1_default": 0.24793388429752064,
+          "val_accuracy_default": 0.803030303030303,
+          "val_precision_tuned": 0.3288590604026846,
+          "val_recall_tuned": 0.550561797752809,
           "val_f1_tuned": 0.411764705882353,
-          "threshold": 0.21375003072886214
+          "val_accuracy_tuned": 0.696969696969697,
+          "selected": false
         },
         {
           "params": {
             "reg_lambda": 1.0
           },
+          "threshold": 0.21311212845743321,
+          "val_precision_default": 0.4666666666666667,
+          "val_recall_default": 0.15730337078651685,
           "val_f1_default": 0.23529411764705882,
+          "val_accuracy_default": 0.803030303030303,
+          "val_precision_tuned": 0.3288590604026846,
+          "val_recall_tuned": 0.550561797752809,
           "val_f1_tuned": 0.411764705882353,
-          "threshold": 0.21311212845743321
+          "val_accuracy_tuned": 0.696969696969697,
+          "selected": false
         },
         {
           "params": {
             "reg_lambda": 10.0
           },
+          "threshold": 0.19247955167850875,
+          "val_precision_default": 0.65,
+          "val_recall_default": 0.14606741573033707,
           "val_f1_default": 0.2385321100917431,
+          "val_accuracy_default": 0.8203463203463204,
+          "val_precision_tuned": 0.30939226519337015,
+          "val_recall_tuned": 0.6292134831460674,
           "val_f1_tuned": 0.4148148148148148,
-          "threshold": 0.19247955167850875
+          "val_accuracy_tuned": 0.658008658008658,
+          "selected": true
         },
         {
           "params": {
             "reg_lambda": 100.0
           },
+          "threshold": 0.187130082391835,
+          "val_precision_default": 0.6666666666666666,
+          "val_recall_default": 0.1348314606741573,
           "val_f1_default": 0.22429906542056074,
+          "val_accuracy_default": 0.8203463203463204,
+          "val_precision_tuned": 0.29473684210526313,
+          "val_recall_tuned": 0.6292134831460674,
           "val_f1_tuned": 0.40143369175627236,
-          "threshold": 0.187130082391835
+          "val_accuracy_tuned": 0.6385281385281385,
+          "selected": false
         },
         {
           "params": {
             "reg_lambda": 1000.0
           },
+          "threshold": 0.19575232663223824,
+          "val_precision_default": 0.7142857142857143,
+          "val_recall_default": 0.056179775280898875,
           "val_f1_default": 0.10416666666666666,
+          "val_accuracy_default": 0.8138528138528138,
+          "val_precision_tuned": 0.3067484662576687,
+          "val_recall_tuned": 0.5617977528089888,
           "val_f1_tuned": 0.39682539682539686,
-          "threshold": 0.19575232663223824
+          "val_accuracy_tuned": 0.670995670995671,
+          "selected": false
+        },
+        {
+          "params": {
+            "reg_lambda": 10000.0
+          },
+          "threshold": 0.19922184392150494,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.34710743801652894,
+          "val_recall_tuned": 0.47191011235955055,
+          "val_f1_tuned": 0.4,
+          "val_accuracy_tuned": 0.7272727272727273,
+          "selected": false
+        },
+        {
+          "params": {
+            "reg_lambda": 100000.0
+          },
+          "threshold": 0.18698115598603224,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.3627450980392157,
+          "val_recall_tuned": 0.4157303370786517,
+          "val_f1_tuned": 0.38743455497382207,
+          "val_accuracy_tuned": 0.7467532467532467,
+          "selected": false
         }
       ],
       "MLP": [
         {
           "params": {
             "hidden_sizes": [
-              32,
               16
             ],
             "learning_rate": 0.001,
             "n_epochs": 50,
             "batch_size": 32
           },
-          "val_f1_default": 0.21568627450980393,
-          "val_f1_tuned": 0.36734693877551017,
-          "threshold": 0.19464808251824045
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.001,
-            "n_epochs": 50,
-            "batch_size": 64
-          },
-          "val_f1_default": 0.10416666666666666,
-          "val_f1_tuned": 0.3741935483870968,
-          "threshold": 0.18716760716660974
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.001,
-            "n_epochs": 100,
-            "batch_size": 32
-          },
-          "val_f1_default": 0.2452830188679245,
-          "val_f1_tuned": 0.3490909090909091,
-          "threshold": 0.176569336618748
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.001,
-            "n_epochs": 100,
-            "batch_size": 64
-          },
-          "val_f1_default": 0.21568627450980393,
-          "val_f1_tuned": 0.36734693877551017,
-          "threshold": 0.19629860489682358
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.01,
-            "n_epochs": 50,
-            "batch_size": 32
-          },
-          "val_f1_default": 0.32,
-          "val_f1_tuned": 0.3533834586466166,
-          "threshold": 0.20880410625510143
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.01,
-            "n_epochs": 50,
-            "batch_size": 64
-          },
-          "val_f1_default": 0.2735042735042735,
-          "val_f1_tuned": 0.34184675834970535,
-          "threshold": 0.029196456192725005
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.01,
-            "n_epochs": 100,
-            "batch_size": 32
-          },
-          "val_f1_default": 0.24516129032258063,
-          "val_f1_tuned": 0.3471882640586797,
-          "threshold": 0.00929737912075632
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              32,
-              16
-            ],
-            "learning_rate": 0.01,
-            "n_epochs": 100,
-            "batch_size": 64
-          },
-          "val_f1_default": 0.29577464788732394,
-          "val_f1_tuned": 0.3672131147540983,
-          "threshold": 0.1054406676429634
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              16
-            ],
-            "learning_rate": 0.001,
-            "n_epochs": 50,
-            "batch_size": 32
-          },
+          "threshold": 0.19602733589005794,
+          "val_precision_default": 0.5909090909090909,
+          "val_recall_default": 0.14606741573033707,
           "val_f1_default": 0.23423423423423423,
+          "val_accuracy_default": 0.816017316017316,
+          "val_precision_tuned": 0.30656934306569344,
+          "val_recall_tuned": 0.47191011235955055,
           "val_f1_tuned": 0.37168141592920356,
-          "threshold": 0.19602733589005794
+          "val_accuracy_tuned": 0.6926406926406926,
+          "selected": false
         },
         {
           "params": {
@@ -1093,9 +3624,16 @@
             "n_epochs": 50,
             "batch_size": 64
           },
+          "threshold": 0.162318615365241,
+          "val_precision_default": 0.6190476190476191,
+          "val_recall_default": 0.14606741573033707,
           "val_f1_default": 0.23636363636363636,
+          "val_accuracy_default": 0.8181818181818182,
+          "val_precision_tuned": 0.26570048309178745,
+          "val_recall_tuned": 0.6179775280898876,
           "val_f1_tuned": 0.3716216216216216,
-          "threshold": 0.162318615365241
+          "val_accuracy_tuned": 0.5974025974025974,
+          "selected": false
         },
         {
           "params": {
@@ -1106,9 +3644,16 @@
             "n_epochs": 100,
             "batch_size": 32
           },
+          "threshold": 0.1482539583544893,
+          "val_precision_default": 0.5555555555555556,
+          "val_recall_default": 0.16853932584269662,
           "val_f1_default": 0.25862068965517243,
+          "val_accuracy_default": 0.8138528138528138,
+          "val_precision_tuned": 0.2608695652173913,
+          "val_recall_tuned": 0.6067415730337079,
           "val_f1_tuned": 0.36486486486486486,
-          "threshold": 0.1482539583544893
+          "val_accuracy_tuned": 0.5930735930735931,
+          "selected": false
         },
         {
           "params": {
@@ -1119,35 +3664,216 @@
             "n_epochs": 100,
             "batch_size": 64
           },
+          "threshold": 0.17750933864660806,
+          "val_precision_default": 0.5909090909090909,
+          "val_recall_default": 0.14606741573033707,
           "val_f1_default": 0.23423423423423423,
+          "val_accuracy_default": 0.816017316017316,
+          "val_precision_tuned": 0.2883435582822086,
+          "val_recall_tuned": 0.5280898876404494,
           "val_f1_tuned": 0.373015873015873,
-          "threshold": 0.17750933864660806
+          "val_accuracy_tuned": 0.658008658008658,
+          "selected": false
         },
         {
           "params": {
             "hidden_sizes": [
               16
             ],
-            "learning_rate": 0.01,
-            "n_epochs": 50,
+            "learning_rate": 0.001,
+            "n_epochs": 200,
             "batch_size": 32
           },
-          "val_f1_default": 0.22608695652173913,
-          "val_f1_tuned": 0.35882352941176476,
-          "threshold": 0.0871044451347661
-        },
-        {
-          "params": {
-            "hidden_sizes": [
-              16
-            ],
-            "learning_rate": 0.01,
-            "n_epochs": 50,
-            "batch_size": 64
-          },
+          "threshold": 0.09780346270897362,
+          "val_precision_default": 0.48148148148148145,
+          "val_recall_default": 0.14606741573033707,
           "val_f1_default": 0.2241379310344828,
+          "val_accuracy_default": 0.8051948051948052,
+          "val_precision_tuned": 0.2277580071174377,
+          "val_recall_tuned": 0.7191011235955056,
+          "val_f1_tuned": 0.34594594594594597,
+          "val_accuracy_tuned": 0.47619047619047616,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.14741844903477516,
+          "val_precision_default": 0.5555555555555556,
+          "val_recall_default": 0.16853932584269662,
+          "val_f1_default": 0.25862068965517243,
+          "val_accuracy_default": 0.8138528138528138,
+          "val_precision_tuned": 0.2583732057416268,
+          "val_recall_tuned": 0.6067415730337079,
+          "val_f1_tuned": 0.36241610738255037,
+          "val_accuracy_tuned": 0.5887445887445888,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.11768651094819407,
+          "val_precision_default": 0.5384615384615384,
+          "val_recall_default": 0.15730337078651685,
+          "val_f1_default": 0.24347826086956517,
+          "val_accuracy_default": 0.8116883116883117,
+          "val_precision_tuned": 0.24701195219123506,
+          "val_recall_tuned": 0.6966292134831461,
+          "val_f1_tuned": 0.3647058823529412,
+          "val_accuracy_tuned": 0.5324675324675324,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.15449908327702505,
+          "val_precision_default": 0.5416666666666666,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.23008849557522124,
+          "val_accuracy_default": 0.8116883116883117,
+          "val_precision_tuned": 0.26903553299492383,
+          "val_recall_tuned": 0.5955056179775281,
+          "val_f1_tuned": 0.3706293706293706,
+          "val_accuracy_tuned": 0.6103896103896104,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.11253691195450624,
+          "val_precision_default": 0.43333333333333335,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.21848739495798317,
+          "val_accuracy_default": 0.7987012987012987,
+          "val_precision_tuned": 0.23790322580645162,
+          "val_recall_tuned": 0.6629213483146067,
+          "val_f1_tuned": 0.35014836795252224,
+          "val_accuracy_tuned": 0.525974025974026,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.11897822454179602,
+          "val_precision_default": 0.5384615384615384,
+          "val_recall_default": 0.15730337078651685,
+          "val_f1_default": 0.24347826086956517,
+          "val_accuracy_default": 0.8116883116883117,
+          "val_precision_tuned": 0.2450592885375494,
+          "val_recall_tuned": 0.6966292134831461,
+          "val_f1_tuned": 0.3625730994152047,
+          "val_accuracy_tuned": 0.5281385281385281,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.057665745549856,
+          "val_precision_default": 0.2777777777777778,
+          "val_recall_default": 0.11235955056179775,
+          "val_f1_default": 0.16,
+          "val_accuracy_default": 0.7727272727272727,
+          "val_precision_tuned": 0.2255892255892256,
+          "val_recall_tuned": 0.7528089887640449,
+          "val_f1_tuned": 0.3471502590673575,
+          "val_accuracy_tuned": 0.45454545454545453,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.24516614078504237,
+          "val_precision_default": 0.45161290322580644,
+          "val_recall_default": 0.15730337078651685,
+          "val_f1_default": 0.23333333333333334,
+          "val_accuracy_default": 0.8008658008658008,
+          "val_precision_tuned": 0.3119266055045872,
+          "val_recall_tuned": 0.38202247191011235,
+          "val_f1_tuned": 0.3434343434343434,
+          "val_accuracy_tuned": 0.7186147186147186,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.0871044451347661,
+          "val_precision_default": 0.5,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.22608695652173913,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.24302788844621515,
+          "val_recall_tuned": 0.6853932584269663,
+          "val_f1_tuned": 0.35882352941176476,
+          "val_accuracy_tuned": 0.5281385281385281,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.10593276677893312,
+          "val_precision_default": 0.48148148148148145,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.2241379310344828,
+          "val_accuracy_default": 0.8051948051948052,
+          "val_precision_tuned": 0.24031007751937986,
+          "val_recall_tuned": 0.6966292134831461,
           "val_f1_tuned": 0.35734870317002887,
-          "threshold": 0.10593276677893312
+          "val_accuracy_tuned": 0.5173160173160173,
+          "selected": false
         },
         {
           "params": {
@@ -1158,9 +3884,16 @@
             "n_epochs": 100,
             "batch_size": 32
           },
+          "threshold": 0.09586702023306715,
+          "val_precision_default": 0.3333333333333333,
+          "val_recall_default": 0.16853932584269662,
           "val_f1_default": 0.22388059701492535,
+          "val_accuracy_default": 0.7748917748917749,
+          "val_precision_tuned": 0.23834196891191708,
+          "val_recall_tuned": 0.5168539325842697,
           "val_f1_tuned": 0.3262411347517731,
-          "threshold": 0.09586702023306715
+          "val_accuracy_tuned": 0.5887445887445888,
+          "selected": false
         },
         {
           "params": {
@@ -1171,51 +3904,934 @@
             "n_epochs": 100,
             "batch_size": 64
           },
+          "threshold": 0.20786499919141138,
+          "val_precision_default": 0.3870967741935484,
+          "val_recall_default": 0.1348314606741573,
           "val_f1_default": 0.2,
+          "val_accuracy_default": 0.7922077922077922,
+          "val_precision_tuned": 0.2962962962962963,
+          "val_recall_tuned": 0.449438202247191,
           "val_f1_tuned": 0.3571428571428571,
-          "threshold": 0.20786499919141138
+          "val_accuracy_tuned": 0.6883116883116883,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 1.2636726325239046e-05,
+          "val_precision_default": 0.22950819672131148,
+          "val_recall_default": 0.15730337078651685,
+          "val_f1_default": 0.18666666666666668,
+          "val_accuracy_default": 0.7359307359307359,
+          "val_precision_tuned": 0.19264069264069264,
+          "val_recall_tuned": 1.0,
+          "val_f1_tuned": 0.323049001814882,
+          "val_accuracy_tuned": 0.19264069264069264,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.03445557192743863,
+          "val_precision_default": 0.20454545454545456,
+          "val_recall_default": 0.10112359550561797,
+          "val_f1_default": 0.13533834586466165,
+          "val_accuracy_default": 0.7510822510822511,
+          "val_precision_tuned": 0.21739130434782608,
+          "val_recall_tuned": 0.7303370786516854,
+          "val_f1_tuned": 0.33505154639175255,
+          "val_accuracy_tuned": 0.44155844155844154,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.19464808251824045,
+          "val_precision_default": 0.8461538461538461,
+          "val_recall_default": 0.12359550561797752,
+          "val_f1_default": 0.21568627450980393,
+          "val_accuracy_default": 0.8268398268398268,
+          "val_precision_tuned": 0.28846153846153844,
+          "val_recall_tuned": 0.5056179775280899,
+          "val_f1_tuned": 0.36734693877551017,
+          "val_accuracy_tuned": 0.6645021645021645,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.18716760716660974,
+          "val_precision_default": 0.7142857142857143,
+          "val_recall_default": 0.056179775280898875,
+          "val_f1_default": 0.10416666666666666,
+          "val_accuracy_default": 0.8138528138528138,
+          "val_precision_tuned": 0.26244343891402716,
+          "val_recall_tuned": 0.651685393258427,
+          "val_f1_tuned": 0.3741935483870968,
+          "val_accuracy_tuned": 0.5800865800865801,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.176569336618748,
+          "val_precision_default": 0.7647058823529411,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.2452830188679245,
+          "val_accuracy_default": 0.8268398268398268,
+          "val_precision_tuned": 0.25806451612903225,
+          "val_recall_tuned": 0.5393258426966292,
+          "val_f1_tuned": 0.3490909090909091,
+          "val_accuracy_tuned": 0.6125541125541125,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.19629860489682358,
+          "val_precision_default": 0.8461538461538461,
+          "val_recall_default": 0.12359550561797752,
+          "val_f1_default": 0.21568627450980393,
+          "val_accuracy_default": 0.8268398268398268,
+          "val_precision_tuned": 0.28846153846153844,
+          "val_recall_tuned": 0.5056179775280899,
+          "val_f1_tuned": 0.36734693877551017,
+          "val_accuracy_tuned": 0.6645021645021645,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.03800901412924232,
+          "val_precision_default": 0.7,
+          "val_recall_default": 0.15730337078651685,
+          "val_f1_default": 0.25688073394495414,
+          "val_accuracy_default": 0.8246753246753247,
+          "val_precision_tuned": 0.20833333333333334,
+          "val_recall_tuned": 0.9550561797752809,
+          "val_f1_tuned": 0.3420523138832998,
+          "val_accuracy_tuned": 0.2922077922077922,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.06337404065747171,
+          "val_precision_default": 0.7647058823529411,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.2452830188679245,
+          "val_accuracy_default": 0.8268398268398268,
+          "val_precision_tuned": 0.2116788321167883,
+          "val_recall_tuned": 0.9775280898876404,
+          "val_f1_tuned": 0.348,
+          "val_accuracy_tuned": 0.2943722943722944,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.056570205898542496,
+          "val_precision_default": 0.7222222222222222,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.24299065420560745,
+          "val_accuracy_default": 0.8246753246753247,
+          "val_precision_tuned": 0.2128205128205128,
+          "val_recall_tuned": 0.9325842696629213,
+          "val_f1_tuned": 0.34655532359081415,
+          "val_accuracy_tuned": 0.3225108225108225,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.2534749370014451,
+          "val_precision_default": 0.8,
+          "val_recall_default": 0.1348314606741573,
+          "val_f1_default": 0.23076923076923075,
+          "val_accuracy_default": 0.8268398268398268,
+          "val_precision_tuned": 0.3516483516483517,
+          "val_recall_tuned": 0.3595505617977528,
+          "val_f1_tuned": 0.35555555555555557,
+          "val_accuracy_tuned": 0.7489177489177489,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.10263119745679304,
+          "val_precision_default": 0.5428571428571428,
+          "val_recall_default": 0.21348314606741572,
+          "val_f1_default": 0.3064516129032258,
+          "val_accuracy_default": 0.8138528138528138,
+          "val_precision_tuned": 0.2366412213740458,
+          "val_recall_tuned": 0.6966292134831461,
+          "val_f1_tuned": 0.3532763532763533,
+          "val_accuracy_tuned": 0.5086580086580087,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.0598496602538308,
+          "val_precision_default": 0.6842105263157895,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.24074074074074076,
+          "val_accuracy_default": 0.8225108225108225,
+          "val_precision_tuned": 0.21164021164021163,
+          "val_recall_tuned": 0.898876404494382,
+          "val_f1_tuned": 0.3426124197002141,
+          "val_accuracy_tuned": 0.3354978354978355,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.09335289377966535,
+          "val_precision_default": 0.37254901960784315,
+          "val_recall_default": 0.21348314606741572,
+          "val_f1_default": 0.2714285714285714,
+          "val_accuracy_default": 0.7792207792207793,
+          "val_precision_tuned": 0.27717391304347827,
+          "val_recall_tuned": 0.5730337078651685,
+          "val_f1_tuned": 0.37362637362637363,
+          "val_accuracy_tuned": 0.6298701298701299,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.08601951783895159,
+          "val_precision_default": 0.46153846153846156,
+          "val_recall_default": 0.20224719101123595,
+          "val_f1_default": 0.28125,
+          "val_accuracy_default": 0.8008658008658008,
+          "val_precision_tuned": 0.22826086956521738,
+          "val_recall_tuned": 0.7078651685393258,
+          "val_f1_tuned": 0.34520547945205476,
+          "val_accuracy_tuned": 0.48268398268398266,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.20880410625510143,
+          "val_precision_default": 0.39344262295081966,
+          "val_recall_default": 0.2696629213483146,
+          "val_f1_default": 0.32,
+          "val_accuracy_default": 0.7792207792207793,
+          "val_precision_tuned": 0.2655367231638418,
+          "val_recall_tuned": 0.5280898876404494,
+          "val_f1_tuned": 0.3533834586466166,
+          "val_accuracy_tuned": 0.6277056277056277,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.029196456192725005,
+          "val_precision_default": 0.5714285714285714,
+          "val_recall_default": 0.1797752808988764,
+          "val_f1_default": 0.2735042735042735,
+          "val_accuracy_default": 0.816017316017316,
+          "val_precision_tuned": 0.20714285714285716,
+          "val_recall_tuned": 0.9775280898876404,
+          "val_f1_tuned": 0.34184675834970535,
+          "val_accuracy_tuned": 0.2748917748917749,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.00929737912075632,
+          "val_precision_default": 0.2878787878787879,
+          "val_recall_default": 0.21348314606741572,
+          "val_f1_default": 0.24516129032258063,
+          "val_accuracy_default": 0.7467532467532467,
+          "val_precision_tuned": 0.221875,
+          "val_recall_tuned": 0.797752808988764,
+          "val_f1_tuned": 0.3471882640586797,
+          "val_accuracy_tuned": 0.42207792207792205,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.1054406676429634,
+          "val_precision_default": 0.39622641509433965,
+          "val_recall_default": 0.23595505617977527,
+          "val_f1_default": 0.29577464788732394,
+          "val_accuracy_default": 0.7835497835497836,
+          "val_precision_tuned": 0.25925925925925924,
+          "val_recall_tuned": 0.6292134831460674,
+          "val_f1_tuned": 0.3672131147540983,
+          "val_accuracy_tuned": 0.5822510822510822,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.05713577404202315,
+          "val_precision_default": 0.3333333333333333,
+          "val_recall_default": 0.30337078651685395,
+          "val_f1_default": 0.3176470588235294,
+          "val_accuracy_default": 0.7489177489177489,
+          "val_precision_tuned": 0.29411764705882354,
+          "val_recall_tuned": 0.5617977528089888,
+          "val_f1_tuned": 0.3861003861003861,
+          "val_accuracy_tuned": 0.6558441558441559,
+          "selected": true
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              32,
+              16
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.007430656824292581,
+          "val_precision_default": 0.3181818181818182,
+          "val_recall_default": 0.23595505617977527,
+          "val_f1_default": 0.2709677419354839,
+          "val_accuracy_default": 0.7554112554112554,
+          "val_precision_tuned": 0.23509933774834438,
+          "val_recall_tuned": 0.797752808988764,
+          "val_f1_tuned": 0.36317135549872126,
+          "val_accuracy_tuned": 0.461038961038961,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.15706372999660234,
+          "val_precision_default": 0.5454545454545454,
+          "val_recall_default": 0.1348314606741573,
+          "val_f1_default": 0.2162162162162162,
+          "val_accuracy_default": 0.8116883116883117,
+          "val_precision_tuned": 0.26732673267326734,
+          "val_recall_tuned": 0.6067415730337079,
+          "val_f1_tuned": 0.3711340206185567,
+          "val_accuracy_tuned": 0.6038961038961039,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.22532490762931776,
+          "val_precision_default": 0.6470588235294118,
+          "val_recall_default": 0.12359550561797752,
+          "val_f1_default": 0.20754716981132076,
+          "val_accuracy_default": 0.8181818181818182,
+          "val_precision_tuned": 0.296875,
+          "val_recall_tuned": 0.42696629213483145,
+          "val_f1_tuned": 0.35023041474654376,
+          "val_accuracy_tuned": 0.6948051948051948,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.16630055891622816,
+          "val_precision_default": 0.5,
+          "val_recall_default": 0.1348314606741573,
+          "val_f1_default": 0.21238938053097345,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.2849462365591398,
+          "val_recall_tuned": 0.5955056179775281,
+          "val_f1_tuned": 0.3854545454545455,
+          "val_accuracy_tuned": 0.6341991341991342,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.16281376090963695,
+          "val_precision_default": 0.5454545454545454,
+          "val_recall_default": 0.1348314606741573,
+          "val_f1_default": 0.2162162162162162,
+          "val_accuracy_default": 0.8116883116883117,
+          "val_precision_tuned": 0.2639593908629442,
+          "val_recall_tuned": 0.5842696629213483,
+          "val_f1_tuned": 0.3636363636363637,
+          "val_accuracy_tuned": 0.6060606060606061,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.18555246122808589,
+          "val_precision_default": 0.5,
+          "val_recall_default": 0.1797752808988764,
+          "val_f1_default": 0.2644628099173554,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.2694610778443114,
+          "val_recall_tuned": 0.5056179775280899,
+          "val_f1_tuned": 0.3515625,
+          "val_accuracy_tuned": 0.6406926406926406,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.001,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.1802191337653068,
+          "val_precision_default": 0.52,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.22807017543859648,
+          "val_accuracy_default": 0.8095238095238095,
+          "val_precision_tuned": 0.288135593220339,
+          "val_recall_tuned": 0.5730337078651685,
+          "val_f1_tuned": 0.38345864661654133,
+          "val_accuracy_tuned": 0.645021645021645,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.18807146975692213,
+          "val_precision_default": 0.4666666666666667,
+          "val_recall_default": 0.15730337078651685,
+          "val_f1_default": 0.23529411764705882,
+          "val_accuracy_default": 0.803030303030303,
+          "val_precision_tuned": 0.26666666666666666,
+          "val_recall_tuned": 0.5842696629213483,
+          "val_f1_tuned": 0.3661971830985915,
+          "val_accuracy_tuned": 0.6103896103896104,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.14818596815757878,
+          "val_precision_default": 0.5,
+          "val_recall_default": 0.1348314606741573,
+          "val_f1_default": 0.21238938053097345,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.25925925925925924,
+          "val_recall_tuned": 0.6292134831460674,
+          "val_f1_tuned": 0.3672131147540983,
+          "val_accuracy_tuned": 0.5822510822510822,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.041578928618306144,
+          "val_precision_default": 0.21212121212121213,
+          "val_recall_default": 0.07865168539325842,
+          "val_f1_default": 0.11475409836065574,
+          "val_accuracy_default": 0.7662337662337663,
+          "val_precision_tuned": 0.23550724637681159,
+          "val_recall_tuned": 0.7303370786516854,
+          "val_f1_tuned": 0.3561643835616438,
+          "val_accuracy_tuned": 0.49134199134199136,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.15346115816423048,
+          "val_precision_default": 0.4642857142857143,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.22222222222222218,
+          "val_accuracy_default": 0.803030303030303,
+          "val_precision_tuned": 0.266304347826087,
+          "val_recall_tuned": 0.550561797752809,
+          "val_f1_tuned": 0.35897435897435903,
+          "val_accuracy_tuned": 0.6212121212121212,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 0.010440935483627215,
+          "val_precision_default": 0.21621621621621623,
+          "val_recall_default": 0.0898876404494382,
+          "val_f1_default": 0.12698412698412698,
+          "val_accuracy_default": 0.7619047619047619,
+          "val_precision_tuned": 0.21561338289962825,
+          "val_recall_tuned": 0.651685393258427,
+          "val_f1_tuned": 0.3240223463687151,
+          "val_accuracy_tuned": 0.47619047619047616,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.003,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 0.01851294326607247,
+          "val_precision_default": 0.2682926829268293,
+          "val_recall_default": 0.12359550561797752,
+          "val_f1_default": 0.16923076923076924,
+          "val_accuracy_default": 0.7662337662337663,
+          "val_precision_tuned": 0.2251655629139073,
+          "val_recall_tuned": 0.7640449438202247,
+          "val_f1_tuned": 0.3478260869565218,
+          "val_accuracy_tuned": 0.44805194805194803,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 32
+          },
+          "threshold": 0.621610507082054,
+          "val_precision_default": 0.3409090909090909,
+          "val_recall_default": 0.33707865168539325,
+          "val_f1_default": 0.3389830508474576,
+          "val_accuracy_default": 0.7467532467532467,
+          "val_precision_tuned": 0.4307692307692308,
+          "val_recall_tuned": 0.3146067415730337,
+          "val_f1_tuned": 0.36363636363636365,
+          "val_accuracy_tuned": 0.7878787878787878,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 50,
+            "batch_size": 64
+          },
+          "threshold": 0.04029698911471984,
+          "val_precision_default": 0.26666666666666666,
+          "val_recall_default": 0.1348314606741573,
+          "val_f1_default": 0.1791044776119403,
+          "val_accuracy_default": 0.7619047619047619,
+          "val_precision_tuned": 0.21543408360128619,
+          "val_recall_tuned": 0.7528089887640449,
+          "val_f1_tuned": 0.335,
+          "val_accuracy_tuned": 0.42424242424242425,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 32
+          },
+          "threshold": 0.0672798357497626,
+          "val_precision_default": 0.3026315789473684,
+          "val_recall_default": 0.25842696629213485,
+          "val_f1_default": 0.2787878787878788,
+          "val_accuracy_default": 0.7424242424242424,
+          "val_precision_tuned": 0.2393617021276596,
+          "val_recall_tuned": 0.5056179775280899,
+          "val_f1_tuned": 0.3249097472924188,
+          "val_accuracy_tuned": 0.5952380952380952,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 100,
+            "batch_size": 64
+          },
+          "threshold": 0.026728909318256593,
+          "val_precision_default": 0.18571428571428572,
+          "val_recall_default": 0.14606741573033707,
+          "val_f1_default": 0.16352201257861634,
+          "val_accuracy_default": 0.7121212121212122,
+          "val_precision_tuned": 0.21897810218978103,
+          "val_recall_tuned": 0.6741573033707865,
+          "val_f1_tuned": 0.3305785123966942,
+          "val_accuracy_tuned": 0.474025974025974,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 32
+          },
+          "threshold": 5.903885455480619e-14,
+          "val_precision_default": 0.23809523809523808,
+          "val_recall_default": 0.2808988764044944,
+          "val_f1_default": 0.25773195876288657,
+          "val_accuracy_default": 0.6883116883116883,
+          "val_precision_tuned": 0.19264069264069264,
+          "val_recall_tuned": 1.0,
+          "val_f1_tuned": 0.323049001814882,
+          "val_accuracy_tuned": 0.19264069264069264,
+          "selected": false
+        },
+        {
+          "params": {
+            "hidden_sizes": [
+              64,
+              32
+            ],
+            "learning_rate": 0.01,
+            "n_epochs": 200,
+            "batch_size": 64
+          },
+          "threshold": 2.5668689716011465e-12,
+          "val_precision_default": 0.2318840579710145,
+          "val_recall_default": 0.1797752808988764,
+          "val_f1_default": 0.20253164556962022,
+          "val_accuracy_default": 0.7272727272727273,
+          "val_precision_tuned": 0.19264069264069264,
+          "val_recall_tuned": 1.0,
+          "val_f1_tuned": 0.323049001814882,
+          "val_accuracy_tuned": 0.19264069264069264,
+          "selected": false
         }
       ],
       "Bagged NB (Parzen)": [
         {
           "params": {
+            "bandwidth": 0.05
+          },
+          "threshold": 0.22026238313291902,
+          "val_precision_default": 0.3380281690140845,
+          "val_recall_default": 0.2696629213483146,
+          "val_f1_default": 0.3,
+          "val_accuracy_default": 0.7575757575757576,
+          "val_precision_tuned": 0.2916666666666667,
+          "val_recall_tuned": 0.47191011235955055,
+          "val_f1_tuned": 0.3605150214592275,
+          "val_accuracy_tuned": 0.6774891774891775,
+          "selected": false
+        },
+        {
+          "params": {
             "bandwidth": 0.1
           },
+          "threshold": 0.21888462396746425,
+          "val_precision_default": 0.3382352941176471,
+          "val_recall_default": 0.25842696629213485,
           "val_f1_default": 0.2929936305732484,
+          "val_accuracy_default": 0.7597402597402597,
+          "val_precision_tuned": 0.3028169014084507,
+          "val_recall_tuned": 0.48314606741573035,
           "val_f1_tuned": 0.37229437229437234,
-          "threshold": 0.21888462396746425
+          "val_accuracy_tuned": 0.6861471861471862,
+          "selected": false
         },
         {
           "params": {
             "bandwidth": 0.25
           },
+          "threshold": 0.18341756596499575,
+          "val_precision_default": 0.3877551020408163,
+          "val_recall_default": 0.21348314606741572,
           "val_f1_default": 0.2753623188405797,
+          "val_accuracy_default": 0.7835497835497836,
+          "val_precision_tuned": 0.3237410071942446,
+          "val_recall_tuned": 0.5056179775280899,
           "val_f1_tuned": 0.39473684210526316,
-          "threshold": 0.18341756596499575
+          "val_accuracy_tuned": 0.7012987012987013,
+          "selected": false
         },
         {
           "params": {
             "bandwidth": 0.5
           },
+          "threshold": 0.16117347637461296,
+          "val_precision_default": 0.46153846153846156,
+          "val_recall_default": 0.20224719101123595,
           "val_f1_default": 0.28125,
+          "val_accuracy_default": 0.8008658008658008,
+          "val_precision_tuned": 0.29411764705882354,
+          "val_recall_tuned": 0.5617977528089888,
           "val_f1_tuned": 0.3861003861003861,
-          "threshold": 0.16117347637461296
+          "val_accuracy_tuned": 0.6558441558441559,
+          "selected": false
         },
         {
           "params": {
             "bandwidth": 1.0
           },
+          "threshold": 0.15942775624577893,
+          "val_precision_default": 0.5909090909090909,
+          "val_recall_default": 0.14606741573033707,
           "val_f1_default": 0.23423423423423423,
+          "val_accuracy_default": 0.816017316017316,
+          "val_precision_tuned": 0.2631578947368421,
+          "val_recall_tuned": 0.6179775280898876,
           "val_f1_tuned": 0.3691275167785235,
-          "threshold": 0.15942775624577893
+          "val_accuracy_tuned": 0.5930735930735931,
+          "selected": false
+        },
+        {
+          "params": {
+            "bandwidth": 2.0
+          },
+          "threshold": 0.1880727340563742,
+          "val_precision_default": 1.0,
+          "val_recall_default": 0.011235955056179775,
+          "val_f1_default": 0.02222222222222222,
+          "val_accuracy_default": 0.8095238095238095,
+          "val_precision_tuned": 0.33098591549295775,
+          "val_recall_tuned": 0.5280898876404494,
+          "val_f1_tuned": 0.4069264069264069,
+          "val_accuracy_tuned": 0.7034632034632035,
+          "selected": true
+        },
+        {
+          "params": {
+            "bandwidth": 4.0
+          },
+          "threshold": 0.18456134940682734,
+          "val_precision_default": 0.0,
+          "val_recall_default": 0.0,
+          "val_f1_default": 0.0,
+          "val_accuracy_default": 0.8073593073593074,
+          "val_precision_tuned": 0.33093525179856115,
+          "val_recall_tuned": 0.5168539325842697,
+          "val_f1_tuned": 0.40350877192982454,
+          "val_accuracy_tuned": 0.7056277056277056,
+          "selected": false
         },
         {
           "params": {
             "bandwidth": "silverman"
           },
+          "threshold": 0.020605204643137087,
+          "val_precision_default": 0.32,
+          "val_recall_default": 0.1797752808988764,
           "val_f1_default": 0.2302158273381295,
+          "val_accuracy_default": 0.7683982683982684,
+          "val_precision_tuned": 0.2849740932642487,
+          "val_recall_tuned": 0.6179775280898876,
           "val_f1_tuned": 0.3900709219858156,
-          "threshold": 0.020605204643137087
+          "val_accuracy_tuned": 0.6277056277056277,
+          "selected": false
         }
       ]
     }

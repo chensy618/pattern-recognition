@@ -9,7 +9,7 @@ real experiments:  python checks.py
 4. Least squares: matches the closed-form solution w = (X^T X)^(-1) X^T y.
 5. MLP: backpropagation gradients agree with finite differences, and the
    network learns a non-linear (XOR-like) problem.
-6. Metrics: precision / recall / F1 on a hand-computed example.
+6. Metrics: precision / recall / F1 / accuracy on a hand-computed example.
 """
 
 import numpy as np
@@ -18,7 +18,7 @@ from data_utils import load_data, group_train_val_test_split, Preprocessor
 from naive_bayes import ParzenNaiveBayes, LOG_SQRT_2PI
 from least_squares import LeastSquaresClassifier
 from mlp import MLPClassifier
-from metrics import precision_recall_f1
+from metrics import precision_recall_f1, accuracy
 from scipy.special import logsumexp
 
 rng = np.random.default_rng(0)
@@ -107,7 +107,8 @@ def check_metrics():
     y_pred = np.array([1, 0, 1, 1, 0, 0, 0, 0])
     p, r, f = precision_recall_f1(y_true, y_pred)       # TP=2, FP=1, FN=2
     assert np.isclose(p, 2 / 3) and np.isclose(r, 0.5) and np.isclose(f, 4 / 7)
-    print("[ok] metrics: P = 2/3, R = 1/2, F1 = 4/7")
+    assert np.isclose(accuracy(y_true, y_pred), 5 / 8)  # TP + TN = 2 + 3
+    print("[ok] metrics: P = 2/3, R = 1/2, F1 = 4/7, accuracy = 5/8")
 
 
 if __name__ == "__main__":

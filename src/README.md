@@ -12,7 +12,7 @@ Code for the FYS-3012 home exam.
 | `dummy.py` | 1d | Stratified random baseline |
 | `bagging.py` | 1g | Bagged naive Bayes |
 | `data_utils.py` | | Data loading, split by site, preprocessing |
-| `metrics.py` | | Precision, recall, F1 |
+| `metrics.py` | | Precision, recall, F1, accuracy |
 | `experiment.py` | | Training, tuning and testing |
 | `main.py` | 1e, 1f, 1h | Runs the experiments, hyperparameter grids |
 | `checks.py` | | Sanity checks on synthetic data |
@@ -26,8 +26,23 @@ python checks.py                  # sanity checks
 
 Names: `dummy`, `naive_bayes`, `least_squares`, `mlp`, `bagging`.
 
-Results are written to `results/problem1/` (`registry_results.csv`, `full_results.csv`, `bagging_results.csv`, `run_config.json`).
+Split: set `SPLIT_METHOD` in `main.py` to `"holdout"` (one 70/15/15 split by site), `"kfold"` (group k-fold, `K_FOLDS` folds) or `"holdout_cv"` (train/test split by site with `CV_TEST_FRAC` = 15% test, hyperparameters chosen by `INNER_FOLDS`-fold CV inside the training set).
+
+Results are written to `results/problem1/`: test metrics (`registry_results.csv`, `full_results.csv`, `bagging_results.csv`), validation metrics of every hyperparameter setting (`*_validation.csv`) and `run_config.json`; with the suffix `_kfold` or `_cv` for the other splits.
 
 ## Problem 2 (`problem2/`)
 
-Not implemented yet. Results will go to `results/problem2/`.
+| File | Problem | Content |
+|---|---|---|
+| `data_utils.py` | | Data loading, log(1 + x) transform, standardisation |
+| `pca.py` | 2a, 2b | PCA (covariance, eigendecomposition, projection, reconstruction) |
+| `anomaly.py` | 2c, 2d | Reconstruction-based anomaly score, threshold |
+| `visualization.py` | 2b | PC1–PC2 scatter plot |
+| `main.py` | 2b–2d | Runs all steps |
+
+```bash
+cd problem2
+python main.py
+```
+
+Results are written to `results/problem2/` (`explained_variance.csv`, `pca_projection.png`, `top10_anomalies.csv`, `summary.txt`).

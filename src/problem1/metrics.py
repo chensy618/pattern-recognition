@@ -1,12 +1,19 @@
 """
 Performance metrics, implemented from scratch.
 
-All metrics refer to the positive class (breach = 1), because the goal is to
-identify the sites that are likely to breach the sea-lice limit:
+Precision, recall and F1 refer to the positive class (breach = 1), because
+the goal is to identify the sites that are likely to breach the sea-lice limit:
 
     Precision = TP / (TP + FP)      fraction of flagged sites that do breach
     Recall    = TP / (TP + FN)      fraction of breaching sites that are flagged
     F1        = 2 P R / (P + R)     harmonic mean of precision and recall
+
+Accuracy is computed over both classes:
+
+    Accuracy  = (TP + TN) / N       fraction of correctly classified rows
+
+With ~81% non-breachers, a classifier that never predicts a breach already
+reaches an accuracy of ~0.8, so accuracy alone is misleading here.
 
 Undefined ratios (0/0, e.g. precision when nothing is predicted positive) are
 set to 0, which is the usual convention.
@@ -34,6 +41,12 @@ def precision_recall_f1(y_true, y_pred):
     f1 = (2 * precision * recall / (precision + recall)
           if (precision + recall) > 0 else 0.0)
     return precision, recall, f1
+
+
+def accuracy(y_true, y_pred):
+    """Fraction of correctly classified samples, (TP + TN) / N."""
+    tp, fp, fn, tn = confusion_counts(y_true, y_pred)
+    return (tp + tn) / (tp + fp + fn + tn)
 
 
 def best_f1_threshold(y_true, scores, n_candidates=200):
