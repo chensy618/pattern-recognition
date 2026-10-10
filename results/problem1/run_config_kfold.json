@@ -3,6 +3,7 @@
   "split_method": "kfold",
   "k": 5,
   "inner_folds": null,
+  "cv_test_frac": null,
   "split": [
     {
       "train": {
@@ -653,7 +654,7 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 0.3432461221420716,
+            "threshold": 0.3455368221269606,
             "val_precision_default": 0.3225806451612903,
             "val_recall_default": 0.2777777777777778,
             "val_f1_default": 0.29850746268656714,
@@ -668,7 +669,7 @@
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 0.3844102108994677,
+            "threshold": 0.3883396557465128,
             "val_precision_default": 0.36363636363636365,
             "val_recall_default": 0.2777777777777778,
             "val_f1_default": 0.3149606299212599,
@@ -683,7 +684,7 @@
             "params": {
               "bandwidth": 0.25
             },
-            "threshold": 0.3096677492217351,
+            "threshold": 0.31340008495503313,
             "val_precision_default": 0.22916666666666666,
             "val_recall_default": 0.1527777777777778,
             "val_f1_default": 0.18333333333333335,
@@ -698,7 +699,7 @@
             "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.2843896022362509,
+            "threshold": 0.28881277305931163,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
@@ -713,52 +714,52 @@
             "params": {
               "bandwidth": 1.0
             },
-            "threshold": 0.24842183467020784,
+            "threshold": 0.2793973838314087,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.837471783295711,
-            "val_precision_tuned": 0.2356687898089172,
-            "val_recall_tuned": 0.5138888888888888,
-            "val_f1_tuned": 0.3231441048034935,
-            "val_accuracy_tuned": 0.6501128668171557,
+            "val_precision_tuned": 0.26548672566371684,
+            "val_recall_tuned": 0.4166666666666667,
+            "val_f1_tuned": 0.32432432432432434,
+            "val_accuracy_tuned": 0.7178329571106095,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 2.0
             },
-            "threshold": 0.24802239629634734,
+            "threshold": 0.2155683806507725,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.837471783295711,
-            "val_precision_tuned": 0.25190839694656486,
-            "val_recall_tuned": 0.4583333333333333,
-            "val_f1_tuned": 0.32512315270935954,
-            "val_accuracy_tuned": 0.690744920993228,
+            "val_precision_tuned": 0.2620689655172414,
+            "val_recall_tuned": 0.5277777777777778,
+            "val_f1_tuned": 0.35023041474654387,
+            "val_accuracy_tuned": 0.6817155756207675,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 4.0
             },
-            "threshold": 0.2730467935263875,
+            "threshold": 0.19487303538826037,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.837471783295711,
-            "val_precision_tuned": 0.29591836734693877,
-            "val_recall_tuned": 0.4027777777777778,
-            "val_f1_tuned": 0.3411764705882353,
-            "val_accuracy_tuned": 0.7471783295711061,
+            "val_precision_tuned": 0.22674418604651161,
+            "val_recall_tuned": 0.5416666666666666,
+            "val_f1_tuned": 0.31967213114754095,
+            "val_accuracy_tuned": 0.6252821670428894,
             "selected": false
           },
           {
             "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.055916704421539835,
+            "threshold": 0.04517009434454421,
             "val_precision_default": 0.26666666666666666,
             "val_recall_default": 0.1111111111111111,
             "val_f1_default": 0.1568627450980392,
@@ -775,56 +776,71 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 4.164958881826842e-88,
+            "threshold": 8.407591631875513e-88,
             "val_precision_default": 0.24050632911392406,
             "val_recall_default": 0.23170731707317074,
             "val_f1_default": 0.2360248447204969,
             "val_accuracy_default": 0.7254464285714286,
-            "val_precision_tuned": 0.18510158013544017,
+            "val_precision_tuned": 0.18764302059496568,
             "val_recall_tuned": 1.0,
-            "val_f1_tuned": 0.31238095238095237,
-            "val_accuracy_tuned": 0.19419642857142858,
+            "val_f1_tuned": 0.3159922928709056,
+            "val_accuracy_tuned": 0.20758928571428573,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 2.2148621324385195e-22,
+            "threshold": 4.471030053069988e-22,
             "val_precision_default": 0.189873417721519,
             "val_recall_default": 0.18292682926829268,
             "val_f1_default": 0.18633540372670807,
             "val_accuracy_default": 0.7075892857142857,
-            "val_precision_tuned": 0.18510158013544017,
+            "val_precision_tuned": 0.18764302059496568,
             "val_recall_tuned": 1.0,
-            "val_f1_tuned": 0.31238095238095237,
-            "val_accuracy_tuned": 0.19419642857142858,
+            "val_f1_tuned": 0.3159922928709056,
+            "val_accuracy_tuned": 0.20758928571428573,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 0.25
             },
-            "threshold": 0.02714604831398371,
+            "threshold": 0.0008357121019708529,
             "val_precision_default": 0.10869565217391304,
             "val_recall_default": 0.06097560975609756,
             "val_f1_default": 0.078125,
             "val_accuracy_default": 0.7366071428571429,
-            "val_precision_tuned": 0.1878048780487805,
-            "val_recall_tuned": 0.9390243902439024,
-            "val_f1_tuned": 0.31300813008130085,
-            "val_accuracy_tuned": 0.24553571428571427,
+            "val_precision_tuned": 0.18764302059496568,
+            "val_recall_tuned": 1.0,
+            "val_f1_tuned": 0.3159922928709056,
+            "val_accuracy_tuned": 0.20758928571428573,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.03057498146715496,
+            "threshold": 0.02603166956407338,
             "val_precision_default": 0.10714285714285714,
             "val_recall_default": 0.036585365853658534,
             "val_f1_default": 0.05454545454545455,
             "val_accuracy_default": 0.7678571428571429,
+            "val_precision_tuned": 0.18807339449541285,
+            "val_recall_tuned": 1.0,
+            "val_f1_tuned": 0.3166023166023166,
+            "val_accuracy_tuned": 0.20982142857142858,
+            "selected": false
+          },
+          {
+            "params": {
+              "bandwidth": 1.0
+            },
+            "threshold": 0.05515008415428821,
+            "val_precision_default": 0.07142857142857142,
+            "val_recall_default": 0.012195121951219513,
+            "val_f1_default": 0.020833333333333336,
+            "val_accuracy_default": 0.7901785714285714,
             "val_precision_tuned": 0.18552036199095023,
             "val_recall_tuned": 1.0,
             "val_f1_tuned": 0.31297709923664124,
@@ -833,62 +849,47 @@
           },
           {
             "params": {
-              "bandwidth": 1.0
-            },
-            "threshold": 0.056032225670118535,
-            "val_precision_default": 0.07142857142857142,
-            "val_recall_default": 0.012195121951219513,
-            "val_f1_default": 0.020833333333333336,
-            "val_accuracy_default": 0.7901785714285714,
-            "val_precision_tuned": 0.18303571428571427,
-            "val_recall_tuned": 1.0,
-            "val_f1_tuned": 0.30943396226415093,
-            "val_accuracy_tuned": 0.18303571428571427,
-            "selected": false
-          },
-          {
-            "params": {
               "bandwidth": 2.0
             },
-            "threshold": 0.061887040055851154,
+            "threshold": 0.1413516286958721,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8169642857142857,
-            "val_precision_tuned": 0.18303571428571427,
+            "val_precision_tuned": 0.18552036199095023,
             "val_recall_tuned": 1.0,
-            "val_f1_tuned": 0.30943396226415093,
-            "val_accuracy_tuned": 0.18303571428571427,
+            "val_f1_tuned": 0.31297709923664124,
+            "val_accuracy_tuned": 0.19642857142857142,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 4.0
             },
-            "threshold": 0.16504920409896828,
+            "threshold": 0.1860990177639613,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8169642857142857,
-            "val_precision_tuned": 0.20279720279720279,
-            "val_recall_tuned": 0.7073170731707317,
-            "val_f1_tuned": 0.3152173913043478,
-            "val_accuracy_tuned": 0.4375,
+            "val_precision_tuned": 0.18850574712643678,
+            "val_recall_tuned": 1.0,
+            "val_f1_tuned": 0.31721470019342357,
+            "val_accuracy_tuned": 0.21205357142857142,
             "selected": true
           },
           {
             "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 9.694427190061754e-40,
+            "threshold": 3.1804969157402434e-40,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
-            "val_accuracy_default": 0.8035714285714286,
-            "val_precision_tuned": 0.18303571428571427,
+            "val_accuracy_default": 0.8169642857142857,
+            "val_precision_tuned": 0.18552036199095023,
             "val_recall_tuned": 1.0,
-            "val_f1_tuned": 0.30943396226415093,
-            "val_accuracy_tuned": 0.18303571428571427,
+            "val_f1_tuned": 0.31297709923664124,
+            "val_accuracy_tuned": 0.19642857142857142,
             "selected": false
           }
         ],
@@ -897,7 +898,7 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 0.4344675217621595,
+            "threshold": 0.4403586515126038,
             "val_precision_default": 0.3170731707317073,
             "val_recall_default": 0.17333333333333334,
             "val_f1_default": 0.22413793103448276,
@@ -912,7 +913,7 @@
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 0.12988385806978073,
+            "threshold": 0.13250857424758483,
             "val_precision_default": 0.30952380952380953,
             "val_recall_default": 0.17333333333333334,
             "val_f1_default": 0.22222222222222224,
@@ -927,22 +928,22 @@
             "params": {
               "bandwidth": 0.25
             },
-            "threshold": 0.4431675301478956,
+            "threshold": 0.39922265179801303,
             "val_precision_default": 0.4074074074074074,
             "val_recall_default": 0.14666666666666667,
             "val_f1_default": 0.21568627450980393,
             "val_accuracy_default": 0.8148148148148148,
-            "val_precision_tuned": 0.4878048780487805,
-            "val_recall_tuned": 0.26666666666666666,
-            "val_f1_tuned": 0.3448275862068965,
-            "val_accuracy_tuned": 0.8240740740740741,
+            "val_precision_tuned": 0.35294117647058826,
+            "val_recall_tuned": 0.32,
+            "val_f1_tuned": 0.3356643356643357,
+            "val_accuracy_tuned": 0.7800925925925926,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.3386311132319645,
+            "threshold": 0.33834598508225533,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
@@ -957,52 +958,52 @@
             "params": {
               "bandwidth": 1.0
             },
-            "threshold": 0.201599563696337,
+            "threshold": 0.28153115222555203,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8263888888888888,
-            "val_precision_tuned": 0.21904761904761905,
-            "val_recall_tuned": 0.6133333333333333,
-            "val_f1_tuned": 0.3228070175438596,
-            "val_accuracy_tuned": 0.5532407407407407,
+            "val_precision_tuned": 0.32432432432432434,
+            "val_recall_tuned": 0.32,
+            "val_f1_tuned": 0.3221476510067114,
+            "val_accuracy_tuned": 0.7662037037037037,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 2.0
             },
-            "threshold": 0.208902519751427,
+            "threshold": 0.20206982135709467,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8263888888888888,
-            "val_precision_tuned": 0.2692307692307692,
-            "val_recall_tuned": 0.4666666666666667,
-            "val_f1_tuned": 0.3414634146341463,
-            "val_accuracy_tuned": 0.6875,
+            "val_precision_tuned": 0.26356589147286824,
+            "val_recall_tuned": 0.4533333333333333,
+            "val_f1_tuned": 0.3333333333333333,
+            "val_accuracy_tuned": 0.6851851851851852,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 4.0
             },
-            "threshold": 0.20257787553777012,
+            "threshold": 0.19010596161231044,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8263888888888888,
-            "val_precision_tuned": 0.26666666666666666,
-            "val_recall_tuned": 0.48,
-            "val_f1_tuned": 0.3428571428571429,
-            "val_accuracy_tuned": 0.6805555555555556,
+            "val_precision_tuned": 0.2786885245901639,
+            "val_recall_tuned": 0.4533333333333333,
+            "val_f1_tuned": 0.34517766497461927,
+            "val_accuracy_tuned": 0.7013888888888888,
             "selected": false
           },
           {
             "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.07970165954816875,
+            "threshold": 0.03010252079870705,
             "val_precision_default": 0.06666666666666667,
             "val_recall_default": 0.013333333333333334,
             "val_f1_default": 0.022222222222222223,
@@ -1019,7 +1020,7 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 3.2402114634831537e-153,
+            "threshold": 3.179696225057283e-153,
             "val_precision_default": 0.18309859154929578,
             "val_recall_default": 0.19117647058823528,
             "val_f1_default": 0.18705035971223022,
@@ -1034,7 +1035,7 @@
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 9.731889122245687e-39,
+            "threshold": 9.550133209951571e-39,
             "val_precision_default": 0.18333333333333332,
             "val_recall_default": 0.16176470588235295,
             "val_f1_default": 0.171875,
@@ -1049,11 +1050,11 @@
             "params": {
               "bandwidth": 0.25
             },
-            "threshold": 5.747921931901272e-07,
-            "val_precision_default": 0.2571428571428571,
+            "threshold": 5.640571941357441e-07,
+            "val_precision_default": 0.21428571428571427,
             "val_recall_default": 0.1323529411764706,
-            "val_f1_default": 0.17475728155339806,
-            "val_accuracy_default": 0.8072562358276644,
+            "val_f1_default": 0.16363636363636364,
+            "val_accuracy_default": 0.7913832199546486,
             "val_precision_tuned": 0.15419501133786848,
             "val_recall_tuned": 1.0,
             "val_f1_tuned": 0.26719056974459726,
@@ -1064,7 +1065,7 @@
             "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.008324623780843761,
+            "threshold": 0.008170420930394686,
             "val_precision_default": 0.14285714285714285,
             "val_recall_default": 0.04411764705882353,
             "val_f1_default": 0.06741573033707865,
@@ -1079,7 +1080,7 @@
             "params": {
               "bandwidth": 1.0
             },
-            "threshold": 0.035821642932014515,
+            "threshold": 0.032825816996239585,
             "val_precision_default": 0.21428571428571427,
             "val_recall_default": 0.04411764705882353,
             "val_f1_default": 0.07317073170731708,
@@ -1094,7 +1095,7 @@
             "params": {
               "bandwidth": 2.0
             },
-            "threshold": 0.05236343191438983,
+            "threshold": 0.123288786075403,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
@@ -1109,7 +1110,7 @@
             "params": {
               "bandwidth": 4.0
             },
-            "threshold": 0.05900450295800842,
+            "threshold": 0.19006546240382877,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
@@ -1124,7 +1125,7 @@
             "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 5.450482777078045e-50,
+            "threshold": 5.392093725804077e-50,
             "val_precision_default": 0.4166666666666667,
             "val_recall_default": 0.07352941176470588,
             "val_f1_default": 0.125,
@@ -1141,7 +1142,7 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 0.1457004417489772,
+            "threshold": 0.14677579373673064,
             "val_precision_default": 0.19047619047619047,
             "val_recall_default": 0.10810810810810811,
             "val_f1_default": 0.13793103448275862,
@@ -1156,22 +1157,22 @@
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 0.15169174674028224,
+            "threshold": 0.15427126160409546,
             "val_precision_default": 0.10256410256410256,
             "val_recall_default": 0.05405405405405406,
             "val_f1_default": 0.07079646017699115,
             "val_accuracy_default": 0.7586206896551724,
-            "val_precision_tuned": 0.22435897435897437,
-            "val_recall_tuned": 0.47297297297297297,
-            "val_f1_tuned": 0.30434782608695654,
-            "val_accuracy_tuned": 0.632183908045977,
+            "val_precision_tuned": 0.23129251700680273,
+            "val_recall_tuned": 0.4594594594594595,
+            "val_f1_tuned": 0.3076923076923077,
+            "val_accuracy_tuned": 0.6482758620689655,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 0.25
             },
-            "threshold": 0.07939458834689592,
+            "threshold": 0.07987968046067787,
             "val_precision_default": 0.125,
             "val_recall_default": 0.05405405405405406,
             "val_f1_default": 0.07547169811320754,
@@ -1186,67 +1187,67 @@
             "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.21777231533751865,
+            "threshold": 0.07266623086678518,
             "val_precision_default": 0.14285714285714285,
             "val_recall_default": 0.04054054054054054,
             "val_f1_default": 0.06315789473684211,
             "val_accuracy_default": 0.7954022988505747,
-            "val_precision_tuned": 0.2391304347826087,
-            "val_recall_tuned": 0.44594594594594594,
-            "val_f1_tuned": 0.3113207547169811,
-            "val_accuracy_tuned": 0.664367816091954,
+            "val_precision_tuned": 0.1837270341207349,
+            "val_recall_tuned": 0.9459459459459459,
+            "val_f1_tuned": 0.30769230769230765,
+            "val_accuracy_tuned": 0.27586206896551724,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 1.0
             },
-            "threshold": 0.17911426408633066,
+            "threshold": 0.18463998235400322,
             "val_precision_default": 0.21428571428571427,
             "val_recall_default": 0.04054054054054054,
             "val_f1_default": 0.06818181818181819,
             "val_accuracy_default": 0.8114942528735632,
-            "val_precision_tuned": 0.24598930481283424,
-            "val_recall_tuned": 0.6216216216216216,
-            "val_f1_tuned": 0.3524904214559387,
-            "val_accuracy_tuned": 0.6114942528735632,
+            "val_precision_tuned": 0.24444444444444444,
+            "val_recall_tuned": 0.5945945945945946,
+            "val_f1_tuned": 0.3464566929133858,
+            "val_accuracy_tuned": 0.6183908045977011,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 2.0
             },
-            "threshold": 0.18241687170917076,
-            "val_precision_default": 0.2857142857142857,
-            "val_recall_default": 0.02702702702702703,
-            "val_f1_default": 0.04938271604938272,
-            "val_accuracy_default": 0.8229885057471265,
-            "val_precision_tuned": 0.26744186046511625,
-            "val_recall_tuned": 0.6216216216216216,
-            "val_f1_tuned": 0.37398373983739835,
-            "val_accuracy_tuned": 0.6459770114942529,
+            "threshold": 0.1920169731029059,
+            "val_precision_default": 0.0,
+            "val_recall_default": 0.0,
+            "val_f1_default": 0.0,
+            "val_accuracy_default": 0.8298850574712644,
+            "val_precision_tuned": 0.25146198830409355,
+            "val_recall_tuned": 0.581081081081081,
+            "val_f1_tuned": 0.3510204081632653,
+            "val_accuracy_tuned": 0.6344827586206897,
             "selected": true
           },
           {
             "params": {
               "bandwidth": 4.0
             },
-            "threshold": 0.16896285387093346,
+            "threshold": 0.19189443227629563,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8298850574712644,
-            "val_precision_tuned": 0.24875621890547264,
-            "val_recall_tuned": 0.6756756756756757,
-            "val_f1_tuned": 0.36363636363636365,
-            "val_accuracy_tuned": 0.5977011494252874,
+            "val_precision_tuned": 0.26865671641791045,
+            "val_recall_tuned": 0.4864864864864865,
+            "val_f1_tuned": 0.3461538461538462,
+            "val_accuracy_tuned": 0.6873563218390805,
             "selected": false
           },
           {
             "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.0077649825585874585,
+            "threshold": 0.0019334974327552352,
             "val_precision_default": 0.2857142857142857,
             "val_recall_default": 0.05405405405405406,
             "val_f1_default": 0.09090909090909091,
@@ -7546,7 +7547,7 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 0.26447119505259903,
+            "threshold": 0.2663320806009034,
             "val_precision_default": 0.32727272727272727,
             "val_recall_default": 0.25,
             "val_f1_default": 0.28346456692913385,
@@ -7561,101 +7562,101 @@
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 0.2139640372333991,
-            "val_precision_default": 0.3617021276595745,
+            "threshold": 0.20180376772437705,
+            "val_precision_default": 0.38636363636363635,
             "val_recall_default": 0.2361111111111111,
-            "val_f1_default": 0.2857142857142857,
-            "val_accuracy_default": 0.8081264108352144,
-            "val_precision_tuned": 0.2767857142857143,
-            "val_recall_tuned": 0.4305555555555556,
-            "val_f1_tuned": 0.33695652173913043,
-            "val_accuracy_tuned": 0.7246049661399548,
+            "val_f1_default": 0.2931034482758621,
+            "val_accuracy_default": 0.8148984198645598,
+            "val_precision_tuned": 0.27586206896551724,
+            "val_recall_tuned": 0.4444444444444444,
+            "val_f1_tuned": 0.3404255319148936,
+            "val_accuracy_tuned": 0.7200902934537246,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 0.25
             },
-            "threshold": 0.17851292408512115,
+            "threshold": 0.38905192514047654,
             "val_precision_default": 0.4117647058823529,
             "val_recall_default": 0.19444444444444445,
             "val_f1_default": 0.2641509433962264,
             "val_accuracy_default": 0.8239277652370203,
-            "val_precision_tuned": 0.2550335570469799,
-            "val_recall_tuned": 0.5277777777777778,
-            "val_f1_tuned": 0.3438914027149322,
-            "val_accuracy_tuned": 0.672686230248307,
+            "val_precision_tuned": 0.38333333333333336,
+            "val_recall_tuned": 0.3194444444444444,
+            "val_f1_tuned": 0.3484848484848485,
+            "val_accuracy_tuned": 0.8058690744920993,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.25173760816925084,
-            "val_precision_default": 0.3157894736842105,
-            "val_recall_default": 0.08333333333333333,
-            "val_f1_default": 0.13186813186813187,
+            "threshold": 0.2539932711266196,
+            "val_precision_default": 0.3333333333333333,
+            "val_recall_default": 0.09722222222222222,
+            "val_f1_default": 0.15053763440860216,
             "val_accuracy_default": 0.8216704288939052,
-            "val_precision_tuned": 0.29347826086956524,
+            "val_precision_tuned": 0.30337078651685395,
             "val_recall_tuned": 0.375,
-            "val_f1_tuned": 0.3292682926829269,
-            "val_accuracy_tuned": 0.7516930022573364,
+            "val_f1_tuned": 0.3354037267080745,
+            "val_accuracy_tuned": 0.7584650112866818,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 1.0
             },
-            "threshold": 0.21102234483554305,
+            "threshold": 0.21629801520505507,
             "val_precision_default": 0.5,
             "val_recall_default": 0.027777777777777776,
             "val_f1_default": 0.05263157894736842,
             "val_accuracy_default": 0.837471783295711,
-            "val_precision_tuned": 0.24242424242424243,
-            "val_recall_tuned": 0.4444444444444444,
-            "val_f1_tuned": 0.3137254901960784,
-            "val_accuracy_tuned": 0.6839729119638827,
+            "val_precision_tuned": 0.2542372881355932,
+            "val_recall_tuned": 0.4166666666666667,
+            "val_f1_tuned": 0.3157894736842105,
+            "val_accuracy_tuned": 0.7065462753950339,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 2.0
             },
-            "threshold": 0.2137326754562569,
+            "threshold": 0.20012691984887485,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.837471783295711,
-            "val_precision_tuned": 0.24285714285714285,
-            "val_recall_tuned": 0.4722222222222222,
-            "val_f1_tuned": 0.32075471698113206,
-            "val_accuracy_tuned": 0.6749435665914221,
+            "val_precision_tuned": 0.3058823529411765,
+            "val_recall_tuned": 0.3611111111111111,
+            "val_f1_tuned": 0.33121019108280253,
+            "val_accuracy_tuned": 0.7629796839729119,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 4.0
             },
-            "threshold": 0.25364075585627216,
+            "threshold": 0.18788195538802552,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.837471783295711,
-            "val_precision_tuned": 0.2719298245614035,
-            "val_recall_tuned": 0.4305555555555556,
-            "val_f1_tuned": 0.33333333333333337,
-            "val_accuracy_tuned": 0.7200902934537246,
+            "val_precision_tuned": 0.2815533980582524,
+            "val_recall_tuned": 0.4027777777777778,
+            "val_f1_tuned": 0.33142857142857146,
+            "val_accuracy_tuned": 0.7358916478555305,
             "selected": false
           },
           {
             "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.060934585383480205,
-            "val_precision_default": 0.2647058823529412,
-            "val_recall_default": 0.125,
-            "val_f1_default": 0.16981132075471697,
-            "val_accuracy_default": 0.801354401805869,
+            "threshold": 0.048796966235943824,
+            "val_precision_default": 0.24242424242424243,
+            "val_recall_default": 0.1111111111111111,
+            "val_f1_default": 0.15238095238095237,
+            "val_accuracy_default": 0.7990970654627539,
             "val_precision_tuned": 0.30120481927710846,
             "val_recall_tuned": 0.3472222222222222,
             "val_f1_tuned": 0.3225806451612903,
@@ -7668,11 +7669,101 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 0.1527812482960019,
-            "val_precision_default": 0.2328767123287671,
-            "val_recall_default": 0.2073170731707317,
-            "val_f1_default": 0.2193548387096774,
-            "val_accuracy_default": 0.7299107142857143,
+            "threshold": 0.1496895352235443,
+            "val_precision_default": 0.25,
+            "val_recall_default": 0.23170731707317074,
+            "val_f1_default": 0.24050632911392408,
+            "val_accuracy_default": 0.7321428571428571,
+            "val_precision_tuned": 0.2222222222222222,
+            "val_recall_tuned": 0.6341463414634146,
+            "val_f1_tuned": 0.3291139240506329,
+            "val_accuracy_tuned": 0.5267857142857143,
+            "selected": false
+          },
+          {
+            "params": {
+              "bandwidth": 0.1
+            },
+            "threshold": 0.15974252282107979,
+            "val_precision_default": 0.2631578947368421,
+            "val_recall_default": 0.24390243902439024,
+            "val_f1_default": 0.25316455696202533,
+            "val_accuracy_default": 0.7366071428571429,
+            "val_precision_tuned": 0.22666666666666666,
+            "val_recall_tuned": 0.6219512195121951,
+            "val_f1_tuned": 0.3322475570032573,
+            "val_accuracy_tuned": 0.5424107142857143,
+            "selected": false
+          },
+          {
+            "params": {
+              "bandwidth": 0.25
+            },
+            "threshold": 0.10051100658255596,
+            "val_precision_default": 0.26785714285714285,
+            "val_recall_default": 0.18292682926829268,
+            "val_f1_default": 0.21739130434782608,
+            "val_accuracy_default": 0.7589285714285714,
+            "val_precision_tuned": 0.2112676056338028,
+            "val_recall_tuned": 0.7317073170731707,
+            "val_f1_tuned": 0.3278688524590164,
+            "val_accuracy_tuned": 0.45089285714285715,
+            "selected": false
+          },
+          {
+            "params": {
+              "bandwidth": 0.5
+            },
+            "threshold": 0.14081196619021846,
+            "val_precision_default": 0.30303030303030304,
+            "val_recall_default": 0.12195121951219512,
+            "val_f1_default": 0.17391304347826086,
+            "val_accuracy_default": 0.7879464285714286,
+            "val_precision_tuned": 0.21851851851851853,
+            "val_recall_tuned": 0.7195121951219512,
+            "val_f1_tuned": 0.3352272727272727,
+            "val_accuracy_tuned": 0.47767857142857145,
+            "selected": false
+          },
+          {
+            "params": {
+              "bandwidth": 1.0
+            },
+            "threshold": 0.19122793988438028,
+            "val_precision_default": 0.3333333333333333,
+            "val_recall_default": 0.024390243902439025,
+            "val_f1_default": 0.04545454545454545,
+            "val_accuracy_default": 0.8125,
+            "val_precision_tuned": 0.2290748898678414,
+            "val_recall_tuned": 0.6341463414634146,
+            "val_f1_tuned": 0.3365695792880259,
+            "val_accuracy_tuned": 0.5424107142857143,
+            "selected": false
+          },
+          {
+            "params": {
+              "bandwidth": 2.0
+            },
+            "threshold": 0.1881344981715035,
+            "val_precision_default": 0.0,
+            "val_recall_default": 0.0,
+            "val_f1_default": 0.0,
+            "val_accuracy_default": 0.8169642857142857,
+            "val_precision_tuned": 0.22608695652173913,
+            "val_recall_tuned": 0.6341463414634146,
+            "val_f1_tuned": 0.33333333333333337,
+            "val_accuracy_tuned": 0.5357142857142857,
+            "selected": false
+          },
+          {
+            "params": {
+              "bandwidth": 4.0
+            },
+            "threshold": 0.19371220627172334,
+            "val_precision_default": 0.0,
+            "val_recall_default": 0.0,
+            "val_f1_default": 0.0,
+            "val_accuracy_default": 0.8169642857142857,
             "val_precision_tuned": 0.22413793103448276,
             "val_recall_tuned": 0.6341463414634146,
             "val_f1_tuned": 0.3312101910828026,
@@ -7681,106 +7772,16 @@
           },
           {
             "params": {
-              "bandwidth": 0.1
-            },
-            "threshold": 0.15876507315195476,
-            "val_precision_default": 0.2702702702702703,
-            "val_recall_default": 0.24390243902439024,
-            "val_f1_default": 0.2564102564102564,
-            "val_accuracy_default": 0.7410714285714286,
-            "val_precision_tuned": 0.22466960352422907,
-            "val_recall_tuned": 0.6219512195121951,
-            "val_f1_tuned": 0.3300970873786408,
-            "val_accuracy_tuned": 0.5379464285714286,
-            "selected": false
-          },
-          {
-            "params": {
-              "bandwidth": 0.25
-            },
-            "threshold": 0.05240312257560231,
-            "val_precision_default": 0.26785714285714285,
-            "val_recall_default": 0.18292682926829268,
-            "val_f1_default": 0.21739130434782608,
-            "val_accuracy_default": 0.7589285714285714,
-            "val_precision_tuned": 0.20552147239263804,
-            "val_recall_tuned": 0.8170731707317073,
-            "val_f1_tuned": 0.3284313725490196,
-            "val_accuracy_tuned": 0.38839285714285715,
-            "selected": false
-          },
-          {
-            "params": {
-              "bandwidth": 0.5
-            },
-            "threshold": 0.14294726668594127,
-            "val_precision_default": 0.28125,
-            "val_recall_default": 0.10975609756097561,
-            "val_f1_default": 0.15789473684210525,
-            "val_accuracy_default": 0.7857142857142857,
-            "val_precision_tuned": 0.21804511278195488,
-            "val_recall_tuned": 0.7073170731707317,
-            "val_f1_tuned": 0.33333333333333326,
-            "val_accuracy_tuned": 0.48214285714285715,
-            "selected": false
-          },
-          {
-            "params": {
-              "bandwidth": 1.0
-            },
-            "threshold": 0.1773753045052291,
-            "val_precision_default": 0.42857142857142855,
-            "val_recall_default": 0.036585365853658534,
-            "val_f1_default": 0.06741573033707865,
-            "val_accuracy_default": 0.8147321428571429,
-            "val_precision_tuned": 0.2222222222222222,
-            "val_recall_tuned": 0.6829268292682927,
-            "val_f1_tuned": 0.33532934131736525,
-            "val_accuracy_tuned": 0.5044642857142857,
-            "selected": false
-          },
-          {
-            "params": {
-              "bandwidth": 2.0
-            },
-            "threshold": 0.16068805337716366,
-            "val_precision_default": 0.0,
-            "val_recall_default": 0.0,
-            "val_f1_default": 0.0,
-            "val_accuracy_default": 0.8169642857142857,
-            "val_precision_tuned": 0.20938628158844766,
-            "val_recall_tuned": 0.7073170731707317,
-            "val_f1_tuned": 0.3231197771587744,
-            "val_accuracy_tuned": 0.4575892857142857,
-            "selected": false
-          },
-          {
-            "params": {
-              "bandwidth": 4.0
-            },
-            "threshold": 0.16051405144073694,
-            "val_precision_default": 0.0,
-            "val_recall_default": 0.0,
-            "val_f1_default": 0.0,
-            "val_accuracy_default": 0.8169642857142857,
-            "val_precision_tuned": 0.2078853046594982,
-            "val_recall_tuned": 0.7073170731707317,
-            "val_f1_tuned": 0.32132963988919666,
-            "val_accuracy_tuned": 0.453125,
-            "selected": false
-          },
-          {
-            "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.027159783285936476,
-            "val_precision_default": 0.1,
+            "threshold": 0.008674253626945945,
+            "val_precision_default": 1.0,
             "val_recall_default": 0.012195121951219513,
-            "val_f1_default": 0.02173913043478261,
-            "val_accuracy_default": 0.7991071428571429,
-            "val_precision_tuned": 0.2463768115942029,
-            "val_recall_tuned": 0.6219512195121951,
-            "val_f1_tuned": 0.35294117647058826,
+            "val_f1_default": 0.024096385542168676,
+            "val_accuracy_default": 0.8191964285714286,
+            "val_precision_tuned": 0.24880382775119617,
+            "val_recall_tuned": 0.6341463414634146,
+            "val_f1_tuned": 0.35738831615120276,
             "val_accuracy_tuned": 0.5825892857142857,
             "selected": true
           }
@@ -7790,7 +7791,7 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 0.5772710213203791,
+            "threshold": 0.5794357863976095,
             "val_precision_default": 0.38181818181818183,
             "val_recall_default": 0.28,
             "val_f1_default": 0.3230769230769231,
@@ -7805,11 +7806,11 @@
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 0.5097825488407929,
-            "val_precision_default": 0.43137254901960786,
+            "threshold": 0.514196807651425,
+            "val_precision_default": 0.4230769230769231,
             "val_recall_default": 0.29333333333333333,
-            "val_f1_default": 0.3492063492063492,
-            "val_accuracy_default": 0.8101851851851852,
+            "val_f1_default": 0.3464566929133859,
+            "val_accuracy_default": 0.8078703703703703,
             "val_precision_tuned": 0.4782608695652174,
             "val_recall_tuned": 0.29333333333333333,
             "val_f1_tuned": 0.36363636363636365,
@@ -7820,7 +7821,7 @@
             "params": {
               "bandwidth": 0.25
             },
-            "threshold": 0.3765126428788888,
+            "threshold": 0.3800484406971458,
             "val_precision_default": 0.5,
             "val_recall_default": 0.26666666666666666,
             "val_f1_default": 0.3478260869565218,
@@ -7835,71 +7836,71 @@
             "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.2964045516373781,
+            "threshold": 0.2929315303470583,
             "val_precision_default": 0.5806451612903226,
             "val_recall_default": 0.24,
             "val_f1_default": 0.339622641509434,
             "val_accuracy_default": 0.8379629629629629,
-            "val_precision_tuned": 0.3617021276595745,
-            "val_recall_tuned": 0.4533333333333333,
-            "val_f1_tuned": 0.40236686390532544,
-            "val_accuracy_tuned": 0.7662037037037037,
+            "val_precision_tuned": 0.35714285714285715,
+            "val_recall_tuned": 0.4666666666666667,
+            "val_f1_tuned": 0.4046242774566475,
+            "val_accuracy_tuned": 0.7615740740740741,
             "selected": true
           },
           {
             "params": {
               "bandwidth": 1.0
             },
-            "threshold": 0.24675076192843842,
-            "val_precision_default": 0.5384615384615384,
-            "val_recall_default": 0.09333333333333334,
-            "val_f1_default": 0.1590909090909091,
-            "val_accuracy_default": 0.8287037037037037,
-            "val_precision_tuned": 0.3076923076923077,
-            "val_recall_tuned": 0.4266666666666667,
-            "val_f1_tuned": 0.3575418994413408,
-            "val_accuracy_tuned": 0.7337962962962963,
+            "threshold": 0.2637789824345584,
+            "val_precision_default": 0.5714285714285714,
+            "val_recall_default": 0.10666666666666667,
+            "val_f1_default": 0.1797752808988764,
+            "val_accuracy_default": 0.8310185185185185,
+            "val_precision_tuned": 0.3333333333333333,
+            "val_recall_tuned": 0.38666666666666666,
+            "val_f1_tuned": 0.35802469135802467,
+            "val_accuracy_tuned": 0.7592592592592593,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 2.0
             },
-            "threshold": 0.19328347361657702,
+            "threshold": 0.20153160123306488,
             "val_precision_default": 0.5,
             "val_recall_default": 0.013333333333333334,
             "val_f1_default": 0.025974025974025976,
             "val_accuracy_default": 0.8263888888888888,
-            "val_precision_tuned": 0.26973684210526316,
-            "val_recall_tuned": 0.5466666666666666,
-            "val_f1_tuned": 0.36123348017621143,
-            "val_accuracy_tuned": 0.6643518518518519,
+            "val_precision_tuned": 0.308411214953271,
+            "val_recall_tuned": 0.44,
+            "val_f1_tuned": 0.3626373626373626,
+            "val_accuracy_tuned": 0.7314814814814815,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 4.0
             },
-            "threshold": 0.19535768478077625,
+            "threshold": 0.1881491237582581,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8263888888888888,
-            "val_precision_tuned": 0.25675675675675674,
-            "val_recall_tuned": 0.5066666666666667,
-            "val_f1_tuned": 0.3408071748878924,
-            "val_accuracy_tuned": 0.6597222222222222,
+            "val_precision_tuned": 0.3177570093457944,
+            "val_recall_tuned": 0.4533333333333333,
+            "val_f1_tuned": 0.37362637362637363,
+            "val_accuracy_tuned": 0.7361111111111112,
             "selected": false
           },
           {
             "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.13602408463620175,
-            "val_precision_default": 0.3793103448275862,
-            "val_recall_default": 0.14666666666666667,
-            "val_f1_default": 0.21153846153846156,
-            "val_accuracy_default": 0.8101851851851852,
+            "threshold": 0.0533108024905954,
+            "val_precision_default": 0.22727272727272727,
+            "val_recall_default": 0.06666666666666667,
+            "val_f1_default": 0.10309278350515463,
+            "val_accuracy_default": 0.7986111111111112,
             "val_precision_tuned": 0.4423076923076923,
             "val_recall_tuned": 0.30666666666666664,
             "val_f1_tuned": 0.3622047244094488,
@@ -7912,7 +7913,7 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 1.9479522439869986e-153,
+            "threshold": 1.911571657159275e-153,
             "val_precision_default": 0.16666666666666666,
             "val_recall_default": 0.10294117647058823,
             "val_f1_default": 0.12727272727272726,
@@ -7927,11 +7928,11 @@
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 4.601048745501545e-39,
-            "val_precision_default": 0.15789473684210525,
+            "threshold": 4.5151180693765227e-39,
+            "val_precision_default": 0.15384615384615385,
             "val_recall_default": 0.08823529411764706,
-            "val_f1_default": 0.11320754716981131,
-            "val_accuracy_default": 0.7868480725623582,
+            "val_f1_default": 0.11214953271028037,
+            "val_accuracy_default": 0.7845804988662132,
             "val_precision_tuned": 0.1552511415525114,
             "val_recall_tuned": 1.0,
             "val_f1_tuned": 0.26877470355731226,
@@ -7942,37 +7943,37 @@
             "params": {
               "bandwidth": 0.25
             },
-            "threshold": 0.1628794444345265,
+            "threshold": 0.16973540643047366,
             "val_precision_default": 0.24242424242424243,
             "val_recall_default": 0.11764705882352941,
             "val_f1_default": 0.15841584158415842,
             "val_accuracy_default": 0.8072562358276644,
-            "val_precision_tuned": 0.2119205298013245,
-            "val_recall_tuned": 0.47058823529411764,
-            "val_f1_tuned": 0.29223744292237447,
-            "val_accuracy_tuned": 0.6485260770975056,
+            "val_precision_tuned": 0.21232876712328766,
+            "val_recall_tuned": 0.45588235294117646,
+            "val_f1_tuned": 0.2897196261682243,
+            "val_accuracy_tuned": 0.655328798185941,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.28674409792041605,
-            "val_precision_default": 0.21739130434782608,
-            "val_recall_default": 0.07352941176470588,
-            "val_f1_default": 0.1098901098901099,
-            "val_accuracy_default": 0.8163265306122449,
+            "threshold": 0.2889900774950579,
+            "val_precision_default": 0.25,
+            "val_recall_default": 0.08823529411764706,
+            "val_f1_default": 0.13043478260869565,
+            "val_accuracy_default": 0.81859410430839,
             "val_precision_tuned": 0.28205128205128205,
             "val_recall_tuned": 0.3235294117647059,
             "val_f1_tuned": 0.3013698630136986,
             "val_accuracy_tuned": 0.7687074829931972,
-            "selected": true
+            "selected": false
           },
           {
             "params": {
               "bandwidth": 1.0
             },
-            "threshold": 0.030967493358807108,
+            "threshold": 0.02836568516072505,
             "val_precision_default": 0.25,
             "val_recall_default": 0.04411764705882353,
             "val_f1_default": 0.075,
@@ -7987,45 +7988,45 @@
             "params": {
               "bandwidth": 2.0
             },
-            "threshold": 0.21954013172456138,
+            "threshold": 0.22011217021830987,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8458049886621315,
-            "val_precision_tuned": 0.20422535211267606,
-            "val_recall_tuned": 0.4264705882352941,
-            "val_f1_tuned": 0.2761904761904762,
-            "val_accuracy_tuned": 0.655328798185941,
+            "val_precision_tuned": 0.23958333333333334,
+            "val_recall_tuned": 0.3382352941176471,
+            "val_f1_tuned": 0.28048780487804875,
+            "val_accuracy_tuned": 0.7324263038548753,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 4.0
             },
-            "threshold": 0.05694270235775204,
+            "threshold": 0.20883054645556726,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8458049886621315,
-            "val_precision_tuned": 0.15419501133786848,
-            "val_recall_tuned": 1.0,
-            "val_f1_tuned": 0.26719056974459726,
-            "val_accuracy_tuned": 0.15419501133786848,
-            "selected": false
+            "val_precision_tuned": 0.26,
+            "val_recall_tuned": 0.38235294117647056,
+            "val_f1_tuned": 0.30952380952380953,
+            "val_accuracy_tuned": 0.7369614512471655,
+            "selected": true
           },
           {
             "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.02287555712911748,
+            "threshold": 0.02255812431664644,
             "val_precision_default": 0.3181818181818182,
             "val_recall_default": 0.10294117647058823,
             "val_f1_default": 0.15555555555555556,
             "val_accuracy_default": 0.8276643990929705,
-            "val_precision_tuned": 0.21311475409836064,
+            "val_precision_tuned": 0.20967741935483872,
             "val_recall_tuned": 0.38235294117647056,
-            "val_f1_tuned": 0.27368421052631575,
-            "val_accuracy_tuned": 0.6870748299319728,
+            "val_f1_tuned": 0.2708333333333333,
+            "val_accuracy_tuned": 0.6825396825396826,
             "selected": false
           }
         ],
@@ -8034,7 +8035,7 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 0.08506635287118511,
+            "threshold": 0.08477554938919989,
             "val_precision_default": 0.14893617021276595,
             "val_recall_default": 0.0945945945945946,
             "val_f1_default": 0.11570247933884298,
@@ -8049,11 +8050,26 @@
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 0.06896233191031172,
-            "val_precision_default": 0.15555555555555556,
+            "threshold": 0.07646116765338816,
+            "val_precision_default": 0.17391304347826086,
+            "val_recall_default": 0.10810810810810811,
+            "val_f1_default": 0.13333333333333333,
+            "val_accuracy_default": 0.7609195402298851,
+            "val_precision_tuned": 0.22171945701357465,
+            "val_recall_tuned": 0.6621621621621622,
+            "val_f1_tuned": 0.3322033898305085,
+            "val_accuracy_tuned": 0.5471264367816092,
+            "selected": false
+          },
+          {
+            "params": {
+              "bandwidth": 0.25
+            },
+            "threshold": 0.09157994790352694,
+            "val_precision_default": 0.21212121212121213,
             "val_recall_default": 0.0945945945945946,
-            "val_f1_default": 0.11764705882352941,
-            "val_accuracy_default": 0.7586206896551724,
+            "val_f1_default": 0.13084112149532712,
+            "val_accuracy_default": 0.7862068965517242,
             "val_precision_tuned": 0.2183406113537118,
             "val_recall_tuned": 0.6756756756756757,
             "val_f1_tuned": 0.33003300330033003,
@@ -8062,92 +8078,77 @@
           },
           {
             "params": {
-              "bandwidth": 0.25
-            },
-            "threshold": 0.08429308099281939,
-            "val_precision_default": 0.22580645161290322,
-            "val_recall_default": 0.0945945945945946,
-            "val_f1_default": 0.13333333333333333,
-            "val_accuracy_default": 0.7908045977011494,
-            "val_precision_tuned": 0.2139917695473251,
-            "val_recall_tuned": 0.7027027027027027,
-            "val_f1_tuned": 0.3280757097791798,
-            "val_accuracy_tuned": 0.5103448275862069,
-            "selected": false
-          },
-          {
-            "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.10272527969848827,
+            "threshold": 0.10801189446065051,
             "val_precision_default": 0.23529411764705882,
             "val_recall_default": 0.05405405405405406,
             "val_f1_default": 0.08791208791208792,
             "val_accuracy_default": 0.8091954022988506,
-            "val_precision_tuned": 0.2139917695473251,
-            "val_recall_tuned": 0.7027027027027027,
-            "val_f1_tuned": 0.3280757097791798,
-            "val_accuracy_tuned": 0.5103448275862069,
+            "val_precision_tuned": 0.21428571428571427,
+            "val_recall_tuned": 0.6891891891891891,
+            "val_f1_tuned": 0.32692307692307687,
+            "val_accuracy_tuned": 0.5172413793103449,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 1.0
             },
-            "threshold": 0.1247484252030911,
-            "val_precision_default": 0.16666666666666666,
+            "threshold": 0.11820803865578706,
+            "val_precision_default": 0.2,
             "val_recall_default": 0.013513513513513514,
-            "val_f1_default": 0.025,
-            "val_accuracy_default": 0.8206896551724138,
-            "val_precision_tuned": 0.23076923076923078,
-            "val_recall_tuned": 0.7702702702702703,
-            "val_f1_tuned": 0.3551401869158879,
-            "val_accuracy_tuned": 0.5241379310344828,
+            "val_f1_default": 0.02531645569620253,
+            "val_accuracy_default": 0.8229885057471265,
+            "val_precision_tuned": 0.22868217054263565,
+            "val_recall_tuned": 0.7972972972972973,
+            "val_f1_tuned": 0.3554216867469879,
+            "val_accuracy_tuned": 0.5080459770114942,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 2.0
             },
-            "threshold": 0.15555812301541777,
+            "threshold": 0.1554824851719276,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
-            "val_accuracy_default": 0.8275862068965517,
-            "val_precision_tuned": 0.24378109452736318,
-            "val_recall_tuned": 0.6621621621621622,
-            "val_f1_tuned": 0.3563636363636363,
-            "val_accuracy_tuned": 0.593103448275862,
-            "selected": false
+            "val_accuracy_default": 0.8298850574712644,
+            "val_precision_tuned": 0.23694779116465864,
+            "val_recall_tuned": 0.7972972972972973,
+            "val_f1_tuned": 0.3653250773993808,
+            "val_accuracy_tuned": 0.5287356321839081,
+            "selected": true
           },
           {
             "params": {
               "bandwidth": 4.0
             },
-            "threshold": 0.1608925044320512,
+            "threshold": 0.17862139576550173,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8298850574712644,
-            "val_precision_tuned": 0.24271844660194175,
-            "val_recall_tuned": 0.6756756756756757,
-            "val_f1_tuned": 0.35714285714285715,
-            "val_accuracy_tuned": 0.5862068965517241,
-            "selected": true
+            "val_precision_tuned": 0.24074074074074073,
+            "val_recall_tuned": 0.7027027027027027,
+            "val_f1_tuned": 0.3586206896551724,
+            "val_accuracy_tuned": 0.5724137931034483,
+            "selected": false
           },
           {
             "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.009754168838013456,
+            "threshold": 0.002449026514122539,
             "val_precision_default": 0.2777777777777778,
             "val_recall_default": 0.06756756756756757,
             "val_f1_default": 0.10869565217391305,
             "val_accuracy_default": 0.8114942528735632,
-            "val_precision_tuned": 0.21610169491525424,
+            "val_precision_tuned": 0.21428571428571427,
             "val_recall_tuned": 0.6891891891891891,
-            "val_f1_tuned": 0.3290322580645162,
-            "val_accuracy_tuned": 0.5218390804597701,
+            "val_f1_tuned": 0.32692307692307687,
+            "val_accuracy_tuned": 0.5172413793103449,
             "selected": false
           }
         ]
@@ -14439,7 +14440,7 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 0.26447119505259903,
+            "threshold": 0.2663320806009034,
             "val_precision_default": 0.32727272727272727,
             "val_recall_default": 0.25,
             "val_f1_default": 0.28346456692913385,
@@ -14454,101 +14455,101 @@
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 0.2139640372333991,
-            "val_precision_default": 0.3617021276595745,
+            "threshold": 0.20180376772437705,
+            "val_precision_default": 0.38636363636363635,
             "val_recall_default": 0.2361111111111111,
-            "val_f1_default": 0.2857142857142857,
-            "val_accuracy_default": 0.8081264108352144,
-            "val_precision_tuned": 0.2767857142857143,
-            "val_recall_tuned": 0.4305555555555556,
-            "val_f1_tuned": 0.33695652173913043,
-            "val_accuracy_tuned": 0.7246049661399548,
+            "val_f1_default": 0.2931034482758621,
+            "val_accuracy_default": 0.8148984198645598,
+            "val_precision_tuned": 0.27586206896551724,
+            "val_recall_tuned": 0.4444444444444444,
+            "val_f1_tuned": 0.3404255319148936,
+            "val_accuracy_tuned": 0.7200902934537246,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 0.25
             },
-            "threshold": 0.17851292408512115,
+            "threshold": 0.38905192514047654,
             "val_precision_default": 0.4117647058823529,
             "val_recall_default": 0.19444444444444445,
             "val_f1_default": 0.2641509433962264,
             "val_accuracy_default": 0.8239277652370203,
-            "val_precision_tuned": 0.2550335570469799,
-            "val_recall_tuned": 0.5277777777777778,
-            "val_f1_tuned": 0.3438914027149322,
-            "val_accuracy_tuned": 0.672686230248307,
+            "val_precision_tuned": 0.38333333333333336,
+            "val_recall_tuned": 0.3194444444444444,
+            "val_f1_tuned": 0.3484848484848485,
+            "val_accuracy_tuned": 0.8058690744920993,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.25173760816925084,
-            "val_precision_default": 0.3157894736842105,
-            "val_recall_default": 0.08333333333333333,
-            "val_f1_default": 0.13186813186813187,
+            "threshold": 0.2539932711266196,
+            "val_precision_default": 0.3333333333333333,
+            "val_recall_default": 0.09722222222222222,
+            "val_f1_default": 0.15053763440860216,
             "val_accuracy_default": 0.8216704288939052,
-            "val_precision_tuned": 0.29347826086956524,
+            "val_precision_tuned": 0.30337078651685395,
             "val_recall_tuned": 0.375,
-            "val_f1_tuned": 0.3292682926829269,
-            "val_accuracy_tuned": 0.7516930022573364,
+            "val_f1_tuned": 0.3354037267080745,
+            "val_accuracy_tuned": 0.7584650112866818,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 1.0
             },
-            "threshold": 0.21102234483554305,
+            "threshold": 0.21629801520505507,
             "val_precision_default": 0.5,
             "val_recall_default": 0.027777777777777776,
             "val_f1_default": 0.05263157894736842,
             "val_accuracy_default": 0.837471783295711,
-            "val_precision_tuned": 0.24242424242424243,
-            "val_recall_tuned": 0.4444444444444444,
-            "val_f1_tuned": 0.3137254901960784,
-            "val_accuracy_tuned": 0.6839729119638827,
+            "val_precision_tuned": 0.2542372881355932,
+            "val_recall_tuned": 0.4166666666666667,
+            "val_f1_tuned": 0.3157894736842105,
+            "val_accuracy_tuned": 0.7065462753950339,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 2.0
             },
-            "threshold": 0.2137326754562569,
+            "threshold": 0.20012691984887485,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.837471783295711,
-            "val_precision_tuned": 0.24285714285714285,
-            "val_recall_tuned": 0.4722222222222222,
-            "val_f1_tuned": 0.32075471698113206,
-            "val_accuracy_tuned": 0.6749435665914221,
+            "val_precision_tuned": 0.3058823529411765,
+            "val_recall_tuned": 0.3611111111111111,
+            "val_f1_tuned": 0.33121019108280253,
+            "val_accuracy_tuned": 0.7629796839729119,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 4.0
             },
-            "threshold": 0.25364075585627216,
+            "threshold": 0.18788195538802552,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.837471783295711,
-            "val_precision_tuned": 0.2719298245614035,
-            "val_recall_tuned": 0.4305555555555556,
-            "val_f1_tuned": 0.33333333333333337,
-            "val_accuracy_tuned": 0.7200902934537246,
+            "val_precision_tuned": 0.2815533980582524,
+            "val_recall_tuned": 0.4027777777777778,
+            "val_f1_tuned": 0.33142857142857146,
+            "val_accuracy_tuned": 0.7358916478555305,
             "selected": false
           },
           {
             "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.060934585383480205,
-            "val_precision_default": 0.2647058823529412,
-            "val_recall_default": 0.125,
-            "val_f1_default": 0.16981132075471697,
-            "val_accuracy_default": 0.801354401805869,
+            "threshold": 0.048796966235943824,
+            "val_precision_default": 0.24242424242424243,
+            "val_recall_default": 0.1111111111111111,
+            "val_f1_default": 0.15238095238095237,
+            "val_accuracy_default": 0.7990970654627539,
             "val_precision_tuned": 0.30120481927710846,
             "val_recall_tuned": 0.3472222222222222,
             "val_f1_tuned": 0.3225806451612903,
@@ -14561,11 +14562,101 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 0.1527812482960019,
-            "val_precision_default": 0.2328767123287671,
-            "val_recall_default": 0.2073170731707317,
-            "val_f1_default": 0.2193548387096774,
-            "val_accuracy_default": 0.7299107142857143,
+            "threshold": 0.1496895352235443,
+            "val_precision_default": 0.25,
+            "val_recall_default": 0.23170731707317074,
+            "val_f1_default": 0.24050632911392408,
+            "val_accuracy_default": 0.7321428571428571,
+            "val_precision_tuned": 0.2222222222222222,
+            "val_recall_tuned": 0.6341463414634146,
+            "val_f1_tuned": 0.3291139240506329,
+            "val_accuracy_tuned": 0.5267857142857143,
+            "selected": false
+          },
+          {
+            "params": {
+              "bandwidth": 0.1
+            },
+            "threshold": 0.15974252282107979,
+            "val_precision_default": 0.2631578947368421,
+            "val_recall_default": 0.24390243902439024,
+            "val_f1_default": 0.25316455696202533,
+            "val_accuracy_default": 0.7366071428571429,
+            "val_precision_tuned": 0.22666666666666666,
+            "val_recall_tuned": 0.6219512195121951,
+            "val_f1_tuned": 0.3322475570032573,
+            "val_accuracy_tuned": 0.5424107142857143,
+            "selected": false
+          },
+          {
+            "params": {
+              "bandwidth": 0.25
+            },
+            "threshold": 0.10051100658255596,
+            "val_precision_default": 0.26785714285714285,
+            "val_recall_default": 0.18292682926829268,
+            "val_f1_default": 0.21739130434782608,
+            "val_accuracy_default": 0.7589285714285714,
+            "val_precision_tuned": 0.2112676056338028,
+            "val_recall_tuned": 0.7317073170731707,
+            "val_f1_tuned": 0.3278688524590164,
+            "val_accuracy_tuned": 0.45089285714285715,
+            "selected": false
+          },
+          {
+            "params": {
+              "bandwidth": 0.5
+            },
+            "threshold": 0.14081196619021846,
+            "val_precision_default": 0.30303030303030304,
+            "val_recall_default": 0.12195121951219512,
+            "val_f1_default": 0.17391304347826086,
+            "val_accuracy_default": 0.7879464285714286,
+            "val_precision_tuned": 0.21851851851851853,
+            "val_recall_tuned": 0.7195121951219512,
+            "val_f1_tuned": 0.3352272727272727,
+            "val_accuracy_tuned": 0.47767857142857145,
+            "selected": false
+          },
+          {
+            "params": {
+              "bandwidth": 1.0
+            },
+            "threshold": 0.19122793988438028,
+            "val_precision_default": 0.3333333333333333,
+            "val_recall_default": 0.024390243902439025,
+            "val_f1_default": 0.04545454545454545,
+            "val_accuracy_default": 0.8125,
+            "val_precision_tuned": 0.2290748898678414,
+            "val_recall_tuned": 0.6341463414634146,
+            "val_f1_tuned": 0.3365695792880259,
+            "val_accuracy_tuned": 0.5424107142857143,
+            "selected": false
+          },
+          {
+            "params": {
+              "bandwidth": 2.0
+            },
+            "threshold": 0.1881344981715035,
+            "val_precision_default": 0.0,
+            "val_recall_default": 0.0,
+            "val_f1_default": 0.0,
+            "val_accuracy_default": 0.8169642857142857,
+            "val_precision_tuned": 0.22608695652173913,
+            "val_recall_tuned": 0.6341463414634146,
+            "val_f1_tuned": 0.33333333333333337,
+            "val_accuracy_tuned": 0.5357142857142857,
+            "selected": false
+          },
+          {
+            "params": {
+              "bandwidth": 4.0
+            },
+            "threshold": 0.19371220627172334,
+            "val_precision_default": 0.0,
+            "val_recall_default": 0.0,
+            "val_f1_default": 0.0,
+            "val_accuracy_default": 0.8169642857142857,
             "val_precision_tuned": 0.22413793103448276,
             "val_recall_tuned": 0.6341463414634146,
             "val_f1_tuned": 0.3312101910828026,
@@ -14574,106 +14665,16 @@
           },
           {
             "params": {
-              "bandwidth": 0.1
-            },
-            "threshold": 0.15876507315195476,
-            "val_precision_default": 0.2702702702702703,
-            "val_recall_default": 0.24390243902439024,
-            "val_f1_default": 0.2564102564102564,
-            "val_accuracy_default": 0.7410714285714286,
-            "val_precision_tuned": 0.22466960352422907,
-            "val_recall_tuned": 0.6219512195121951,
-            "val_f1_tuned": 0.3300970873786408,
-            "val_accuracy_tuned": 0.5379464285714286,
-            "selected": false
-          },
-          {
-            "params": {
-              "bandwidth": 0.25
-            },
-            "threshold": 0.05240312257560231,
-            "val_precision_default": 0.26785714285714285,
-            "val_recall_default": 0.18292682926829268,
-            "val_f1_default": 0.21739130434782608,
-            "val_accuracy_default": 0.7589285714285714,
-            "val_precision_tuned": 0.20552147239263804,
-            "val_recall_tuned": 0.8170731707317073,
-            "val_f1_tuned": 0.3284313725490196,
-            "val_accuracy_tuned": 0.38839285714285715,
-            "selected": false
-          },
-          {
-            "params": {
-              "bandwidth": 0.5
-            },
-            "threshold": 0.14294726668594127,
-            "val_precision_default": 0.28125,
-            "val_recall_default": 0.10975609756097561,
-            "val_f1_default": 0.15789473684210525,
-            "val_accuracy_default": 0.7857142857142857,
-            "val_precision_tuned": 0.21804511278195488,
-            "val_recall_tuned": 0.7073170731707317,
-            "val_f1_tuned": 0.33333333333333326,
-            "val_accuracy_tuned": 0.48214285714285715,
-            "selected": false
-          },
-          {
-            "params": {
-              "bandwidth": 1.0
-            },
-            "threshold": 0.1773753045052291,
-            "val_precision_default": 0.42857142857142855,
-            "val_recall_default": 0.036585365853658534,
-            "val_f1_default": 0.06741573033707865,
-            "val_accuracy_default": 0.8147321428571429,
-            "val_precision_tuned": 0.2222222222222222,
-            "val_recall_tuned": 0.6829268292682927,
-            "val_f1_tuned": 0.33532934131736525,
-            "val_accuracy_tuned": 0.5044642857142857,
-            "selected": false
-          },
-          {
-            "params": {
-              "bandwidth": 2.0
-            },
-            "threshold": 0.16068805337716366,
-            "val_precision_default": 0.0,
-            "val_recall_default": 0.0,
-            "val_f1_default": 0.0,
-            "val_accuracy_default": 0.8169642857142857,
-            "val_precision_tuned": 0.20938628158844766,
-            "val_recall_tuned": 0.7073170731707317,
-            "val_f1_tuned": 0.3231197771587744,
-            "val_accuracy_tuned": 0.4575892857142857,
-            "selected": false
-          },
-          {
-            "params": {
-              "bandwidth": 4.0
-            },
-            "threshold": 0.16051405144073694,
-            "val_precision_default": 0.0,
-            "val_recall_default": 0.0,
-            "val_f1_default": 0.0,
-            "val_accuracy_default": 0.8169642857142857,
-            "val_precision_tuned": 0.2078853046594982,
-            "val_recall_tuned": 0.7073170731707317,
-            "val_f1_tuned": 0.32132963988919666,
-            "val_accuracy_tuned": 0.453125,
-            "selected": false
-          },
-          {
-            "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.027159783285936476,
-            "val_precision_default": 0.1,
+            "threshold": 0.008674253626945945,
+            "val_precision_default": 1.0,
             "val_recall_default": 0.012195121951219513,
-            "val_f1_default": 0.02173913043478261,
-            "val_accuracy_default": 0.7991071428571429,
-            "val_precision_tuned": 0.2463768115942029,
-            "val_recall_tuned": 0.6219512195121951,
-            "val_f1_tuned": 0.35294117647058826,
+            "val_f1_default": 0.024096385542168676,
+            "val_accuracy_default": 0.8191964285714286,
+            "val_precision_tuned": 0.24880382775119617,
+            "val_recall_tuned": 0.6341463414634146,
+            "val_f1_tuned": 0.35738831615120276,
             "val_accuracy_tuned": 0.5825892857142857,
             "selected": true
           }
@@ -14683,7 +14684,7 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 0.5772710213203791,
+            "threshold": 0.5794357863976095,
             "val_precision_default": 0.38181818181818183,
             "val_recall_default": 0.28,
             "val_f1_default": 0.3230769230769231,
@@ -14698,11 +14699,11 @@
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 0.5097825488407929,
-            "val_precision_default": 0.43137254901960786,
+            "threshold": 0.514196807651425,
+            "val_precision_default": 0.4230769230769231,
             "val_recall_default": 0.29333333333333333,
-            "val_f1_default": 0.3492063492063492,
-            "val_accuracy_default": 0.8101851851851852,
+            "val_f1_default": 0.3464566929133859,
+            "val_accuracy_default": 0.8078703703703703,
             "val_precision_tuned": 0.4782608695652174,
             "val_recall_tuned": 0.29333333333333333,
             "val_f1_tuned": 0.36363636363636365,
@@ -14713,7 +14714,7 @@
             "params": {
               "bandwidth": 0.25
             },
-            "threshold": 0.3765126428788888,
+            "threshold": 0.3800484406971458,
             "val_precision_default": 0.5,
             "val_recall_default": 0.26666666666666666,
             "val_f1_default": 0.3478260869565218,
@@ -14728,71 +14729,71 @@
             "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.2964045516373781,
+            "threshold": 0.2929315303470583,
             "val_precision_default": 0.5806451612903226,
             "val_recall_default": 0.24,
             "val_f1_default": 0.339622641509434,
             "val_accuracy_default": 0.8379629629629629,
-            "val_precision_tuned": 0.3617021276595745,
-            "val_recall_tuned": 0.4533333333333333,
-            "val_f1_tuned": 0.40236686390532544,
-            "val_accuracy_tuned": 0.7662037037037037,
+            "val_precision_tuned": 0.35714285714285715,
+            "val_recall_tuned": 0.4666666666666667,
+            "val_f1_tuned": 0.4046242774566475,
+            "val_accuracy_tuned": 0.7615740740740741,
             "selected": true
           },
           {
             "params": {
               "bandwidth": 1.0
             },
-            "threshold": 0.24675076192843842,
-            "val_precision_default": 0.5384615384615384,
-            "val_recall_default": 0.09333333333333334,
-            "val_f1_default": 0.1590909090909091,
-            "val_accuracy_default": 0.8287037037037037,
-            "val_precision_tuned": 0.3076923076923077,
-            "val_recall_tuned": 0.4266666666666667,
-            "val_f1_tuned": 0.3575418994413408,
-            "val_accuracy_tuned": 0.7337962962962963,
+            "threshold": 0.2637789824345584,
+            "val_precision_default": 0.5714285714285714,
+            "val_recall_default": 0.10666666666666667,
+            "val_f1_default": 0.1797752808988764,
+            "val_accuracy_default": 0.8310185185185185,
+            "val_precision_tuned": 0.3333333333333333,
+            "val_recall_tuned": 0.38666666666666666,
+            "val_f1_tuned": 0.35802469135802467,
+            "val_accuracy_tuned": 0.7592592592592593,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 2.0
             },
-            "threshold": 0.19328347361657702,
+            "threshold": 0.20153160123306488,
             "val_precision_default": 0.5,
             "val_recall_default": 0.013333333333333334,
             "val_f1_default": 0.025974025974025976,
             "val_accuracy_default": 0.8263888888888888,
-            "val_precision_tuned": 0.26973684210526316,
-            "val_recall_tuned": 0.5466666666666666,
-            "val_f1_tuned": 0.36123348017621143,
-            "val_accuracy_tuned": 0.6643518518518519,
+            "val_precision_tuned": 0.308411214953271,
+            "val_recall_tuned": 0.44,
+            "val_f1_tuned": 0.3626373626373626,
+            "val_accuracy_tuned": 0.7314814814814815,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 4.0
             },
-            "threshold": 0.19535768478077625,
+            "threshold": 0.1881491237582581,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8263888888888888,
-            "val_precision_tuned": 0.25675675675675674,
-            "val_recall_tuned": 0.5066666666666667,
-            "val_f1_tuned": 0.3408071748878924,
-            "val_accuracy_tuned": 0.6597222222222222,
+            "val_precision_tuned": 0.3177570093457944,
+            "val_recall_tuned": 0.4533333333333333,
+            "val_f1_tuned": 0.37362637362637363,
+            "val_accuracy_tuned": 0.7361111111111112,
             "selected": false
           },
           {
             "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.13602408463620175,
-            "val_precision_default": 0.3793103448275862,
-            "val_recall_default": 0.14666666666666667,
-            "val_f1_default": 0.21153846153846156,
-            "val_accuracy_default": 0.8101851851851852,
+            "threshold": 0.0533108024905954,
+            "val_precision_default": 0.22727272727272727,
+            "val_recall_default": 0.06666666666666667,
+            "val_f1_default": 0.10309278350515463,
+            "val_accuracy_default": 0.7986111111111112,
             "val_precision_tuned": 0.4423076923076923,
             "val_recall_tuned": 0.30666666666666664,
             "val_f1_tuned": 0.3622047244094488,
@@ -14805,7 +14806,7 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 1.9479522439869986e-153,
+            "threshold": 1.911571657159275e-153,
             "val_precision_default": 0.16666666666666666,
             "val_recall_default": 0.10294117647058823,
             "val_f1_default": 0.12727272727272726,
@@ -14820,11 +14821,11 @@
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 4.601048745501545e-39,
-            "val_precision_default": 0.15789473684210525,
+            "threshold": 4.5151180693765227e-39,
+            "val_precision_default": 0.15384615384615385,
             "val_recall_default": 0.08823529411764706,
-            "val_f1_default": 0.11320754716981131,
-            "val_accuracy_default": 0.7868480725623582,
+            "val_f1_default": 0.11214953271028037,
+            "val_accuracy_default": 0.7845804988662132,
             "val_precision_tuned": 0.1552511415525114,
             "val_recall_tuned": 1.0,
             "val_f1_tuned": 0.26877470355731226,
@@ -14835,37 +14836,37 @@
             "params": {
               "bandwidth": 0.25
             },
-            "threshold": 0.1628794444345265,
+            "threshold": 0.16973540643047366,
             "val_precision_default": 0.24242424242424243,
             "val_recall_default": 0.11764705882352941,
             "val_f1_default": 0.15841584158415842,
             "val_accuracy_default": 0.8072562358276644,
-            "val_precision_tuned": 0.2119205298013245,
-            "val_recall_tuned": 0.47058823529411764,
-            "val_f1_tuned": 0.29223744292237447,
-            "val_accuracy_tuned": 0.6485260770975056,
+            "val_precision_tuned": 0.21232876712328766,
+            "val_recall_tuned": 0.45588235294117646,
+            "val_f1_tuned": 0.2897196261682243,
+            "val_accuracy_tuned": 0.655328798185941,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.28674409792041605,
-            "val_precision_default": 0.21739130434782608,
-            "val_recall_default": 0.07352941176470588,
-            "val_f1_default": 0.1098901098901099,
-            "val_accuracy_default": 0.8163265306122449,
+            "threshold": 0.2889900774950579,
+            "val_precision_default": 0.25,
+            "val_recall_default": 0.08823529411764706,
+            "val_f1_default": 0.13043478260869565,
+            "val_accuracy_default": 0.81859410430839,
             "val_precision_tuned": 0.28205128205128205,
             "val_recall_tuned": 0.3235294117647059,
             "val_f1_tuned": 0.3013698630136986,
             "val_accuracy_tuned": 0.7687074829931972,
-            "selected": true
+            "selected": false
           },
           {
             "params": {
               "bandwidth": 1.0
             },
-            "threshold": 0.030967493358807108,
+            "threshold": 0.02836568516072505,
             "val_precision_default": 0.25,
             "val_recall_default": 0.04411764705882353,
             "val_f1_default": 0.075,
@@ -14880,45 +14881,45 @@
             "params": {
               "bandwidth": 2.0
             },
-            "threshold": 0.21954013172456138,
+            "threshold": 0.22011217021830987,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8458049886621315,
-            "val_precision_tuned": 0.20422535211267606,
-            "val_recall_tuned": 0.4264705882352941,
-            "val_f1_tuned": 0.2761904761904762,
-            "val_accuracy_tuned": 0.655328798185941,
+            "val_precision_tuned": 0.23958333333333334,
+            "val_recall_tuned": 0.3382352941176471,
+            "val_f1_tuned": 0.28048780487804875,
+            "val_accuracy_tuned": 0.7324263038548753,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 4.0
             },
-            "threshold": 0.05694270235775204,
+            "threshold": 0.20883054645556726,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8458049886621315,
-            "val_precision_tuned": 0.15419501133786848,
-            "val_recall_tuned": 1.0,
-            "val_f1_tuned": 0.26719056974459726,
-            "val_accuracy_tuned": 0.15419501133786848,
-            "selected": false
+            "val_precision_tuned": 0.26,
+            "val_recall_tuned": 0.38235294117647056,
+            "val_f1_tuned": 0.30952380952380953,
+            "val_accuracy_tuned": 0.7369614512471655,
+            "selected": true
           },
           {
             "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.02287555712911748,
+            "threshold": 0.02255812431664644,
             "val_precision_default": 0.3181818181818182,
             "val_recall_default": 0.10294117647058823,
             "val_f1_default": 0.15555555555555556,
             "val_accuracy_default": 0.8276643990929705,
-            "val_precision_tuned": 0.21311475409836064,
+            "val_precision_tuned": 0.20967741935483872,
             "val_recall_tuned": 0.38235294117647056,
-            "val_f1_tuned": 0.27368421052631575,
-            "val_accuracy_tuned": 0.6870748299319728,
+            "val_f1_tuned": 0.2708333333333333,
+            "val_accuracy_tuned": 0.6825396825396826,
             "selected": false
           }
         ],
@@ -14927,7 +14928,7 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 0.08506635287118511,
+            "threshold": 0.08477554938919989,
             "val_precision_default": 0.14893617021276595,
             "val_recall_default": 0.0945945945945946,
             "val_f1_default": 0.11570247933884298,
@@ -14942,11 +14943,26 @@
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 0.06896233191031172,
-            "val_precision_default": 0.15555555555555556,
+            "threshold": 0.07646116765338816,
+            "val_precision_default": 0.17391304347826086,
+            "val_recall_default": 0.10810810810810811,
+            "val_f1_default": 0.13333333333333333,
+            "val_accuracy_default": 0.7609195402298851,
+            "val_precision_tuned": 0.22171945701357465,
+            "val_recall_tuned": 0.6621621621621622,
+            "val_f1_tuned": 0.3322033898305085,
+            "val_accuracy_tuned": 0.5471264367816092,
+            "selected": false
+          },
+          {
+            "params": {
+              "bandwidth": 0.25
+            },
+            "threshold": 0.09157994790352694,
+            "val_precision_default": 0.21212121212121213,
             "val_recall_default": 0.0945945945945946,
-            "val_f1_default": 0.11764705882352941,
-            "val_accuracy_default": 0.7586206896551724,
+            "val_f1_default": 0.13084112149532712,
+            "val_accuracy_default": 0.7862068965517242,
             "val_precision_tuned": 0.2183406113537118,
             "val_recall_tuned": 0.6756756756756757,
             "val_f1_tuned": 0.33003300330033003,
@@ -14955,92 +14971,77 @@
           },
           {
             "params": {
-              "bandwidth": 0.25
-            },
-            "threshold": 0.08429308099281939,
-            "val_precision_default": 0.22580645161290322,
-            "val_recall_default": 0.0945945945945946,
-            "val_f1_default": 0.13333333333333333,
-            "val_accuracy_default": 0.7908045977011494,
-            "val_precision_tuned": 0.2139917695473251,
-            "val_recall_tuned": 0.7027027027027027,
-            "val_f1_tuned": 0.3280757097791798,
-            "val_accuracy_tuned": 0.5103448275862069,
-            "selected": false
-          },
-          {
-            "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.10272527969848827,
+            "threshold": 0.10801189446065051,
             "val_precision_default": 0.23529411764705882,
             "val_recall_default": 0.05405405405405406,
             "val_f1_default": 0.08791208791208792,
             "val_accuracy_default": 0.8091954022988506,
-            "val_precision_tuned": 0.2139917695473251,
-            "val_recall_tuned": 0.7027027027027027,
-            "val_f1_tuned": 0.3280757097791798,
-            "val_accuracy_tuned": 0.5103448275862069,
+            "val_precision_tuned": 0.21428571428571427,
+            "val_recall_tuned": 0.6891891891891891,
+            "val_f1_tuned": 0.32692307692307687,
+            "val_accuracy_tuned": 0.5172413793103449,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 1.0
             },
-            "threshold": 0.1247484252030911,
-            "val_precision_default": 0.16666666666666666,
+            "threshold": 0.11820803865578706,
+            "val_precision_default": 0.2,
             "val_recall_default": 0.013513513513513514,
-            "val_f1_default": 0.025,
-            "val_accuracy_default": 0.8206896551724138,
-            "val_precision_tuned": 0.23076923076923078,
-            "val_recall_tuned": 0.7702702702702703,
-            "val_f1_tuned": 0.3551401869158879,
-            "val_accuracy_tuned": 0.5241379310344828,
+            "val_f1_default": 0.02531645569620253,
+            "val_accuracy_default": 0.8229885057471265,
+            "val_precision_tuned": 0.22868217054263565,
+            "val_recall_tuned": 0.7972972972972973,
+            "val_f1_tuned": 0.3554216867469879,
+            "val_accuracy_tuned": 0.5080459770114942,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 2.0
             },
-            "threshold": 0.15555812301541777,
+            "threshold": 0.1554824851719276,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
-            "val_accuracy_default": 0.8275862068965517,
-            "val_precision_tuned": 0.24378109452736318,
-            "val_recall_tuned": 0.6621621621621622,
-            "val_f1_tuned": 0.3563636363636363,
-            "val_accuracy_tuned": 0.593103448275862,
-            "selected": false
+            "val_accuracy_default": 0.8298850574712644,
+            "val_precision_tuned": 0.23694779116465864,
+            "val_recall_tuned": 0.7972972972972973,
+            "val_f1_tuned": 0.3653250773993808,
+            "val_accuracy_tuned": 0.5287356321839081,
+            "selected": true
           },
           {
             "params": {
               "bandwidth": 4.0
             },
-            "threshold": 0.1608925044320512,
+            "threshold": 0.17862139576550173,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8298850574712644,
-            "val_precision_tuned": 0.24271844660194175,
-            "val_recall_tuned": 0.6756756756756757,
-            "val_f1_tuned": 0.35714285714285715,
-            "val_accuracy_tuned": 0.5862068965517241,
-            "selected": true
+            "val_precision_tuned": 0.24074074074074073,
+            "val_recall_tuned": 0.7027027027027027,
+            "val_f1_tuned": 0.3586206896551724,
+            "val_accuracy_tuned": 0.5724137931034483,
+            "selected": false
           },
           {
             "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.009754168838013456,
+            "threshold": 0.002449026514122539,
             "val_precision_default": 0.2777777777777778,
             "val_recall_default": 0.06756756756756757,
             "val_f1_default": 0.10869565217391305,
             "val_accuracy_default": 0.8114942528735632,
-            "val_precision_tuned": 0.21610169491525424,
+            "val_precision_tuned": 0.21428571428571427,
             "val_recall_tuned": 0.6891891891891891,
-            "val_f1_tuned": 0.3290322580645162,
-            "val_accuracy_tuned": 0.5218390804597701,
+            "val_f1_tuned": 0.32692307692307687,
+            "val_accuracy_tuned": 0.5172413793103449,
             "selected": false
           }
         ]
@@ -21330,7 +21331,7 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 0.24558323467622262,
+            "threshold": 0.24907611010686856,
             "val_precision_default": 0.34146341463414637,
             "val_recall_default": 0.19444444444444445,
             "val_f1_default": 0.247787610619469,
@@ -21345,105 +21346,105 @@
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 0.40917998573945336,
-            "val_precision_default": 0.42105263157894735,
+            "threshold": 0.2186161710662839,
+            "val_precision_default": 0.41025641025641024,
             "val_recall_default": 0.2222222222222222,
-            "val_f1_default": 0.2909090909090909,
-            "val_accuracy_default": 0.8239277652370203,
-            "val_precision_tuned": 0.39285714285714285,
-            "val_recall_tuned": 0.3055555555555556,
-            "val_f1_tuned": 0.34375000000000006,
-            "val_accuracy_tuned": 0.8103837471783296,
-            "selected": true
+            "val_f1_default": 0.2882882882882883,
+            "val_accuracy_default": 0.8216704288939052,
+            "val_precision_tuned": 0.2767857142857143,
+            "val_recall_tuned": 0.4305555555555556,
+            "val_f1_tuned": 0.33695652173913043,
+            "val_accuracy_tuned": 0.7246049661399548,
+            "selected": false
           },
           {
             "params": {
               "bandwidth": 0.25
             },
-            "threshold": 0.34589190020184923,
+            "threshold": 0.3394923209855462,
             "val_precision_default": 0.3793103448275862,
             "val_recall_default": 0.1527777777777778,
             "val_f1_default": 0.21782178217821785,
             "val_accuracy_default": 0.8216704288939052,
-            "val_precision_tuned": 0.35384615384615387,
+            "val_precision_tuned": 0.34328358208955223,
             "val_recall_tuned": 0.3194444444444444,
-            "val_f1_tuned": 0.3357664233576642,
-            "val_accuracy_tuned": 0.7945823927765236,
+            "val_f1_tuned": 0.33093525179856115,
+            "val_accuracy_tuned": 0.7900677200902935,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.22908235701164034,
-            "val_precision_default": 0.35294117647058826,
+            "threshold": 0.229671716792797,
+            "val_precision_default": 0.3333333333333333,
             "val_recall_default": 0.08333333333333333,
-            "val_f1_default": 0.1348314606741573,
-            "val_accuracy_default": 0.8261851015801355,
-            "val_precision_tuned": 0.28440366972477066,
+            "val_f1_default": 0.13333333333333333,
+            "val_accuracy_default": 0.8239277652370203,
+            "val_precision_tuned": 0.2897196261682243,
             "val_recall_tuned": 0.4305555555555556,
-            "val_f1_tuned": 0.3425414364640884,
-            "val_accuracy_tuned": 0.7313769751693002,
-            "selected": false
+            "val_f1_tuned": 0.3463687150837989,
+            "val_accuracy_tuned": 0.7358916478555305,
+            "selected": true
           },
           {
             "params": {
               "bandwidth": 1.0
             },
-            "threshold": 0.25080970883994225,
+            "threshold": 0.24187186228338167,
             "val_precision_default": 0.5,
             "val_recall_default": 0.027777777777777776,
             "val_f1_default": 0.05263157894736842,
             "val_accuracy_default": 0.837471783295711,
-            "val_precision_tuned": 0.30120481927710846,
+            "val_precision_tuned": 0.2808988764044944,
             "val_recall_tuned": 0.3472222222222222,
-            "val_f1_tuned": 0.3225806451612903,
-            "val_accuracy_tuned": 0.7629796839729119,
+            "val_f1_tuned": 0.31055900621118016,
+            "val_accuracy_tuned": 0.7494356659142212,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 2.0
             },
-            "threshold": 0.2074620337063908,
+            "threshold": 0.19943272568206155,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.837471783295711,
-            "val_precision_tuned": 0.23717948717948717,
-            "val_recall_tuned": 0.5138888888888888,
-            "val_f1_tuned": 0.3245614035087719,
-            "val_accuracy_tuned": 0.6523702031602708,
+            "val_precision_tuned": 0.27522935779816515,
+            "val_recall_tuned": 0.4166666666666667,
+            "val_f1_tuned": 0.33149171270718236,
+            "val_accuracy_tuned": 0.7268623024830699,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 4.0
             },
-            "threshold": 0.2472382642259588,
+            "threshold": 0.1913616021783058,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.837471783295711,
-            "val_precision_tuned": 0.2627118644067797,
-            "val_recall_tuned": 0.4305555555555556,
-            "val_f1_tuned": 0.3263157894736843,
-            "val_accuracy_tuned": 0.7110609480812641,
+            "val_precision_tuned": 0.2815533980582524,
+            "val_recall_tuned": 0.4027777777777778,
+            "val_f1_tuned": 0.33142857142857146,
+            "val_accuracy_tuned": 0.7358916478555305,
             "selected": false
           },
           {
             "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.013818643081655455,
-            "val_precision_default": 0.2647058823529412,
-            "val_recall_default": 0.125,
-            "val_f1_default": 0.16981132075471697,
-            "val_accuracy_default": 0.801354401805869,
-            "val_precision_tuned": 0.22164948453608246,
-            "val_recall_tuned": 0.5972222222222222,
-            "val_f1_tuned": 0.32330827067669177,
-            "val_accuracy_tuned": 0.5936794582392777,
+            "threshold": 0.05646660029262957,
+            "val_precision_default": 0.2857142857142857,
+            "val_recall_default": 0.1388888888888889,
+            "val_f1_default": 0.18691588785046728,
+            "val_accuracy_default": 0.8036117381489842,
+            "val_precision_tuned": 0.21951219512195122,
+            "val_recall_tuned": 0.625,
+            "val_f1_tuned": 0.3249097472924188,
+            "val_accuracy_tuned": 0.5778781038374717,
             "selected": false
           }
         ],
@@ -21452,11 +21453,11 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 0.2747710713670766,
-            "val_precision_default": 0.2830188679245283,
-            "val_recall_default": 0.18292682926829268,
-            "val_f1_default": 0.22222222222222224,
-            "val_accuracy_default": 0.765625,
+            "threshold": 0.2755673168711164,
+            "val_precision_default": 0.2962962962962963,
+            "val_recall_default": 0.1951219512195122,
+            "val_f1_default": 0.23529411764705882,
+            "val_accuracy_default": 0.7678571428571429,
             "val_precision_tuned": 0.25443786982248523,
             "val_recall_tuned": 0.524390243902439,
             "val_f1_tuned": 0.34262948207171323,
@@ -21467,11 +21468,11 @@
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 0.15608950895855503,
-            "val_precision_default": 0.3275862068965517,
-            "val_recall_default": 0.23170731707317074,
-            "val_f1_default": 0.27142857142857146,
-            "val_accuracy_default": 0.7723214285714286,
+            "threshold": 0.15651083193994303,
+            "val_precision_default": 0.32786885245901637,
+            "val_recall_default": 0.24390243902439024,
+            "val_f1_default": 0.27972027972027974,
+            "val_accuracy_default": 0.7700892857142857,
             "val_precision_tuned": 0.2222222222222222,
             "val_recall_tuned": 0.6341463414634146,
             "val_f1_tuned": 0.3291139240506329,
@@ -21482,11 +21483,11 @@
             "params": {
               "bandwidth": 0.25
             },
-            "threshold": 0.10270597008799211,
-            "val_precision_default": 0.29411764705882354,
+            "threshold": 0.1020939451884655,
+            "val_precision_default": 0.2830188679245283,
             "val_recall_default": 0.18292682926829268,
-            "val_f1_default": 0.22556390977443608,
-            "val_accuracy_default": 0.7700892857142857,
+            "val_f1_default": 0.22222222222222224,
+            "val_accuracy_default": 0.765625,
             "val_precision_tuned": 0.21505376344086022,
             "val_recall_tuned": 0.7317073170731707,
             "val_f1_tuned": 0.33240997229916897,
@@ -21497,7 +21498,7 @@
             "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.14032794815607993,
+            "threshold": 0.1408554473478889,
             "val_precision_default": 0.32142857142857145,
             "val_recall_default": 0.10975609756097561,
             "val_f1_default": 0.16363636363636364,
@@ -21512,60 +21513,60 @@
             "params": {
               "bandwidth": 1.0
             },
-            "threshold": 0.17589413244026858,
-            "val_precision_default": 0.3333333333333333,
-            "val_recall_default": 0.024390243902439025,
-            "val_f1_default": 0.04545454545454545,
-            "val_accuracy_default": 0.8125,
-            "val_precision_tuned": 0.2204724409448819,
-            "val_recall_tuned": 0.6829268292682927,
-            "val_f1_tuned": 0.33333333333333337,
-            "val_accuracy_tuned": 0.5,
+            "threshold": 0.19187602200053344,
+            "val_precision_default": 0.42857142857142855,
+            "val_recall_default": 0.036585365853658534,
+            "val_f1_default": 0.06741573033707865,
+            "val_accuracy_default": 0.8147321428571429,
+            "val_precision_tuned": 0.22413793103448276,
+            "val_recall_tuned": 0.6341463414634146,
+            "val_f1_tuned": 0.3312101910828026,
+            "val_accuracy_tuned": 0.53125,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 2.0
             },
-            "threshold": 0.1625701305717674,
+            "threshold": 0.18657005284085884,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8169642857142857,
-            "val_precision_tuned": 0.21323529411764705,
-            "val_recall_tuned": 0.7073170731707317,
-            "val_f1_tuned": 0.327683615819209,
-            "val_accuracy_tuned": 0.46875,
+            "val_precision_tuned": 0.22040816326530613,
+            "val_recall_tuned": 0.6585365853658537,
+            "val_f1_tuned": 0.3302752293577982,
+            "val_accuracy_tuned": 0.5111607142857143,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 4.0
             },
-            "threshold": 0.15954562052332694,
+            "threshold": 0.1932268910173065,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8169642857142857,
-            "val_precision_tuned": 0.20640569395017794,
-            "val_recall_tuned": 0.7073170731707317,
-            "val_f1_tuned": 0.31955922865013775,
-            "val_accuracy_tuned": 0.4486607142857143,
+            "val_precision_tuned": 0.22,
+            "val_recall_tuned": 0.6707317073170732,
+            "val_f1_tuned": 0.33132530120481934,
+            "val_accuracy_tuned": 0.5044642857142857,
             "selected": false
           },
           {
             "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.0332106563812768,
-            "val_precision_default": 0.14285714285714285,
+            "threshold": 0.059149200591783906,
+            "val_precision_default": 1.0,
             "val_recall_default": 0.012195121951219513,
-            "val_f1_default": 0.02247191011235955,
-            "val_accuracy_default": 0.8058035714285714,
-            "val_precision_tuned": 0.2513089005235602,
-            "val_recall_tuned": 0.5853658536585366,
-            "val_f1_tuned": 0.3516483516483517,
-            "val_accuracy_tuned": 0.6049107142857143,
+            "val_f1_default": 0.024096385542168676,
+            "val_accuracy_default": 0.8191964285714286,
+            "val_precision_tuned": 0.26900584795321636,
+            "val_recall_tuned": 0.5609756097560976,
+            "val_f1_tuned": 0.3636363636363636,
+            "val_accuracy_tuned": 0.640625,
             "selected": true
           }
         ],
@@ -21574,11 +21575,11 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 0.16811102715773119,
-            "val_precision_default": 0.4418604651162791,
+            "threshold": 0.16727212174429987,
+            "val_precision_default": 0.4318181818181818,
             "val_recall_default": 0.25333333333333335,
-            "val_f1_default": 0.32203389830508483,
-            "val_accuracy_default": 0.8148148148148148,
+            "val_f1_default": 0.319327731092437,
+            "val_accuracy_default": 0.8125,
             "val_precision_tuned": 0.2602739726027397,
             "val_recall_tuned": 0.5066666666666667,
             "val_f1_tuned": 0.3438914027149321,
@@ -21589,11 +21590,11 @@
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 0.4136584891527561,
-            "val_precision_default": 0.46511627906976744,
+            "threshold": 0.41686491546306353,
+            "val_precision_default": 0.4444444444444444,
             "val_recall_default": 0.26666666666666666,
-            "val_f1_default": 0.3389830508474576,
-            "val_accuracy_default": 0.8194444444444444,
+            "val_f1_default": 0.33333333333333337,
+            "val_accuracy_default": 0.8148148148148148,
             "val_precision_tuned": 0.3968253968253968,
             "val_recall_tuned": 0.3333333333333333,
             "val_f1_tuned": 0.36231884057971014,
@@ -21604,7 +21605,7 @@
             "params": {
               "bandwidth": 0.25
             },
-            "threshold": 0.5056946138910581,
+            "threshold": 0.5111973424978493,
             "val_precision_default": 0.55,
             "val_recall_default": 0.29333333333333333,
             "val_f1_default": 0.3826086956521739,
@@ -21619,22 +21620,22 @@
             "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.28348500811525285,
+            "threshold": 0.3151251800134402,
             "val_precision_default": 0.5806451612903226,
             "val_recall_default": 0.24,
             "val_f1_default": 0.339622641509434,
             "val_accuracy_default": 0.8379629629629629,
-            "val_precision_tuned": 0.33653846153846156,
-            "val_recall_tuned": 0.4666666666666667,
-            "val_f1_tuned": 0.3910614525139665,
-            "val_accuracy_tuned": 0.7476851851851852,
+            "val_precision_tuned": 0.37349397590361444,
+            "val_recall_tuned": 0.41333333333333333,
+            "val_f1_tuned": 0.3924050632911392,
+            "val_accuracy_tuned": 0.7777777777777778,
             "selected": true
           },
           {
             "params": {
               "bandwidth": 1.0
             },
-            "threshold": 0.2597373755849036,
+            "threshold": 0.26129616285755536,
             "val_precision_default": 0.625,
             "val_recall_default": 0.13333333333333333,
             "val_f1_default": 0.21978021978021978,
@@ -21649,41 +21650,41 @@
             "params": {
               "bandwidth": 2.0
             },
-            "threshold": 0.1982219505347885,
-            "val_precision_default": 0.5,
+            "threshold": 0.20364833588494832,
+            "val_precision_default": 0.3333333333333333,
             "val_recall_default": 0.013333333333333334,
-            "val_f1_default": 0.025974025974025976,
-            "val_accuracy_default": 0.8263888888888888,
-            "val_precision_tuned": 0.2733333333333333,
-            "val_recall_tuned": 0.5466666666666666,
-            "val_f1_tuned": 0.3644444444444444,
-            "val_accuracy_tuned": 0.6689814814814815,
+            "val_f1_default": 0.025641025641025644,
+            "val_accuracy_default": 0.8240740740740741,
+            "val_precision_tuned": 0.3173076923076923,
+            "val_recall_tuned": 0.44,
+            "val_f1_tuned": 0.36871508379888274,
+            "val_accuracy_tuned": 0.7384259259259259,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 4.0
             },
-            "threshold": 0.19837214446187923,
+            "threshold": 0.1890159623909151,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8263888888888888,
-            "val_precision_tuned": 0.2602739726027397,
-            "val_recall_tuned": 0.5066666666666667,
-            "val_f1_tuned": 0.3438914027149321,
-            "val_accuracy_tuned": 0.6643518518518519,
+            "val_precision_tuned": 0.3130434782608696,
+            "val_recall_tuned": 0.48,
+            "val_f1_tuned": 0.37894736842105264,
+            "val_accuracy_tuned": 0.7268518518518519,
             "selected": false
           },
           {
             "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.1746185709103085,
-            "val_precision_default": 0.3793103448275862,
-            "val_recall_default": 0.14666666666666667,
-            "val_f1_default": 0.21153846153846156,
-            "val_accuracy_default": 0.8101851851851852,
+            "threshold": 0.09626772561864465,
+            "val_precision_default": 0.2916666666666667,
+            "val_recall_default": 0.09333333333333334,
+            "val_f1_default": 0.1414141414141414,
+            "val_accuracy_default": 0.8032407407407407,
             "val_precision_tuned": 0.46153846153846156,
             "val_recall_tuned": 0.32,
             "val_f1_tuned": 0.37795275590551186,
@@ -21696,7 +21697,7 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 2.465956194489207e-139,
+            "threshold": 2.3968493941905723e-139,
             "val_precision_default": 0.175,
             "val_recall_default": 0.10294117647058823,
             "val_f1_default": 0.12962962962962962,
@@ -21711,11 +21712,11 @@
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 1.6288378230769328e-37,
-            "val_precision_default": 0.17647058823529413,
+            "threshold": 1.584104937128855e-37,
+            "val_precision_default": 0.17142857142857143,
             "val_recall_default": 0.08823529411764706,
-            "val_f1_default": 0.11764705882352942,
-            "val_accuracy_default": 0.7959183673469388,
+            "val_f1_default": 0.11650485436893204,
+            "val_accuracy_default": 0.7936507936507936,
             "val_precision_tuned": 0.1552511415525114,
             "val_recall_tuned": 1.0,
             "val_f1_tuned": 0.26877470355731226,
@@ -21726,71 +21727,41 @@
             "params": {
               "bandwidth": 0.25
             },
-            "threshold": 0.1785240908784494,
-            "val_precision_default": 0.25806451612903225,
+            "threshold": 0.1718275812804376,
+            "val_precision_default": 0.24242424242424243,
             "val_recall_default": 0.11764705882352941,
-            "val_f1_default": 0.1616161616161616,
-            "val_accuracy_default": 0.8117913832199547,
-            "val_precision_tuned": 0.2152777777777778,
-            "val_recall_tuned": 0.45588235294117646,
-            "val_f1_tuned": 0.29245283018867924,
-            "val_accuracy_tuned": 0.6598639455782312,
-            "selected": true
+            "val_f1_default": 0.15841584158415842,
+            "val_accuracy_default": 0.8072562358276644,
+            "val_precision_tuned": 0.2119205298013245,
+            "val_recall_tuned": 0.47058823529411764,
+            "val_f1_tuned": 0.29223744292237447,
+            "val_accuracy_tuned": 0.6485260770975056,
+            "selected": false
           },
           {
             "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.2862792204215645,
+            "threshold": 0.28100080132507527,
             "val_precision_default": 0.21739130434782608,
             "val_recall_default": 0.07352941176470588,
             "val_f1_default": 0.1098901098901099,
             "val_accuracy_default": 0.8163265306122449,
-            "val_precision_tuned": 0.2625,
-            "val_recall_tuned": 0.3088235294117647,
-            "val_f1_tuned": 0.2837837837837838,
-            "val_accuracy_tuned": 0.7596371882086168,
+            "val_precision_tuned": 0.25287356321839083,
+            "val_recall_tuned": 0.3235294117647059,
+            "val_f1_tuned": 0.2838709677419355,
+            "val_accuracy_tuned": 0.7482993197278912,
             "selected": false
           },
           {
             "params": {
               "bandwidth": 1.0
             },
-            "threshold": 0.04524078049403029,
+            "threshold": 0.028033802249453278,
             "val_precision_default": 0.25,
             "val_recall_default": 0.04411764705882353,
             "val_f1_default": 0.075,
             "val_accuracy_default": 0.8321995464852607,
-            "val_precision_tuned": 0.15632754342431762,
-            "val_recall_tuned": 0.9264705882352942,
-            "val_f1_tuned": 0.267515923566879,
-            "val_accuracy_tuned": 0.21768707482993196,
-            "selected": false
-          },
-          {
-            "params": {
-              "bandwidth": 2.0
-            },
-            "threshold": 0.22110387898104575,
-            "val_precision_default": 0.0,
-            "val_recall_default": 0.0,
-            "val_f1_default": 0.0,
-            "val_accuracy_default": 0.8458049886621315,
-            "val_precision_tuned": 0.2013888888888889,
-            "val_recall_tuned": 0.4264705882352941,
-            "val_f1_tuned": 0.27358490566037735,
-            "val_accuracy_tuned": 0.6507936507936508,
-            "selected": false
-          },
-          {
-            "params": {
-              "bandwidth": 4.0
-            },
-            "threshold": 0.05584453235396748,
-            "val_precision_default": 0.0,
-            "val_recall_default": 0.0,
-            "val_f1_default": 0.0,
-            "val_accuracy_default": 0.8458049886621315,
             "val_precision_tuned": 0.15419501133786848,
             "val_recall_tuned": 1.0,
             "val_f1_tuned": 0.26719056974459726,
@@ -21799,17 +21770,47 @@
           },
           {
             "params": {
+              "bandwidth": 2.0
+            },
+            "threshold": 0.2156239137201213,
+            "val_precision_default": 0.0,
+            "val_recall_default": 0.0,
+            "val_f1_default": 0.0,
+            "val_accuracy_default": 0.8458049886621315,
+            "val_precision_tuned": 0.22033898305084745,
+            "val_recall_tuned": 0.38235294117647056,
+            "val_f1_tuned": 0.27956989247311825,
+            "val_accuracy_tuned": 0.6961451247165533,
+            "selected": false
+          },
+          {
+            "params": {
+              "bandwidth": 4.0
+            },
+            "threshold": 0.2094315441660917,
+            "val_precision_default": 0.0,
+            "val_recall_default": 0.0,
+            "val_f1_default": 0.0,
+            "val_accuracy_default": 0.8458049886621315,
+            "val_precision_tuned": 0.25,
+            "val_recall_tuned": 0.38235294117647056,
+            "val_f1_tuned": 0.3023255813953488,
+            "val_accuracy_tuned": 0.7278911564625851,
+            "selected": true
+          },
+          {
+            "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.028756037091050065,
-            "val_precision_default": 0.3181818181818182,
-            "val_recall_default": 0.10294117647058823,
-            "val_f1_default": 0.15555555555555556,
-            "val_accuracy_default": 0.8276643990929705,
-            "val_precision_tuned": 0.21311475409836064,
+            "threshold": 0.09850292593829489,
+            "val_precision_default": 0.32,
+            "val_recall_default": 0.11764705882352941,
+            "val_f1_default": 0.17204301075268819,
+            "val_accuracy_default": 0.8253968253968254,
+            "val_precision_tuned": 0.20967741935483872,
             "val_recall_tuned": 0.38235294117647056,
-            "val_f1_tuned": 0.27368421052631575,
-            "val_accuracy_tuned": 0.6870748299319728,
+            "val_f1_tuned": 0.2708333333333333,
+            "val_accuracy_tuned": 0.6825396825396826,
             "selected": false
           }
         ],
@@ -21818,11 +21819,11 @@
             "params": {
               "bandwidth": 0.05
             },
-            "threshold": 0.11232179259599942,
-            "val_precision_default": 0.15555555555555556,
+            "threshold": 0.11343293034427743,
+            "val_precision_default": 0.1590909090909091,
             "val_recall_default": 0.0945945945945946,
-            "val_f1_default": 0.11764705882352941,
-            "val_accuracy_default": 0.7586206896551724,
+            "val_f1_default": 0.11864406779661017,
+            "val_accuracy_default": 0.7609195402298851,
             "val_precision_tuned": 0.23118279569892472,
             "val_recall_tuned": 0.581081081081081,
             "val_f1_tuned": 0.3307692307692307,
@@ -21833,7 +21834,7 @@
             "params": {
               "bandwidth": 0.1
             },
-            "threshold": 0.09068282869796097,
+            "threshold": 0.09006203576081241,
             "val_precision_default": 0.16279069767441862,
             "val_recall_default": 0.0945945945945946,
             "val_f1_default": 0.11965811965811968,
@@ -21848,11 +21849,11 @@
             "params": {
               "bandwidth": 0.25
             },
-            "threshold": 0.0800772989788563,
-            "val_precision_default": 0.23333333333333334,
+            "threshold": 0.08085367126406678,
+            "val_precision_default": 0.21875,
             "val_recall_default": 0.0945945945945946,
-            "val_f1_default": 0.13461538461538464,
-            "val_accuracy_default": 0.7931034482758621,
+            "val_f1_default": 0.1320754716981132,
+            "val_accuracy_default": 0.7885057471264367,
             "val_precision_tuned": 0.2134387351778656,
             "val_recall_tuned": 0.7297297297297297,
             "val_f1_tuned": 0.33027522935779813,
@@ -21863,11 +21864,11 @@
             "params": {
               "bandwidth": 0.5
             },
-            "threshold": 0.10555509932943334,
-            "val_precision_default": 0.2857142857142857,
-            "val_recall_default": 0.05405405405405406,
-            "val_f1_default": 0.09090909090909091,
-            "val_accuracy_default": 0.8160919540229885,
+            "threshold": 0.10504686387235669,
+            "val_precision_default": 0.3333333333333333,
+            "val_recall_default": 0.06756756756756757,
+            "val_f1_default": 0.11235955056179775,
+            "val_accuracy_default": 0.8183908045977012,
             "val_precision_tuned": 0.2145748987854251,
             "val_recall_tuned": 0.7162162162162162,
             "val_f1_tuned": 0.3302180685358255,
@@ -21878,14 +21879,14 @@
             "params": {
               "bandwidth": 1.0
             },
-            "threshold": 0.12312892523558065,
-            "val_precision_default": 0.16666666666666666,
+            "threshold": 0.12165725947392997,
+            "val_precision_default": 0.2,
             "val_recall_default": 0.013513513513513514,
-            "val_f1_default": 0.025,
-            "val_accuracy_default": 0.8206896551724138,
-            "val_precision_tuned": 0.22692307692307692,
-            "val_recall_tuned": 0.7972972972972973,
-            "val_f1_tuned": 0.3532934131736527,
+            "val_f1_default": 0.02531645569620253,
+            "val_accuracy_default": 0.8229885057471265,
+            "val_precision_tuned": 0.22900763358778625,
+            "val_recall_tuned": 0.8108108108108109,
+            "val_f1_tuned": 0.35714285714285715,
             "val_accuracy_tuned": 0.503448275862069,
             "selected": false
           },
@@ -21893,45 +21894,45 @@
             "params": {
               "bandwidth": 2.0
             },
-            "threshold": 0.15905000560458815,
+            "threshold": 0.1597934819953112,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8298850574712644,
-            "val_precision_tuned": 0.24623115577889448,
-            "val_recall_tuned": 0.6621621621621622,
-            "val_f1_tuned": 0.358974358974359,
-            "val_accuracy_tuned": 0.5977011494252874,
+            "val_precision_tuned": 0.2388663967611336,
+            "val_recall_tuned": 0.7972972972972973,
+            "val_f1_tuned": 0.367601246105919,
+            "val_accuracy_tuned": 0.5333333333333333,
             "selected": true
           },
           {
             "params": {
               "bandwidth": 4.0
             },
-            "threshold": 0.1674683617006642,
+            "threshold": 0.18196922815844832,
             "val_precision_default": 0.0,
             "val_recall_default": 0.0,
             "val_f1_default": 0.0,
             "val_accuracy_default": 0.8298850574712644,
-            "val_precision_tuned": 0.24623115577889448,
-            "val_recall_tuned": 0.6621621621621622,
-            "val_f1_tuned": 0.358974358974359,
-            "val_accuracy_tuned": 0.5977011494252874,
+            "val_precision_tuned": 0.2374429223744292,
+            "val_recall_tuned": 0.7027027027027027,
+            "val_f1_tuned": 0.3549488054607508,
+            "val_accuracy_tuned": 0.5655172413793104,
             "selected": false
           },
           {
             "params": {
               "bandwidth": "silverman"
             },
-            "threshold": 0.011196113842203426,
+            "threshold": 0.008328065263761605,
             "val_precision_default": 0.2777777777777778,
             "val_recall_default": 0.06756756756756757,
             "val_f1_default": 0.10869565217391305,
             "val_accuracy_default": 0.8114942528735632,
-            "val_precision_tuned": 0.22026431718061673,
-            "val_recall_tuned": 0.6756756756756757,
-            "val_f1_tuned": 0.33222591362126247,
-            "val_accuracy_tuned": 0.5379310344827586,
+            "val_precision_tuned": 0.21189591078066913,
+            "val_recall_tuned": 0.7702702702702703,
+            "val_f1_tuned": 0.33236151603498537,
+            "val_accuracy_tuned": 0.4735632183908046,
             "selected": false
           }
         ]

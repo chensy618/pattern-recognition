@@ -6,7 +6,7 @@ Algorithm
 1. Draw a bootstrap sample from the training set: N rows drawn uniformly
    *with replacement* (on average ~63.2% distinct rows, some repeated).
 2. Train an independent ParzenNaiveBayes on this bootstrap sample (its own
-   kernel centres, class priors and binary-feature frequencies).
+   kernel centres and class priors).
 3. Repeat B = 50 times.
 4. Average the predicted probabilities of the B classifiers (soft voting):
        P_bag(y=1 | x) = (1/B) Σ_b P_b(y=1 | x).
@@ -29,18 +29,19 @@ class BaggedParzenNaiveBayes:
     ----------
     n_estimators : int
         Number of bootstrap samples / base classifiers B.
-    bandwidth, min_bandwidth, laplace_alpha :
+    bandwidth, min_bandwidth, laplace_alpha, all_parzen :
         Passed on to every ParzenNaiveBayes.
     random_state : int
         Seed for drawing the bootstrap samples.
     """
 
     def __init__(self, n_estimators=50, bandwidth=0.5, min_bandwidth=1e-2,
-                 laplace_alpha=1.0, random_state=0):
+                 laplace_alpha=1.0, all_parzen=True, random_state=0):
         self.n_estimators = n_estimators
         self.bandwidth = bandwidth
         self.min_bandwidth = min_bandwidth
         self.laplace_alpha = laplace_alpha
+        self.all_parzen = all_parzen
         self.random_state = random_state
 
     def fit(self, X, y):
@@ -53,7 +54,8 @@ class BaggedParzenNaiveBayes:
             idx = rng.integers(0, n, size=n)          # bootstrap: N draws with replacement
             nb = ParzenNaiveBayes(bandwidth=self.bandwidth,
                                   min_bandwidth=self.min_bandwidth,
-                                  laplace_alpha=self.laplace_alpha)
+                                  laplace_alpha=self.laplace_alpha,
+                                  all_parzen=self.all_parzen)
             self.estimators_.append(nb.fit(X[idx], y[idx]))
         return self
 

@@ -1,7 +1,7 @@
 model,rule,precision,recall,f1,accuracy,precision_std,recall_std,f1_std,accuracy_std,hyperparameters,threshold
 Dummy (stratified),mean of 100 runs,0.2085,0.1849,0.1956,0.6853,0.0407,0.0374,0.0378,0.0194,"{""random_state"": ""2026-2125""}",
-Naive Bayes (Parzen),default,0.0000,0.0000,0.0000,0.7930,,,,,"{""bandwidth"": 2.0}",default
-Naive Bayes (Parzen),tuned,0.2958,0.4200,0.3471,0.6729,,,,,"{""bandwidth"": 2.0}",0.1917
+Naive Bayes (Parzen),default,0.3182,0.1400,0.1944,0.7598,,,,,"{""bandwidth"": 0.25}",default
+Naive Bayes (Parzen),tuned,0.3018,0.6700,0.4161,0.6108,,,,,"{""bandwidth"": 0.25}",0.1510
 Least Squares,default,0.0000,0.0000,0.0000,0.7826,,,,,"{""reg_lambda"": 10.0}",default
 Least Squares,tuned,0.2944,0.5800,0.3906,0.6253,,,,,"{""reg_lambda"": 10.0}",0.1925
 MLP,default,0.2895,0.2200,0.2500,0.7267,,,,,"{""hidden_sizes"": [32, 16], ""learning_rate"": 0.01, ""n_epochs"": 200, ""batch_size"": 32}",default

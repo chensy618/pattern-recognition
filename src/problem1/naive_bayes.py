@@ -31,11 +31,13 @@ Special cases
 * Constant features (a single value in the training data) carry no
   information about the class and are ignored.
 * Binary features (exactly two values in the training data, e.g. the one-hot
-  production-area indicators) are not continuous, so a kernel density makes
-  little sense. Their class-conditional probability is estimated with
-  Laplace-smoothed relative frequencies,
-      P(x_j = v | C_k) = (count_k(v) + α) / (n_k + 2α),
-  which is never zero, even for a value that never occurs in class k.
+  production-area indicators) also use the Parzen window by default
+  (all_parzen=True), so every class-conditional density comes from the same
+  estimator with the same bandwidth. With a small h this reduces to the
+  relative frequencies of the two values; a larger h smooths them. Optionally
+  (all_parzen=False) they are instead estimated with Laplace-smoothed
+  relative frequencies,
+      P(x_j = v | C_k) = (count_k(v) + α) / (n_k + 2α).
 * Very small densities: all products are computed as sums of logarithms and
   kernel sums with logsumexp, so densities far below 1e-300 do not underflow
   to zero (log 0 = -inf).
@@ -49,8 +51,8 @@ LOG_SQRT_2PI = 0.5 * np.log(2.0 * np.pi)
 
 class ParzenNaiveBayes:
     """
-    Naive Bayes with Gaussian Parzen windows (continuous features) and
-    Laplace-smoothed frequencies (binary features).
+    Naive Bayes with Gaussian Parzen windows for every non-constant feature
+    (or, with all_parzen=False, Laplace-smoothed frequencies for binary ones).
 
     Parameters
     ----------
@@ -59,13 +61,18 @@ class ParzenNaiveBayes:
     min_bandwidth : float
         Lower bound on every bandwidth (avoids h = 0 for nearly constant data).
     laplace_alpha : float
-        Laplace smoothing constant α for binary features.
+        Laplace smoothing constant α for binary features (all_parzen=False only).
+    all_parzen : bool
+        If True (default), binary features are also modelled with Parzen
+        windows; if False, with Laplace-smoothed frequencies.
     """
 
-    def __init__(self, bandwidth=0.5, min_bandwidth=1e-2, laplace_alpha=1.0):
+    def __init__(self, bandwidth=0.5, min_bandwidth=1e-2, laplace_alpha=1.0,
+                 all_parzen=True):
         self.bandwidth = bandwidth
         self.min_bandwidth = min_bandwidth
         self.laplace_alpha = laplace_alpha
+        self.all_parzen = all_parzen
 
     # ------------------------------------------------------------------
     @staticmethod
@@ -90,8 +97,12 @@ class ParzenNaiveBayes:
         # Determine the type of every feature from the training data.
         n_unique = np.array([len(np.unique(X[:, j])) for j in range(n_features)])
         self.constant_ = np.where(n_unique == 1)[0]
-        self.binary_ = np.where(n_unique == 2)[0]
-        self.continuous_ = np.where(n_unique > 2)[0]
+        if self.all_parzen:
+            self.binary_ = np.array([], dtype=int)
+            self.continuous_ = np.where(n_unique >= 2)[0]
+        else:
+            self.binary_ = np.where(n_unique == 2)[0]
+            self.continuous_ = np.where(n_unique > 2)[0]
 
         # Binary features: the two possible values and their smoothed
         # log-probabilities per class, shape (2 classes, n_binary, 2 values).
