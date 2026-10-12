@@ -2,6 +2,18 @@
 
 Code for the FYS-3012 home exam. 
 
+## Environment
+
+Python 3 with NumPy, SciPy and Matplotlib (tested with Python 3.13, NumPy 2.4, SciPy 1.17, Matplotlib 3.10).
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install numpy scipy matplotlib
+```
+
+The data files `task1_lice_forecast.npz` and `task2_water_reports.npz` must be in `data/` at the repository root.
+
 ## Problem 1 (`problem1/`)
 
 | File | Problem | Content |
